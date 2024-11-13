@@ -24,7 +24,7 @@ We chose 1950 as our starting point because this period marks the availability o
 ---
 
 ### **Ethnicity Representation Across Film Industries**
-The Hollywood film industry is often considered representative of North America, while Bollywood plays a similar role for South Asia. Our analysis extends to other regions such as Europe, Oceania, Africa, and the Middle East to provide a comprehensive understanding of how cinematic industries reflect (or diverge from) the demographics of their associated populations.
+The Hollywood film industry is often considered representative of North America, while Bollywood plays a similar role for South Asia. Our analysis extends to other regions such as Europe, Oceania, Africa, and the Middle East (TODO: are we doing middle east ?) to provide a comprehensive understanding of how cinematic industries reflect (or diverge from) the demographics of their associated populations.
 
 1. **Data Sources**:  
    - Ethnicity data for North America was sourced from the [EPR Core dataset](https://icr.ethz.ch/data/epr/core/), providing population breakdowns over time.  

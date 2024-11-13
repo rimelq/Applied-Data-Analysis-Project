@@ -28,8 +28,8 @@ The Hollywood film industry is often considered representative of North America,
 
 1. **Data Sources**:  
    - Ethnicity data for North America was sourced from the [EPR Core dataset](https://icr.ethz.ch/data/epr/core/), providing population breakdowns over time.  
-   - Jewish-American population data was added from [Pew Research 2013](https://www.pewresearch.org/religion/2013/10/01/chapter-1-population-estimates/) and [Pew Research 2021](https://www.pewresearch.org/religion/2021/05/11/the-size-of-the-u-s-jewish-population/) due to their historical significance in Hollywood.  
-
+   - Jewish-American population data was added from [Pew Research 2013](https://www.pewresearch.org/religion/2013/10/01/chapter-1-population-estimates/) and [Pew Research 2021](https://www.pewresearch.org/religion/2021/05/11/the-size-of-the-u-s-jewish-population/) due to their historical significance in Hollywood.
+     
 2. **Adjustments for Analysis**:  
    - Limited ethnic categorization in some regions (e.g., Canada, Oceania) led us to focus on the largest contributing country within each industry when necessary.  
    - Missing data points were filled with zeroes, assuming negligible population proportions.  
@@ -45,7 +45,7 @@ The Hollywood film industry is often considered representative of North America,
 
 ### **Gender and Age Representation**
 1. **Real-World Data**:  
-   Gender and age data was obtained from the [UN World Population Prospects dataset](https://population.un.org/wpp/), covering major regions associated with key film industries.  
+   Gender and age data was obtained from the [UN World Population Prospects dataset](https://population.un.org/wpp/), covering major regions associated with key film industries.
 
 2. **Representation Baselines**:  
    - The dataset was segmented into the same time periods as the ethnicity analysis.  

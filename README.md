@@ -1,5 +1,6 @@
 
 # **The Reel World vs. The Real World: Is Cinema Holding a True Mirror to Society?**
+A Study of Demographic Representation in Global Cinema
 
 ## **Abstract**
 

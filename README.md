@@ -121,7 +121,7 @@ The Hollywood film industry is often considered representative of North America,
 2. Are there specific statistical methods or visualizations you recommend for analyzing demographic discrepancies in relation to box office performance?  
 3. Is attempting to develop a machine learning model to provide actionable steps for improving representation a reasonable goal, or should we focus on descriptive insights instead?  
 4. What challenges might arise when comparing representation across smaller or underrepresented regional industries?  
-
+*Your input will guide us in prioritizing descriptive versus predictive analysis and ensure robust statistical validity.*
 ---
 
 ## **Quickstart**

@@ -33,6 +33,7 @@ The Hollywood film industry is often considered representative of North America,
 2. **Adjustments for Analysis**:  
    - Limited ethnic categorization in some regions (e.g., Canada, Oceania) led us to focus on the largest contributing country within each industry when necessary.  
    - Missing data points were filled with zeroes, assuming negligible population proportions.  
+   - "In this analysis, we focused on how Indian Bollywood movies represent Indian ethnicities compared to the real world.        Bollywood actors with non-Indian ethnicities (less than 1% of the data) were excluded to maintain this focus."
 
 3. **Time Fragmentation**:  
    - Ethnicity data was divided into four time periods for consistency across all regions and industries:  

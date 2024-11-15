@@ -14,6 +14,7 @@ Representation accuracy and trends:
 2. What trends can be identified in cinematic representation over time?
 
 Variations and their impact:
+
 4. How do these portrayals vary across regions, industries, and genres?  
 5. Are the largest demographic discrepancies linked to box office revenue?  
 

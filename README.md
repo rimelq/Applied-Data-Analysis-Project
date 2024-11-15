@@ -9,11 +9,12 @@ Our findings aim to inform audiences, creators, and policymakers about the socie
 ---
 
 ## **Research Questions**
-
-1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?  
-2. How do these portrayals vary across regions, industries, and genres?  
-3. Are the largest demographic discrepancies linked to box office revenue?  
-4. What trends can be identified in cinematic representation over time?  
+Representation accuracy and trends:
+1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
+2. What trends can be identified in cinematic representation over time?
+Variations and their impact:
+4. How do these portrayals vary across regions, industries, and genres?  
+5. Are the largest demographic discrepancies linked to box office revenue?  
 
 ---
 

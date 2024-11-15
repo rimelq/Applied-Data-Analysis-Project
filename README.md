@@ -167,7 +167,7 @@ The directory structure of our project looks like this:
 │       └── oceania               <- Processed data for Oceania region
 │
 ├── src                           <- Source code
-│   ├── data_preprocess.ipynb     <- Notebook for data cleaning and preprocessing
+│   ├── preprocess_global.ipynb     <- Notebook for data cleaning and preprocessing
 │   └── plot.ipynb                <- Notebook for plotting and analysis
 │   └── plot_functions.py         <- Python script with plotting functions
 │

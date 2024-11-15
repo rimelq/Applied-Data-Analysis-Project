@@ -4,17 +4,12 @@
 ## **Abstract**
 
 Cinema has always served as a lens through which society is reflected—or distorted. This project investigates whether the cinematic world aligns with real-world demographics in terms of gender, ethnicity, and age, or whether it reinforces outdated stereotypes. By comparing on-screen representation to societal expectations across genres and regions, we aim to highlight discrepancies and explore their potential implications. Our analysis will compare demographic representation not only by region but also across major film industries such as Hollywood, Bollywood, and others. Beyond identifying these disparities, we will examine trends over time and consider data-driven proposals to address them. 
-Our findings aim to inform audiences, creators, and policymakers about the societal impact of these portrayals and offer actionable insights to bridge the gap between the reel and real worlds.
 
 ---
 
 ## **Research Questions**
-Representation accuracy and trends:
 1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
 2. What trends can be identified in cinematic representation over time?
-
-Variations and their impact:
-
 4. How do these portrayals vary across regions, industries, and genres?  
 5. Are the largest demographic discrepancies linked to box office revenue?  
 
@@ -62,10 +57,11 @@ The Hollywood film industry is often considered representative of North America,
 
 1. **Data Preprocessing**:  
    - Clean and preprocess demographic data from `character.metadata.tsv`, `movie.metadata.tsv`, and real-world datasets.  
-   - Standardize formats to ensure consistency across regions and industries.  
+   - Standardize formats to ensure consistency across regions and industries.
+   - With over 70% missing values in *actor_ethnicity* overall, we explored web scraping to supplement the data. We scraped from both **Wikidata** and **Ethnicelebs**, though Ethnicelebs provided limited information. Wikidata, however, yielded promising results. While we haven’t integrated these values yet, we may consider using the Wikidata results in P3 to improve data completeness. (The file containing the tests for the web scraping process can be found in test/scrap.ipynb.)
 
 2. **Comparative Analysis**:  
-   - Compare on-screen demographics to real-world populations, highlighting differences across genres, industries, and regions.  
+   - Compare on-screen demographics to real-world populations, highlighting differences across genres, industries, and regions. Due to Europe's cultural diversity, in order to exploit the dataset to the fullest we decided to split it into 3 subregions: eastern, western and northic due to culturo-ethnic fundamental differences.
    - Evaluate these disparities over the defined time periods.  
 
 3. **Correlation with Financial Success**:  
@@ -111,9 +107,9 @@ The Hollywood film industry is often considered representative of North America,
 
 - **Data Preprocessing and Pipeline Development**: [Alexandre Huou]  
 - **Demographic Analysis and Correlation Studies**: [Rim El Qabli]  
-- **Visualization Development**: [Lily Gilibert]  
-- **Statistical Analysis and Insights Generation**: [Zeineb Mellouli]  
-- **Documentation and Data Story Writing**: [Donia Gasmi]  
+- **Visualization and Interactive Story Design:** [Donia Gasmi]   
+- **Statistical Analysis and Insights Generation**: [Lily Gilibert]
+- **Website Development and Storytelling Integration:** [Zeineb Mellouli] 
 
 ---
 
@@ -144,29 +140,40 @@ pip install -r pip_requirements.txt
 
 
 ### How to use the library
-Tell us how the code is arranged, any explanations goes here.
+**Preprocessing Notebook:**
+- Loads and cleans raw movie data from data/raw/CMU_movies, then saves the cleaned datasets to data/cleaned_datasets.
+- Clusters the data by region (Oceania, Europe, East Asia, Hollywood, Bollywood) and saves it in data/clustered_clean.
+- Loads and processes real-world demographic data from data/raw/real_world, saving relevant regional stats in data/final/region.
 
+**Plotting Notebook:**
+- Loads the prepared data from data/final/region to perform calculations and generate comparative plots, showing movie vs. real-world demographics.
 
 
 ## Project Structure
 
 The directory structure of our project looks like this:
-
 ```
-├── data                        <- Project data files
+├── data                          <- Project data files
+│   ├── raw                       <- Raw datasets
+│   │   ├── CMU_movies            <- Raw data for CMU movie datasets
+│   │   └── real_world            <- Raw real-world demographic data                   
+│   ├── cleaned_datasets          <- Cleaned datasets after preprocessing
+│   ├── clustered_clean           <- Region-based clustered datasets
+│   └── final                     <- Final processed datasets for analysis
+│       ├── bollywood             <- Processed data for Bollywood region
+│       ├── east_asia             <- Processed data for East Asia region
+│       ├── europe                <- Processed data for Europe region
+│       ├── hollywood             <- Processed data for Hollywood region
+│       └── oceania               <- Processed data for Oceania region
 │
-├── src                         <- Source code
-│   ├── data                            <- Data directory
-│   ├── models                          <- Model directory
-│   ├── utils                           <- Utility directory
-│   ├── scripts                         <- Shell scripts
+├── src                           <- Source code
+│   ├── data_preprocess.ipynb     <- Notebook for data cleaning and preprocessing
+│   └── plot.ipynb                <- Notebook for plotting and analysis
+│   └── plot_functions.py         <- Python script with plotting functions
 │
-├── tests                       <- Tests of any kind
+├── tests                         <- Test scripts and notebooks
 │
-├── results.ipynb               <- a well-structured notebook showing the results
-│
-├── .gitignore                  <- List of files ignored by git
-├── pip_requirements.txt        <- File for installing python dependencies
+├── .gitignore                    <- List of files ignored by git
+├── pip_requirements.txt          <- Python dependencies file
 └── README.md
 ```
-

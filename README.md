@@ -21,7 +21,7 @@ Variations and their impact:
 ## **Data Processing**
 
 ### **Why Start from 1950?**  
-We chose 1950 as our starting point because this period marks the availability of consistent demographic data and represents the beginning of the "contemporary" world. It also coincides with significant transformations in global cinema, including the rise of major film industries and the globalization of filmmaking.
+We chose 1950 as our starting point, the era of classics like *Pather Panchali* and *Sunset Boulevard* because this period marks the availability of consistent demographic data and represents the beginning of the "contemporary" world. It also coincides with significant transformations in global cinema, including the rise of major film industries and the globalization of filmmaking.
 
 ---
 

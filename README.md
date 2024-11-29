@@ -8,10 +8,14 @@ Cinema has always served as a lens through which society is reflected—or disto
 ---
 
 ## **Research Questions**
+Representation accuracy and trends:
 1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
 2. What trends can be identified in cinematic representation over time?
+
+Variations and their impact:
+   
 4. How do these portrayals vary across regions, industries, and genres?  
-5. Are the largest demographic discrepancies linked to box office revenue?  
+5. Are the largest demographic discrepancies linked to box office revenue?    
 
 ---
 
@@ -42,7 +46,10 @@ The Hollywood film industry is often considered representative of North America,
      - **1996–2012**  
 
 ---
-
+**Visualisation**:
+   **DISLAIMER**
+   git doesn't show the interactive plots of plots.ipnyb because of their interactiveness but they should show in Visual Studio Code
+   Alternatively clicking on the following link should open a local server which would display it: https://mybinder.org/v2/gh/epfl-ada/ada-2024-project-advanceddestroyers0fall/HEAD?labpath=src%2Fplots.ipynb
 ### **Gender and Age Representation**
 1. **Real-World Data**:  
    Gender and age data was obtained from the [UN World Population Prospects dataset](https://population.un.org/wpp/), covering major regions associated with key film industries.
@@ -153,27 +160,27 @@ pip install -r pip_requirements.txt
 
 The directory structure of our project looks like this:
 ```
-├── data                          <- Project data files
-│   ├── raw                       <- Raw datasets
-│   │   ├── CMU_movies            <- Raw data for CMU movie datasets
-│   │   └── real_world            <- Raw real-world demographic data                   
-│   ├── cleaned_datasets          <- Cleaned datasets after preprocessing
-│   ├── clustered_clean           <- Region-based clustered datasets
-│   └── final                     <- Final processed datasets for analysis
-│       ├── bollywood             <- Processed data for Bollywood region
-│       ├── east_asia             <- Processed data for East Asia region
-│       ├── europe                <- Processed data for Europe region
-│       ├── hollywood             <- Processed data for Hollywood region
-│       └── oceania               <- Processed data for Oceania region
+├── data                               <- Project data files
+│   ├── raw                            <- Raw datasets
+│   │   ├── CMU_movies                 <- Raw data for CMU movie datasets
+│   │   └── real_world                 <- Raw real-world demographic data                   
+│   ├── cleaned_datasets               <- Cleaned datasets after preprocessing
+│   ├── clustered_clean                <- Region-based clustered datasets
+│   └── final                          <- Final processed datasets for analysis
+│       ├── bollywood                  <- Processed data for Bollywood region
+│       ├── east_asia                  <- Processed data for East Asia region
+│       ├── europe                     <- Processed data for Europe region
+│       ├── hollywood                  <- Processed data for Hollywood region
+│       └── oceania                    <- Processed data for Oceania region
 │
-├── src                           <- Source code
-│   ├── data_preprocess.ipynb     <- Notebook for data cleaning and preprocessing
-│   └── plot.ipynb                <- Notebook for plotting and analysis
-│   └── plot_functions.py         <- Python script with plotting functions
+├── src                                <- Source code
+│   ├── preprocessing_global.ipynb     <- Notebook for data cleaning and preprocessing
+│   └── plot.ipynb                     <- Notebook for plotting and analysis
+│   └── plot_functions.py              <- Python script with plotting functions
 │
-├── tests                         <- Test scripts and notebooks
+├── tests                              <- Test scripts and notebooks
 │
-├── .gitignore                    <- List of files ignored by git
-├── pip_requirements.txt          <- Python dependencies file
+├── .gitignore                         <- List of files ignored by git
+├── pip_requirements.txt               <- Python dependencies file
 └── README.md
 ```

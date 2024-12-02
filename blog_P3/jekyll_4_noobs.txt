@@ -1,0 +1,100 @@
+Basic building blocks: 
+    Pages aka .markdown files in no folder, they will be displayed at
+    different places depending on layout argument. 
+    The layout argument refers to the html files in "_layouts" that 
+    describe how each page should be displayed.
+    Note the "_layout" and "_include" folders are both extracted from the
+    minima theme that is stored as a Ruby Gem (they are here purely for visual clarity)
+    Headers: defined in "_config" at the variable "header_pages" (# rn), only 
+    displayed if variable "title" is defined in the page
+
+CSS Assets (CSS files): 
+    They define the page's look and how it responds to mouse clicks/hovers
+    Has: 
+        - selector (body, wrapper, h1) which says to WHOM apply changes
+        - properties & values (color: , margin: ) says WHICH changes to do
+
+Blog Posts:
+    Markdown files in "_posts" that automatically get "translated" to HTML
+    they should have the following format: "YEAR-MONTH-DAY-title.markdown".
+    All posts begin with front matter a.k.a --- ... --- with layout title etc
+    Can link images and resources quite easily in a post: 
+        -> create folder @ root project and put all resources in it, then specify 
+           path in the md file:
+                ![My helpful screenshot](/assets/screenshot.jpg)
+                [get the PDF](/assets/mydoc.pdf)
+        /!\ Notation: the "!" is to indicate file is an image, text in "[]" is the alt 
+            text a.k.a th eone displayed if fail load/voice over and the path has to be 
+            written inside of "()" 
+        /!\
+
+    Creating index of posts: use Liquid (language prog):
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        "This creates a list of links to blog posts"
+        /!\ To understand this snippet please check help/posts/liquid
+    
+    Tags and Categories: 
+        **Tags**: 
+        Defined by the use of the "tag"/"tags" key in the post's Front matter
+        usable by all of the Liquid Templates similarly to site.posts => site.tags
+        /!\ Iterating over site.tags => [tag_name, [posts with that tag]] /!\
+        -- Used to filter/group many posts --
+
+        **Categories**:
+        Definable via "category"/"categories" key in the post's Front matter
+        usable by all of the Liquid Templates similarly to site.posts => site.categories
+        /!\ Iterating over site.categories => [category_name, [posts with that category]] /!\
+        -- Used to filter/group many posts --
+                /!\ != Tags due to structure: "movies/horror/_posts/markdown_file" has 2 categories /!\
+                /!\ can also get incorporated in a generated URL due to this /!\
+    
+    Post Excerpts: 
+        Used to tickle the pickle of the reader by giving a glimpse of the article
+        underneath the title. By default first paragraph, easy to update per post 
+        to take a specified portion of the post check example-post: "<!--more-->"
+
+    Drafts:
+        Used for blog posts which aren't finished yet, useful for our project I think
+        basically put them in _drafts is enough and run serve/build with --drafts to see drafts on site too
+
+Front Matter:
+    As seen earlier, --- ... --- structure at beginning of posts&pages, 
+    options like layout, title, date, categories, and custom variables. 
+    It controls how the content is rendered and behaves. 
+    V page, post, or draft with front matter is processed by Jekyll. 
+    If a file lacks front matter, it's treated as static content.
+
+
+Collections: 
++-------------------------------------+         +----------------+
+| Can the things be logically grouped?|---No--->|    Use pages   |
++-------------------------------------+         +----------------+
+                |
+               Yes
+                |
+                V
++-------------------------------------+         +----------------+
+|      Are they grouped by date?      |---No--->|Use a collection|
++-------------------------------------+         +----------------+
+                |
+               Yes
+                |
+                V
++-------------------------------------+
+|            Use posts                |
++-------------------------------------+
+
+                    FUCK
+
+
+
+
+
+
+    

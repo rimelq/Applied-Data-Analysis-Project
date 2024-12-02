@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
+title: jpp de ce truc de merde
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -33,6 +33,23 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
+
+permalink: /:categories/:title/
+
+
+livereload: true
+
+#show_excerpts: true
+
+excerpt_separator: "<!--more-->"
+
+#collections:
+# countries:
+#  output: true
+# permalink: /countries/:title/
+
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -53,3 +70,14 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+#header_pages:
+#  - /about/
+#  - /contact/
+
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - jekyll_4_noobs.txt

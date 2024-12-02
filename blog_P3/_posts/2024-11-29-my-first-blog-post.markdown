@@ -7,11 +7,10 @@ tags: [jekyll, first-post, markdown]
 author: Alex
 ---
 
-# Welcome to My First Post!
-
+# Welcome to My First Time!
 Hello world! 🌍 This is my very first post on my Jekyll-powered blog. I'm excited to explore what Jekyll has to offer and learn how to build amazing websites.
 
-## Why I'm Using Jekyll
+## FUCK ME
 
 Here are a few reasons why I decided to use Jekyll:
 

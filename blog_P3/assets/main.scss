@@ -4,44 +4,354 @@
 
 @import "minima";
 
-.plot-section {
-  margin: 60px auto;
-  padding: 20px 40px;
+.site-header {
+  border-top: 0;
+  border-bottom: 0;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  max-width: 1100px;
-  position: relative;
-  left: 0;
-  transform: none;
-}
-
-.plot-section h2 {
-  margin-bottom: 30px;
-  color: #333;
-  text-align: center;
-}
-
-.visualization-container {
-  margin: 20px auto;
+  position: fixed;
   width: 100%;
-  max-width: 1000px;
-  padding: 0;
+  z-index: 100;
+  padding: 2px 0;
+  height: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .wrapper {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  max-width: 100%;
 }
 
-.controls {
-  margin-bottom: 20px;
-  text-align: center;
-  width: 100%;
+.site-title {
+  font-size: 16px;
+  margin-left: 0;
+  line-height: 40px;
+  padding-left: 20px;
 }
 
-.wrapper {
-  max-width: 1200px;
-  margin-right: auto;
+.site-nav {
+  line-height: 40px;
   margin-left: auto;
-  padding-right: 0;
-  padding-left: 0;
+  padding-right: 40px;
 }
+
+.site-nav .page-link {
+  margin-left: 20px;
+  color: #333 !important;
+  font-size: 14px;
+}
+
+.site-title, .site-nav .page-link {
+  color: #333 !important;
+  text-shadow: none;
+}
+
+@keyframes move-twinkle {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000 url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    z-index: -2;
+}
+
+.twinkling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+    z-index: -1;
+    animation: move-twinkle 200s linear infinite;
+}
+
+.home {
+  min-height: 100vh;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+#globeViz {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: move;
+}
+
+spline-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+#globeViz {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: move;
+}
+
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+#globeViz {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: move;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000033;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -1;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+#globeViz {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: move;
+}
+
+#globeCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at center, #0a192f 0%, #000000 100%);
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  h1 {
+    font-size: 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+#globeViz {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  cursor: move;
+}
+

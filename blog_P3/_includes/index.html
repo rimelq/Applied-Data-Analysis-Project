@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<div class="home">
+  <canvas id="globeCanvas"></canvas>
+  <section class="hero">
+    <h1>The Reel World vs. The Real World: Is Cinema Holding a True Mirror to Society?</h1>
+  </section>
+
+  <script>
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    let renderer = new THREE.WebGLRenderer({
+      canvas: document.getElementById('globeCanvas'),
+      antialias: true,
+      alpha: true
+    });
+    
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000, 0);
+    
+    // Create sphere
+    let geometry = new THREE.SphereGeometry(5, 32, 32);
+    let material = new THREE.MeshPhongMaterial({
+      map: new THREE.TextureLoader().load('/assets/images/earth-dark.jpg'),
+      bumpMap: new THREE.TextureLoader().load('/assets/images/earth-bump.jpg'),
+      bumpScale: 0.1,
+      specularMap: new THREE.TextureLoader().load('/assets/images/earth-specular.jpg'),
+      specular: new THREE.Color('grey')
+    });
+    
+    let sphere = new THREE.Mesh(geometry, material);
+    scene.add(sphere);
+    
+    // Add ambient light
+    let ambient = new THREE.AmbientLight(0x404040);
+    scene.add(ambient);
+    
+    // Add directional light
+    let light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(5,3,5);
+    scene.add(light);
+    
+    camera.position.z = 10;
+    
+    // Animation
+    function animate() {
+      requestAnimationFrame(animate);
+      sphere.rotation.y += 0.003;
+      renderer.render(scene, camera);
+    }
+    
+    // Handle window resize
+    window.addEventListener('resize', onWindowResize, false);
+    
+    function onWindowResize() {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    }
+    
+    animate();
+  </script>
+</div>

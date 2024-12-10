@@ -44,6 +44,8 @@
                 <option value="Hollywood">Hollywood</option>
                 <option value="Bollywood">Bollywood</option>
                 <option value="Eastasia">Eastasia</option>
+                <option value="Europe">Europe</option>
+
             </select>
             <select id="ethnicityPeriodSelect">
                 <option value="All periods">All periods</option>
@@ -91,6 +93,11 @@ function updatePlot(data, realworldData) {
             color: 'teal',
             opacity: 0.8
         },
+        error_x: {
+            type: 'data',
+            array: ethnicities.map(() => 1),  // Example error value
+            visible: true
+        },
         hovertemplate: "Real-world Population: %{x:.1f}%<extra></extra>",
     };
 
@@ -103,6 +110,11 @@ function updatePlot(data, realworldData) {
         marker: {
             color: 'purple',
             opacity: 0.8
+        },
+        error_x: {
+            type: 'data',
+            array: ethnicities.map(() => 1),  // Example error value
+            visible: true
         },
         hovertemplate: region + " Industry: %{x:.1f}%<extra></extra>"
     };
@@ -124,9 +136,9 @@ function updatePlot(data, realworldData) {
             zeroline: true,
             zerolinewidth: 2,
             zerolinecolor: 'black',
-            tickvals: [-50, -25, 0, 25, 50],
-            ticktext: ["50%", "25%", "0%", "25%", "50%"],
-            range: [-50, 50],
+            tickvals: [-75, -50, -25, 0, 25, 50, 75],
+            ticktext: ["75%", "50%", "25%", "0%", "25%", "50%", "75%"],
+            range: [-75, 75],
             fixedrange: true
         },
         yaxis: {

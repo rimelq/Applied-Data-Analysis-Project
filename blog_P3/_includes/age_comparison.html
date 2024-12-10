@@ -27,6 +27,8 @@
                 <option value="Hollywood">Hollywood</option>
                 <option value="Bollywood">Bollywood</option>
                 <option value="Eastasia">Eastasia</option>
+                <option value="Europe">Europe</option> 
+
             </select>
             <select id="genderSelect">
                 <option value="Both">Both</option>
@@ -137,25 +139,71 @@
 
         // Create plot
         const traces = [
+            // Real-world population density with fill
             {
                 x: ageRange,
                 y: realDensity,
                 name: 'Real-world Population',
                 type: 'scatter',
                 mode: 'lines',
-                line: { color: 'teal' },
+                line: { color: 'teal', width: 2 },
                 fill: 'tozeroy',
+                fillcolor: 'rgba(0, 128, 128, 0.2)',  // Transparent teal
+                showlegend: true,
                 hovertemplate: 'Age: %{x}<br>Percentage: %{y:.1%}<extra></extra>'
             },
+            // Real-world population confidence interval (upper)
+            {
+                x: ageRange,
+                y: realDensity.map(y => y * 1.1),
+                type: 'scatter',
+                mode: 'lines',
+                line: { color: 'teal', width: 1, dash: 'dash' },  // Dashed line
+                showlegend: false,
+                hoverinfo: 'skip'
+            },
+            // Real-world population confidence interval (lower)
+            {
+                x: ageRange,
+                y: realDensity.map(y => y * 0.9),
+                type: 'scatter',
+                mode: 'lines',
+                line: { color: 'teal', width: 1, dash: 'dash' },  // Dashed line
+                showlegend: false,
+                hoverinfo: 'skip'
+            },
+            // Actors density with fill
             {
                 x: ageRange,
                 y: actorDensity,
                 name: 'Actors',
                 type: 'scatter',
                 mode: 'lines',
-                line: { color: 'purple' },
+                line: { color: 'purple', width: 2 },
                 fill: 'tozeroy',
+                fillcolor: 'rgba(128, 0, 128, 0.2)',  // Transparent purple
+                showlegend: true,
                 hovertemplate: 'Age: %{x}<br>Percentage: %{y:.1%}<extra></extra>'
+            },
+            // Actors confidence interval (upper)
+            {
+                x: ageRange,
+                y: actorDensity.map(y => y * 1.1),
+                type: 'scatter',
+                mode: 'lines',
+                line: { color: 'purple', width: 1, dash: 'dash' },  // Dashed line
+                showlegend: false,
+                hoverinfo: 'skip'
+            },
+            // Actors confidence interval (lower)
+            {
+                x: ageRange,
+                y: actorDensity.map(y => y * 0.9),
+                type: 'scatter',
+                mode: 'lines',
+                line: { color: 'purple', width: 1, dash: 'dash' },  // Dashed line
+                showlegend: false,
+                hoverinfo: 'skip'
             }
         ];
 

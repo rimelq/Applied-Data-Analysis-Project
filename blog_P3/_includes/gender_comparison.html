@@ -4,6 +4,8 @@
             <option value="Hollywood">Hollywood</option>
             <option value="Bollywood">Bollywood</option>
             <option value="Eastasia">Eastasia</option>
+            <option value="Europe">Europe</option> 
+
         </select>
         <select id="genderPeriodSelect">
             <option value="All periods">All periods</option>
@@ -225,7 +227,7 @@
 
         proportions.forEach(row => {
             console.log('Row:', row.Category, 'Type:', row.Type);
-            // Add male bar
+            // Add male bar with more visible border
             traces.push({
                 x: [row.Category],
                 y: [row.Male],
@@ -233,6 +235,10 @@
                 type: 'bar',
                 marker: {
                     color: row.Type === 'Real-world' ? '#99cccc' : 'teal',
+                    line: {
+                        color: 'rgba(255, 255, 255, 0.8)',  
+                        width: 4 // Thicker border
+                    }
                 },
                 showlegend: !maleAdded,
                 text: `${(row.Male * 100).toFixed(1)}%`,
@@ -245,7 +251,7 @@
             });
             maleAdded = true;
 
-            // Add female bar
+            // Add female bar with more visible border
             traces.push({
                 x: [row.Category],
                 y: [row.Female],
@@ -253,6 +259,10 @@
                 type: 'bar',
                 marker: {
                     color: row.Type === 'Real-world' ? '#cc99cc' : 'purple',
+                    line: {
+                        color: 'rgba(255, 255, 255, 0.8)',  
+                        width: 4  
+                    }
                 },
                 base: [row.Male],
                 showlegend: !femaleAdded,

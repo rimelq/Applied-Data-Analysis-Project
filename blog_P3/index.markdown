@@ -8,21 +8,8 @@ title:
 ---
 
 # Movie Industry Analysis
+<div class="flourish-embed flourish-sankey" data-src="visualisation/20741496"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20741496/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
 
-<!-- <div class="plot-section">
-  <h2>Ethnicity Distribution</h2>
-  {% include ethnicity_comparison.html %}
-</div>
-
-<div class="plot-section">
-  <h2>Gender Distribution</h2>
-  {% include gender_comparison.html %}
-</div>
-
-<div class="plot-section">
-    <h2>Age Distribution</h2>
-    {% include age_comparison.html %}
-</div> -->
 
 ## Get in Touch
 You can contact us atmyui [example@example.com](mailto:example@example.com).

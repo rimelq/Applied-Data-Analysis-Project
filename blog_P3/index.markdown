@@ -9,7 +9,7 @@ title:
 
 # Movie Industry Analysis
 
-<div class="plot-section">
+<!-- <div class="plot-section">
   <h2>Ethnicity Distribution</h2>
   {% include ethnicity_comparison.html %}
 </div>
@@ -22,7 +22,7 @@ title:
 <div class="plot-section">
     <h2>Age Distribution</h2>
     {% include age_comparison.html %}
-</div>
+</div> -->
 
 ## Get in Touch
 You can contact us atmyui [example@example.com](mailto:example@example.com).

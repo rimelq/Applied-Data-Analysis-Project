@@ -379,13 +379,14 @@ spline-viewer {
   border: 2px solid #ccc; // Add a light border 
   background: white; // Fallback background
   border-radius: 12px; // Rounded corners 
+  cursor: grab; // Show the grab cursor 
+  transition: none; // Disable transitions for smooth dragging
 }
 
-#map-pip {
-  width: 100%;
-  height: 100%;
-  background-color: transparent; /* Ensure the map is visible */
+#map-container.pip:active {
+  cursor: grabbing; /* Change cursor when dragging */
 }
+
 
 #close-pip {
   position: absolute;
@@ -403,6 +404,29 @@ spline-viewer {
 #close-pip:hover {
   background-color: #c2b6d2; 
 }
+
+#drag-pip {
+  position: absolute;
+  top: 5px; /* Place the button in the top-left of the PiP container */
+  left: 5px;
+  z-index: 1200; /* Ensure the button is above the map content */
+  background-color: #e2ddee; /* Match your color scheme */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Consistent with other buttons */
+  padding: 5px 10px;
+  font-size: 12px; /* Keep a compact style */
+  cursor: grab; /* Show grab cursor for visual feedback */
+}
+
+#drag-pip:hover {
+  background-color: #d3c9e2; /* Subtle hover effect */
+}
+
+#drag-pip:active {
+  background-color: #c4b6d7; /* Darker color when clicked */
+  cursor: grabbing; /* Indicate active drag */
+}
+
 
 
 

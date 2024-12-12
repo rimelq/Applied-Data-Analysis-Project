@@ -45,12 +45,12 @@ var simplemaps_worldmap_mapdata={
     navigation_color: "#f7f7f7",
     navigation_border_color: "#636363",
     initial_back: "no",
-    initial_zoom: -1,
+    initial_zoom: 6,
     initial_zoom_solo: "no",
     region_opacity: 1,
     region_hover_opacity: 0.6,
     zoom_out_incrementally: "yes",
-    zoom_percentage: 0.99,
+    zoom_percentage: 10,
     zoom_time: 0.5,
     
 		//Popup settings

@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const mapContainer = document.getElementById("map-container");
   const dragButton = document.getElementById("drag-pip");
+  const closeButton = document.getElementById("close-pip");
 
-  if (!mapContainer || !dragButton) {
+  if (!mapContainer || !dragButton || !closeButton) {
     console.error("Essential elements for PiP functionality are missing.");
     return;
   }
@@ -28,6 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
       mapContainer.style.left = ""; // Reset to default horizontal position
       mapContainer.style.top = "";  // Reset to default vertical position
     }
+  });
+
+  closeButton.addEventListener("click", () => {
+    // Deactivate PiP mode
+    mapContainer.classList.remove("pip");
+    mapContainer.style.left = ""; // Reset horizontal position
+    mapContainer.style.top = "";  // Reset vertical position
+    // Scroll back to the main map
+    window.scrollTo({ top: mapOffsetTop - 100, behavior: "smooth" });
   });
 
   // Start dragging

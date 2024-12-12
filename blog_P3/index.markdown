@@ -18,8 +18,8 @@ du texte
 
 <div id="map-container">
   <div id="map"></div>
-  <button id="drag-pip" class="drag-pip">Drag</button>
-  <button id="close-pip" style="display: none;">Close</button>
+  <button id="drag-pip">Drag</button>
+  <button id="close-pip">Close</button>
 </div>
 
 lolita

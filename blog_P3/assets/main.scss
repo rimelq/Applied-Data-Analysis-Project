@@ -358,3 +358,55 @@ spline-viewer {
   cursor: move;
 }
 
+
+//Custom me
+#map-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Normal map size */
+  transition: all 0.3s ease; /* Smooth transition for PiP mode */
+}
+
+#map-container.pip {
+  position: fixed; /* Fix position for PiP */
+  bottom: 10px;    /* Place it at the bottom-right */
+  right: 10px;     /* 10px from the screen's right edge */
+  width: 300px;    /* Resize for PiP */
+  height: 200px;
+  z-index: 9999;   /* Place it above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+  border: 2px solid #ccc; /* Add a light border */
+  background: white; /* Fallback background */
+  overflow: hidden;
+}
+
+#map-pip {
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Ensure the map is visible */
+}
+
+#close-pip {
+  position: absolute;
+  top: 10px; /* Position at the top-right of the PiP map */
+  right: 10px;
+  z-index: 1000; /* Ensure it appears above the map */
+  background-color: #ff4d4d; /* Red color for the button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s ease;
+}
+
+#close-pip:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+
+
+

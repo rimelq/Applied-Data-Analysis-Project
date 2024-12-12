@@ -1,9 +1,15 @@
-@import "minima";
+---
+#Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import 
+"minima";
+
 
 .site-header {
   border-top: 0;
   border-bottom: 0;
-  background: rgb(226, 212, 212);
+  background: rgb(183, 164, 198);
   position: fixed;
   width: 100%;
   z-index: 100;

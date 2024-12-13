@@ -20,6 +20,7 @@ du texte
   <div id="map"></div>
   <button id="drag-pip">Drag</button>
   <button id="close-pip">Close</button>
+  <div class="resize-handle br"></div> <!-- Bottom-right -->
 </div>
 
 lolita

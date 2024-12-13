@@ -340,6 +340,7 @@ spline-viewer {
   margin-top: 50px;
 }
 
+// My own stuff
 #container {
   background: #000;
   color: #fff;
@@ -362,7 +363,7 @@ spline-viewer {
   position: relative;
   width: 100%;
   height: 500px; //Normal map size´
-  transition: all 0.3s ease; // Smooth transition for PiP mode
+  transition: all 0.3s ease-in-out; // Smooth transition for PiP mode
   overflow: hidden
 }
 
@@ -372,7 +373,7 @@ spline-viewer {
   right: 16px;
   width: 300px;
   height: auto;
-  max-height: 200px; /* Ensure PiP map doesn’t grow too large */
+  max-height: 600px; /* Ensure PiP map doesn’t grow too large */
   overflow: hidden; /* Prevent content spilling out of the PiP container */
   //display: none; /* Start hidden */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Add shadow for effect 
@@ -380,7 +381,42 @@ spline-viewer {
   background: white; // Fallback background
   border-radius: 12px; // Rounded corners 
   cursor: grab; // Show the grab cursor 
-  transition: none; // Disable transitions for smooth dragging
+  transition: all 0.3s ease-in-out; // Disable transitions for smooth dragging
+}
+
+
+
+/* Resizable handles */
+#map-container.pip .resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  z-index: 2000;
+  cursor: nwse-resize;
+  overflow: hidden;
+}
+
+#map-container.pip .resize-handle.br { /* Bottom-right handle */
+  position: absolute;
+  bottom: 6px;
+  right: 2px;
+  width: 20px; /* Make the handle slightly larger */
+  height: 20px;
+  z-index: 3000; /* Ensure it appears on top */
+  cursor: nwse-resize; /* Show resize cursor */
+  background: url('/assets/images/arrow_out.jpg') no-repeat center center; /* Add arrow image */
+  background-size: contain; /* Ensure the image fits the button */
+  border: none;
+  outline: none;
+  opacity: 0.8; /* Make it slightly transparent */
+  transition: opacity 0.2s ease;
+  overflow: hidden;
+}
+
+#map-container.pip .resize-handle.br:hover {
+  opacity: 1; /* Fully visible on hover */
+  overflow: hidden;
 }
 
 #map-container.pip:active {
@@ -390,14 +426,15 @@ spline-viewer {
 
 #close-pip {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 1100;
+  top: 0px;
+  right: 0px;
+  z-index: 1500;
   background-color: #c0b2e0;
   border: 1px solid #ccc;
   padding: 5px 10px;
   cursor: pointer;
   display: none; /* Initially hidden */
+  border-radius: 4px;
 }
 
 
@@ -407,16 +444,17 @@ spline-viewer {
 
 #drag-pip {
   position: absolute;
-  top: 1px; /* Place the button in the top-left of the PiP container */
-  left: 1px;
-  z-index: 1200; /* Ensure the button is above the map content */
+  bottom: 0px; /* Place the button in the top-left of the PiP container */
+  left: 0px;
+  z-index: 1500; /* Ensure the button is above the map content */
   background-color: #e2ddee; /* Match your color scheme */
   border: 1px solid #ccc;
   border-radius: 4px; /* Consistent with other buttons */
   padding: 5px 10px;
-  font-size: 12px; /* Keep a compact style */
+  //font-size: 12px; /* Keep a compact style */
   cursor: grab; /* Show grab cursor for visual feedback */
   display: none;
+  border-radius: 4px;
 }
 
 #drag-pip:hover {
@@ -432,6 +470,40 @@ spline-viewer {
 #map-container.pip #close-pip {
   display: block;
 }
+
+#typewriter-title {
+  font-size: 2rem; // Adjust font size
+  font-weight: bold;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#typewriter-title .line1 {
+  display: block; // First line on its own
+  white-space: nowrap;
+}
+
+#typewriter-title .line2 {
+  display: block; // Second line below
+  white-space: nowrap;
+  margin-top: 0.5rem; // Add spacing between lines if needed
+}
+
+@keyframes blink-cursor {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #333;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+
 
 
 

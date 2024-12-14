@@ -7,6 +7,8 @@ title:
 #permalink: /index/
 ---
 
+<div id="background-transition"></div> <!-- Starry background layer -->
+
 # Intro papotage bienvenue
 du texte
 

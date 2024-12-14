@@ -26,5 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     typeLine1(); // Start the typing effect
+
+    // Listen for scroll events
+    document.addEventListener("scroll", () => {
+      const scrollPosition = window.scrollY;
+      const transitionHeight = window.innerHeight * 0.15; // Start fading at 15% of the viewport height
+
+      // Add or remove the 'scrolled' class based on scroll position
+      if (scrollPosition > transitionHeight) {
+        document.body.classList.add("scrolled");
+      } else {
+        document.body.classList.remove("scrolled");
+      }
+    });
   });
   

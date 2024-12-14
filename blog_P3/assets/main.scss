@@ -52,38 +52,6 @@
 }
 /* END OF THE NAVIGATION BAR/HEADER */
 
-
-/* START OF THE BACKGROUND ANIMATION*/
-/*
-@keyframes move-twinkle {
-    from {background-position: 0 0;}
-    to {background-position: -10000px 5000px;}
-}
-
-.stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000 url('/assets/images/stars_sky.jpg') repeat top center;
-
-    z-index: 1000;
-}
-
-.twinkling {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent url('/assets/images/giphy.webp') repeat top center;
-    z-index: 2000;
-    //animation: move-twinkle 200s linear infinite;
-}
-    */
-/* END OF THE BACKGROUND ANIMATION*/
-
 .home {
   min-height: 100vh;
 }
@@ -102,48 +70,58 @@
   opacity: 0.95;
   
   h1 {
-    font-size: 48px;
-    max-width: 900px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    word-wrap: break-word;
   }
 }
 
 @media screen and (max-width: 600px) {
   .hero h1 {
-    font-size: 32px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+}
+/* END OF THE BACKGROUND */
+
+/* START OF THE BACKGROUND TRANSITION */
+#background-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/background.gif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -2;
+  opacity: 1; 
+  transition: opacity 0.8s ease-in-out;
+}
+
+@media (max-width: 600px) {
+  #background-transition {
+    transition: opacity 0.5s ease-in-out; /* Faster fade on smaller screens */
   }
 }
 
-/*
-.hero:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/assets/images/stars_sky.jpg') repeat top center;
-  z-index: -2;
+#introduction {
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: #fefefe; 
 }
 
-.hero:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent url('/assets/images/giphy.webp') repeat top center;
-  //animation: move-twinkle 200s linear infinite;
-  opacity: 0.3;
-  z-index: 2000;
+/* Smooth Transition for the Opacity Effect */
+.scrolled #background-transition {
+  opacity: 0; // Fading outt
 }
-  */
-
-/* END OF THE BACKGROUND */
+/* END OF THE BACKGROUND TRANSITION */
 
 
 /* START OF THE CONTENT BELOW BACKGROUND */
@@ -294,22 +272,24 @@
 
 /* START OF TYPE TOTALLY SPIES*/
 #typewriter-title {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: bold;
   display: inline-block;
-  overflow: hidden;
+  overflow-wrap: break-word; 
   white-space: nowrap;
   text-align: center;
+  margin: 0 auto;
+  max-width: 90%;
 }
 
 #typewriter-title .line1 {
   display: block; 
-  white-space: nowrap;
+  white-space: normal;
 }
 
 #typewriter-title .line2 {
   display: block; 
-  white-space: nowrap;
+  white-space: normal;
   margin-top: 0.5rem; 
 }
 
@@ -326,6 +306,7 @@
   }
 }
 /* END OF TYPE TOTALLY SPIES */
+
 
 
 

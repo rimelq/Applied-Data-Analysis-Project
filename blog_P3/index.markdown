@@ -27,6 +27,13 @@ du texte
 
 lolita
 
+<div id="main-content">
+    <h2>Welcome</h2>
+    <p>Click a region on the map to view more information.</p>
+</div>
+
+
+
 
 # Movie Industry Analysis
 

@@ -8,12 +8,12 @@ var simplemaps_worldmap_mapdata={
     
 		//State defaults
 		state_description: "State description",
-    state_color: "#88A4BC",
+    state_color: "#70D0D2",
     state_hover_color: "#3B729F",
     state_url: "https://simplemaps.com",
     border_size: 1.5,
     border_color: "#ffffff",
-    all_states_inactive: "no",
+    all_states_inactive: "yes",
     all_states_zoomable: "no",
     
 		//Location defaults
@@ -1598,5 +1598,51 @@ var simplemaps_worldmap_mapdata={
       size: "default"
     }
   },*/
-  labels: {}
+  labels: {}, 
+  legend: {
+    entries: []
+  }, 
+  regions: {
+    "0": {
+      name: "North America",
+      states: [
+        "CA",
+        "US"
+      ],
+      zoomable: "no",
+      color: "#5B3C89",
+      url: "javascript:loadRegionContent('US')"
+    },
+    "1": {
+      name: "Europe",
+      states:['SK', 'EE', 'BG', 'GB', 'GB', 'SK', 
+        'LU', 'NL', 'UA', 'default', 'CH', 'IT',
+        'GB', 'default', 'GB', 'IE',
+        'SE', 'AL', 'FR', 'PL', 'SI', 'RO', 'RS',
+        'HR', 'GB', 'MK', 'DK',
+        'CZ', 'AT', 'ES', 'BA', 
+        'default', 'PT', 'IS', 'default', 'MT', 'GB',
+        'GE', 'CY', 'LT', 'GR', 'BE', 'HU', 'DE',
+        'NO', 'FI', 'ME'],
+        zoomable: "no",
+        color: "#9585C8",
+        url: "javascript:loadRegionContent('EU')"
+    },
+    "2": {
+      name: "East Asia",
+      states: ['CN', 'JP', 'MN', 'HK', 'KR', 'TW'],
+      zoomable: "no",
+      color: "#B1A3E0",
+      url: "javascript:loadRegionContent('EA')"
+    },
+    "3": {
+      name: "India",
+      states: [
+        "IN"
+      ],
+      zoomable: "no",
+      color: "#7B5BAE",
+      url: "javascript:loadRegionContent('IN')"
+    }
+  }
 };

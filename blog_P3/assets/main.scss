@@ -5,14 +5,14 @@
 @import 
 "minima";
 
-
+/* START OF THE NAVIGATION BAR/HEADER */
 .site-header {
   border-top: 0;
   border-bottom: 0;
   background: rgb(183, 164, 198);
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 2500;
   padding: 2px 0;
   height: 40px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,11 @@
   color: #333 !important;
   text-shadow: none;
 }
+/* END OF THE NAVIGATION BAR/HEADER */
 
+
+/* START OF THE BACKGROUND ANIMATION*/
+/*
 @keyframes move-twinkle {
     from {background-position: 0 0;}
     to {background-position: -10000px 5000px;}
@@ -62,9 +66,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000 url('https://upload.wikimedia.org/wikipedia/commons/6/6e/Starsinthesky.jpg') repeat top center;
+    background: #000 url('/assets/images/stars_sky.jpg') repeat top center;
 
-    z-index: -2;
+    z-index: 1000;
 }
 
 .twinkling {
@@ -73,25 +77,29 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent url('https://upload.wikimedia.org/wikipedia/commons/e/e4/Snowflakes_falling.gif') repeat top center;
-    z-index: -1;
-    animation: move-twinkle 200s linear infinite;
+    background: transparent url('/assets/images/giphy.webp') repeat top center;
+    z-index: 2000;
+    //animation: move-twinkle 200s linear infinite;
 }
+    */
+/* END OF THE BACKGROUND ANIMATION*/
 
 .home {
   min-height: 100vh;
 }
 
+/* START OF THE BACKGROUND*/ 
 .hero {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/background.gif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  opacity: 0.95;
   
   h1 {
     font-size: 48px;
@@ -109,122 +117,55 @@
   }
 }
 
-.content {
-  margin-top: 50px;
-}
-
-#container {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 13px;
-  line-height: 20px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-}
-#globeViz {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  cursor: move;
-}
-
-spline-viewer {
-  position: fixed;
+/*
+.hero:before {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  background: url('/assets/images/stars_sky.jpg') repeat top center;
+  z-index: -2;
 }
 
-.hero {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  h1 {
-    font-size: 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-.content {
-  margin-top: 50px;
-}
-
-#container {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 13px;
-  line-height: 20px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-}
-#globeViz {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  cursor: move;
-}
-
-#vanta-bg {
-  position: fixed;
+.hero:after {
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  background: transparent url('/assets/images/giphy.webp') repeat top center;
+  //animation: move-twinkle 200s linear infinite;
+  opacity: 0.3;
+  z-index: 2000;
 }
+  */
 
-.hero {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  h1 {
-    font-size: 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
-}
+/* END OF THE BACKGROUND */
 
-@media screen and (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-}
 
+/* START OF THE CONTENT BELOW BACKGROUND */
 .content {
   margin-top: 50px;
 }
+/* END OF THE CONTENT BELOW BACKGROUND */
 
+/* START OF GLOBAL CONTAINER */
+#container {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0px; // layout to be changed
+  overflow: hidden;
+  padding: 0px; // layout to be changed
+}
+/* END OF GLOBAL CONTAINER */
+
+/* START OF PIP */
 #container {
   background: #000;
   color: #fff;
@@ -234,129 +175,6 @@ spline-viewer {
   margin: 0px;
   overflow: hidden;
   padding: 0px;
-}
-#globeViz {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  cursor: move;
-}
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #000033;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  z-index: -1;
-}
-
-.hero {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  h1 {
-    font-size: 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-.content {
-  margin-top: 50px;
-}
-
-#container {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 13px;
-  line-height: 20px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-}
-#globeViz {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  cursor: move;
-}
-
-#globeCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: radial-gradient(circle at center, #0a192f 0%, #000000 100%);
-}
-
-.hero {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  
-  h1 {
-    font-size: 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-.content {
-  margin-top: 50px;
-}
-
-// My own stuff
-#container {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  font-size: 13px;
-  line-height: 20px;
-  margin: 0px;
-  overflow: hidden;
-  padding: 0px;
-}
-#globeViz {
-  position: fixed !important;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  cursor: move;
 }
 
 #map-container {
@@ -373,26 +191,26 @@ spline-viewer {
   right: 16px;
   width: 300px;
   height: auto;
-  max-height: 600px; /* Ensure PiP map doesn’t grow too large */
-  overflow: hidden; /* Prevent content spilling out of the PiP container */
-  //display: none; /* Start hidden */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Add shadow for effect 
-  border: 2px solid #ccc; // Add a light border 
+  max-height: 600px; // Making sure PiP map doesn’t grow too large 
+  overflow: hidden; // No spill
+  //display: none; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border: 2px solid #ccc; 
   background: white; // Fallback background
   border-radius: 12px; // Rounded corners 
   cursor: grab; // Show the grab cursor 
   transition: all 0.3s ease-in-out; // Disable transitions for smooth dragging
 }
+/* END OF PIP*/
 
 
-
-/* Resizable handles */
+/* START OF RESIZING PIP */
 #map-container.pip .resize-handle {
   position: absolute;
   width: 10px;
   height: 10px;
   background: transparent;
-  z-index: 2000;
+  z-index: 9;
   cursor: nwse-resize;
   overflow: hidden;
 }
@@ -401,39 +219,40 @@ spline-viewer {
   position: absolute;
   bottom: 6px;
   right: 2px;
-  width: 20px; /* Make the handle slightly larger */
+  width: 20px;
   height: 20px;
-  z-index: 3000; /* Ensure it appears on top */
-  cursor: nwse-resize; /* Show resize cursor */
-  background: url('/assets/images/arrow_out.jpg') no-repeat center center; /* Add arrow image */
-  background-size: contain; /* Ensure the image fits the button */
+  z-index: 10; 
+  cursor: nwse-resize;
+  background: url('/assets/images/arrow_out.jpg') no-repeat center center;
+  background-size: contain; 
   border: none;
   outline: none;
-  opacity: 0.8; /* Make it slightly transparent */
+  opacity: 0.8; 
   transition: opacity 0.2s ease;
   overflow: hidden;
 }
 
 #map-container.pip .resize-handle.br:hover {
-  opacity: 1; /* Fully visible on hover */
+  opacity: 1; 
   overflow: hidden;
 }
+/* END OF RESIZING */
 
 #map-container.pip:active {
-  cursor: grabbing; /* Change cursor when dragging */
+  cursor: grabbing; 
 }
 
-
+/* START OF CLOSING BUTTON IN PIP*/
 #close-pip {
   position: absolute;
   top: 0px;
   right: 0px;
-  z-index: 1500;
+  z-index: 10;
   background-color: #c0b2e0;
   border: 1px solid #ccc;
   padding: 5px 10px;
   cursor: pointer;
-  display: none; /* Initially hidden */
+  display: none; 
   border-radius: 4px;
 }
 
@@ -441,38 +260,41 @@ spline-viewer {
 #close-pip:hover {
   background-color: #c2b6d2; 
 }
+/* END OF CLOSING BUTTON IN PIP */
 
+/* START OF DRAGGING BUTTON IN PIP */
 #drag-pip {
   position: absolute;
-  bottom: 0px; /* Place the button in the top-left of the PiP container */
+  bottom: 0px; 
   left: 0px;
-  z-index: 1500; /* Ensure the button is above the map content */
-  background-color: #e2ddee; /* Match your color scheme */
+  z-index: 10; 
+  background-color: #e2ddee; 
   border: 1px solid #ccc;
-  border-radius: 4px; /* Consistent with other buttons */
+  border-radius: 4px; 
   padding: 5px 10px;
-  //font-size: 12px; /* Keep a compact style */
-  cursor: grab; /* Show grab cursor for visual feedback */
+  cursor: grab; 
   display: none;
   border-radius: 4px;
 }
 
 #drag-pip:hover {
-  background-color: #d3c9e2; /* Subtle hover effect */
+  background-color: #d3c9e2; 
 }
 
 #drag-pip:active {
-  background-color: #c4b6d7; /* Darker color when clicked */
-  cursor: grabbing; /* Indicate active drag */
+  background-color: #c4b6d7; 
+  cursor: grabbing; 
 }
 
 #map-container.pip #drag-pip,
 #map-container.pip #close-pip {
   display: block;
 }
+/* END OF DRAGGING BUTTON IN PIP */
 
+/* START OF TYPE TOTALLY SPIES*/
 #typewriter-title {
-  font-size: 2rem; // Adjust font size
+  font-size: 2rem;
   font-weight: bold;
   display: inline-block;
   overflow: hidden;
@@ -481,15 +303,16 @@ spline-viewer {
 }
 
 #typewriter-title .line1 {
-  display: block; // First line on its own
+  display: block; 
   white-space: nowrap;
 }
 
 #typewriter-title .line2 {
-  display: block; // Second line below
+  display: block; 
   white-space: nowrap;
-  margin-top: 0.5rem; // Add spacing between lines if needed
+  margin-top: 0.5rem; 
 }
+
 
 @keyframes blink-cursor {
   0% {
@@ -502,7 +325,7 @@ spline-viewer {
     border-color: transparent;
   }
 }
-
+/* END OF TYPE TOTALLY SPIES */
 
 
 

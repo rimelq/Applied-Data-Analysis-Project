@@ -84,4 +84,5 @@ exclude:
 include:
   - _includes
   - assets
+  - regions
   - visualizations

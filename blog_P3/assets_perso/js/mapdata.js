@@ -1625,7 +1625,7 @@ var simplemaps_worldmap_mapdata={
         'GE', 'CY', 'LT', 'GR', 'BE', 'HU', 'DE',
         'NO', 'FI', 'ME'],
         zoomable: "no",
-        color: "#9585C8",
+        color: "#7B5BAE",
         url: "javascript:loadRegionContent('EU')"
     },
     "2": {
@@ -1639,9 +1639,9 @@ var simplemaps_worldmap_mapdata={
       name: "India",
       states: [
         "IN"
-      ],
+      ], 
       zoomable: "no",
-      color: "#7B5BAE",
+      color: "#9585C8",
       url: "javascript:loadRegionContent('IN')"
     }
   }

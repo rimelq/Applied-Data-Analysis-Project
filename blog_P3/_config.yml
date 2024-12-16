@@ -36,9 +36,6 @@ plugins:
 
 permalink: /:categories/:title/
 
-LOLILOL
-
-
 livereload: true
 
 #show_excerpts: true

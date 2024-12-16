@@ -4,33 +4,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const secondPart = title.split(":")[1]?.trim() || ""; // Text after the colon
     const line1 = document.querySelector("#typewriter-title .line1");
     const line2 = document.querySelector("#typewriter-title .line2");
-    let index1 = 0;
     let index2 = 0;
   
-    function typeLine1() {
-      if (index1 < firstPart.length) {
-        line1.textContent += firstPart[index1];
-        index1++;
-        setTimeout(typeLine1, 85); // Adjust speed if needed
-      } else {
-        setTimeout(typeLine2, 200); // Small delay before starting second line
-      }
-    }
-  
+    // Display first line immediately without animation
+    line1.textContent = firstPart;
+
+    // Only animate the second line
     function typeLine2() {
       if (index2 < secondPart.length) {
         line2.textContent += secondPart[index2];
         index2++;
-        setTimeout(typeLine2, 85); // Adjust speed if needed
+        setTimeout(typeLine2, 70); 
       }
     }
   
-    typeLine1(); // Start the typing effect
-
+    // Start the typing effect for second line
+    setTimeout(typeLine2, 150); 
+  
     // Listen for scroll events
     document.addEventListener("scroll", () => {
       const scrollPosition = window.scrollY;
-      const transitionHeight = window.innerHeight * 0.15; // Start fading at 15% of the viewport height
+      const transitionHeight = window.innerHeight * 0.15; 
 
       // Add or remove the 'scrolled' class based on scroll position
       if (scrollPosition > transitionHeight) {
@@ -39,5 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.remove("scrolled");
       }
     });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
   });
   

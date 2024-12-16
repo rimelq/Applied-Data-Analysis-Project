@@ -23,20 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     clearTimeout(scrollTimeout);
 
-   
+    // const scrollPosition = window.scrollY;
+    // const mapOffsetTop = mapContainer.offsetTop;
+    // const mapHeight = mapContainer.offsetHeight;
+    // const viewportHeight = window.innerHeight;
+    // const offsetThreshold = mapOffsetTop + mapHeight - viewportHeight + 2700;
     const scrollPosition = window.scrollY;
     const mapOffsetTop = mapContainer.offsetTop;
+    const mapHeight = mapContainer.offsetHeight;
+    const viewportHeight = window.innerHeight;
+    const offsetThreshold = mapOffsetTop + mapHeight - viewportHeight;
 
-
-    if (scrollPosition > mapOffsetTop + mapContainer.offsetHeight) {
+    if (scrollPosition > offsetThreshold) {
       scrollTimeout = setTimeout(() => {
-        mapContainer.classList.add("pip"); // Add PiP mode
-        dragButton.style.display = "block"; // Show drag button
-        closeButton.style.display = "block"; // Show close button
+        mapContainer.classList.add("pip");
+        dragButton.style.display = "block";
+        closeButton.style.display = "block";
 
         if (!mapContainer.style.width || !mapContainer.style.height) {
-          mapContainer.style.width = "200px"; // Default width
-          mapContainer.style.height = "150px"; // Default height
+          mapContainer.style.width = "200px";
+          mapContainer.style.height = "150px";
           console.log("Initial PiP dimensions set.");
         }
       }, 50);

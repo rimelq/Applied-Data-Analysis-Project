@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewportHeight = window.innerHeight;
     const offsetThreshold = mapOffsetTop + mapHeight - viewportHeight;
 
-    if (scrollPosition > offsetThreshold) {
+    if (scrollPosition > offsetThreshold + 2700) {
       scrollTimeout = setTimeout(() => {
         mapContainer.classList.add("pip");
         dragButton.style.display = "block";

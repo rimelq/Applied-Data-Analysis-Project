@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const title = "The Reel Worje testetsteet Is Cinema Holding a True Mirror to Society?";
+    const title = "The Reel World vs. The Real World: Is Cinema Holding a True Mirror to Society?";
     const firstPart = title.split(":")[0] + ":"; // Text before and including the colon
     const secondPart = title.split(":")[1]?.trim() || ""; // Text after the colon
     const line1 = document.querySelector("#typewriter-title .line1");

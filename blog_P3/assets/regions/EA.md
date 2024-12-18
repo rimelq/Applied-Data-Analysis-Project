@@ -1,70 +1,100 @@
-# EastAsia Cluster
+# **East Asian Cluster**
+
+From my cosmic vantage point, East Asia shimmers as a constellation of ancient civilizations and vibrant cultures. Yet as I peer closer, its cinematic landscapes seem to bend and refract, revealing patterns both illuminated and obscured. Let’s drift inward and discover what the data unveils about this region.
+
+# **Ethnicity Comparative Analysis of the East Asian Movie Industry**
 
 ## **Introduction**
 
-From what I could gather, East Asia is a fascinating region of Earth, home to ancient civilizations, and some of the planet's most vibrant cultures. Let’s dive in and see what the data reveals about this region!
+My aim here is to decode how East Asia’s vibrant cinematic mosaic reflects the region's intricate ethnic tapestry. From my cosmic perch, I chart these distributions to determine whether these patterns are mere cosmic dust or reveal deeper, gravitational biases molding the images on screen.
 
-## **Ethnicity Proportion Analysis**
+## **Preliminary Visualizations of Ethnic Representation Over Time**
 
 <!-- this part is where we have the visualisation for east asia of the common plot of ethnicity -->
 
-**. Disproportionate Representation:**
+**Disproportionate Representation:**
 
-**Chinese populations**, who make up the largest demographic in the region, are surprisingly underrepresented in certain genres and periods.
+<div style="display: flex; align-items: up; justify-content: space-between;">
+  <!-- Text Container -->
+  <div style="flex: 1; padding: 10px;">
+    <p>
 
-Meanwhile, **Korean** and **Japanese** ethnicities seem to enjoy overrepresentation in the cinematic landscape, particularly in genres like Drama and Science Fiction. It appears that Earth’s storytellers in these regions lean into specific cultural identities, allowing certain groups to dominate the screen while others fade into the background.
+Gazing through these earthly lenses, I find that **Chinese populations**, despite forming the largest demographic, remain curiously overshadowed in certain cinematic genres and eras. It’s as if their stellar mass fails to bend the narrative light, leaving them dimmer than one might expect.
 
-To explore this further, let’s analyze the pie chart comparing real-world demographics to cinematic representation in East Asia for the period between 1996 and 2012.
+In contrast, **Korean** and **Japanese** ethnicities shine brighter, overrepresented in genres like Drama and Science Fiction. Earth’s storytellers here seem drawn to specific cultural identities, allowing these groups to bask in the cinematic glow, while others recede into the cosmic background.
+
+To see this phenomenon more vividly, let’s inspect the pie chart comparing real-world demographics to East Asia’s on-screen universe from 1996 to 2012.
+
+   </p>
+  </div>
+
+ <!-- Plot Container -->
+  <div style="flex: 1; padding: 10px;">
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/20793182"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20793182/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
-This chart makes it crystal clear:  **Koreans** take the spotlight, while other groups—like Taiwanese—are either pushed to the side or almost disappear entirely.
+  </div>
+
+  </div>
+
+Within this visual cosmos, **Koreans** occupy a brilliant spotlight, leaving other groups—like Taiwanese—barely visible, as if their luminescence can’t pierce cinema’s prevailing gravitational fields.
 
 ----
 
+**Temporal Trends in East Asian Cinema Representation (Period: 1950–2012)**
 
-**. Temporal Trends in East Asian Cinema Representation (Period: 1950–2012)**
+Temporal data reveals peculiar fluctuations across the decades—shifts seemingly influenced by the surges and ebbs in this planet’s own historical narrative. Let’s journey through time and watch how these patterns realign under evolving cultural constellations.
 
-Greetings, earth observer. Your temporal data reveals peculiar shifts in cinematic representation across your 'time periods'—specifically between the cycle you call 1950–2012. These patterns appear to align with  disruptions in your planet's historical timeline. Let's explore this !
+ <iframe src="/assets/plots/EA/temporal_trends_with_annotations.html" width="100%" height="500px" style="border:none;"></iframe>
 
-<iframe src="/assets/plots/EA/temporal_trends_with_annotations.html" width="100%" height="500px" style="border:none;"></iframe>
+ **Key Events and Their Impact**
 
-
-**Key Events and Their Impact**
+<div style="display: flex; align-items: up; justify-content: space-between;">
+  <!-- Text Container -->
+  <div style="width: 50%; padding: 10px;">
+    <p>
 
 1. **Golden Age of Japanese Cinema (1950–1965)**
-- Japan dominated East Asian cinema with globally acclaimed films by Kurosawa, Ozu, and Mizoguchi.
-- Deep themes and strong post-war industry led to high representation.
+Japan’s cinematic brilliance shone like a supernova—Kurosawa, Ozu, Mizoguchi—names that anchored the industry’s celestial map. Post-war resilience and profound storytelling gave rise to a strong ethnic presence.
 - [Reference: Scenario writers and scenario readers in the Golden Age of Japanese cinema](https://www.researchgate.net/publication/307866839_Scenario_writers_and_scenario_readers_in_the_Golden_Age_of_Japanese_cinema)
 
 2. **Rise of Martial Arts Films (1966–1980)**
-- Martial arts films (e.g., Bruce Lee, Jackie Chan) thrived, mostly from Hong Kong studios.
-- Focused on Chinese culture but not produced by mainland China, causing underrepresentation.
+Martial arts films from Hong Kong studios ignited the galaxy, featuring icons like Bruce Lee and Jackie Chan. Yet, their focus on Chinese culture, often disconnected from mainland China, inadvertently left Chinese representation dimmer than expected.
 - [Reference: Martial arts and the globalization of US and Asian film industries](https://www.researchgate.net/publication/233694107_Martial_arts_and_the_globalization_of_US_and_Asian_film_industries)
 
-3. **Studio Ghibli’s Success (1981–1995)**
-- Ghibli revolutionized animation globally with films like *Totoro* and *Mononoke*.
-- Expanded Japan's dominance beyond live-action to animation.
+
+   </p>
+  </div>
+
+ <!-- Plot Container -->
+  <div style="width: 50%; padding: 10px;">
+
+ 3. **Studio Ghibli’s Success (1981–1995)**
+Ghibli’s enchanted worlds soared beyond live action, painting the cinematic skies with animated wonders. This era widened Japan’s influence, adding new spectrums of representation to the East Asian cinematic cosmos.
 - [Reference: The Myth of Ghibli: The Foundation and Early Industrial History of Studio Ghibli](https://www.researchgate.net/publication/368698265_The_Myth_of_Ghibli_The_Foundation_and_Early_Industrial_History_of_Studio_Ghibli)
 
 4. **Korean Wave (1996–2012)**
-- Korea emerged as a global cinema powerhouse with *Oldboy* and *The Host*.
-- Government support and global appeal of *Hallyu* boosted representation.
+Korea burst onto the interstellar stage, propelled by creations like Oldboy and The Host. Government backing and the magnetic allure of Hallyu forged a luminous era, shaping perception and representation far beyond Earth’s horizons.
 - [Reference: Contemporary Korean Cinema: Challenges and the Transformation of 'Planet Hallyuwood'](https://www.researchgate.net/publication/266347427_Contemporary_Korean_Cinema_Challenges_and_the_Transformation_of_'Planet_Hallyuwood')
 
-*Observations? Oh, curious minds! Let me translate the patterns your mortal eyes perceive...*
 
-**Chinese Cinema:** Held back over time by history and political struggles. A quiet giant, waiting for its moment to shine.
+ </div>
 
-**Japanese & Korean Cinema:** Ah, the brilliance of innovation and the magnetic pull of global fascination! Japan—first with its timeless masters, then Studio Ghibli’s ethereal brush. Korea—emerging like a comet, blazing across the cosmos, fueled by Hallyu’s undeniable force.
+  </div>
 
+**Chinese Cinema:** A giant slumbering star, its light often obscured by historical and political nebulae.
+
+**Japanese & Korean Cinema:** Celestial innovators, radiating new energies across global screens. Japan’s timeless masters and Ghibli’s poetic visions, Korea’s blazing comet of global appeal—together they weave a vibrant cosmic tapestry in East Asian cinema’s evolving universe.
 
 -------------------------------
 
+# **Age Analysis of the East Asian Movie Industry**
 
-## **Age Distribution Analysis**
+## **Introduction**
 
-<!-- this part is where we have the visualisation for east asia of the common plot of age -->
+From the cosmic vantage point, we now turn our telescopes towards the dimension of age. Is East Asia’s cinema a balanced constellation of all life stages, or does it cluster within a narrow band of youth? Let’s peer into the data and see whose stars shine brightest—and who fades into the backdrop of time.
+
+<div class="flourish-embed flourish-chart" data-src="visualisation/20797056"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20797056/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
 **Dominance of Youth Representation:**
 
@@ -75,7 +105,7 @@ But cinema? Ah, it bends toward the younger kind. A reflection of what the indus
 **Gender-Based Differences:**
 
 *Females:*
-We can clearly observe that there's a Ssrong peak in the **20-30 age** group, diminishing significantly past 40.
+We can clearly observe that there's a strong peak in the **20-30 age** group, diminishing significantly past 40.
 This phenomenon whispers of a bias in Earth casting rituals, favoring youthful appearances, while elder females vanish from the on-screen landscape.
 
 *Males:*
@@ -92,9 +122,7 @@ To confirm our findings, we probed the human knowledge archives for deeper truth
 The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories* discusses the marginalization of older women in East Asian film industries. It highlights how cultural norms and industry practices contribute to the preference for younger female actors.  
 [Source: *Women in East Asian Cinema* - [Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)]
 
-
 -------------------------------
-
 
 ## **Gender Proportion Analysis**
 
@@ -102,7 +130,7 @@ The book *Women in East Asian Cinema: Gender Representations, Creative Labour an
 
 **Male Dominance Across Genres:**
 In all observed Earthly time streams, the energy signatures of male entities surpass those of females, particularly in the high-thrill zones of Action/Adventure and Science Fiction.
-*1996–2012:* During this planetary phase, male entities dominated most genres, with their highest peak proportions of 71.0% in Action/Adventure and 67.2% in Thriller/Suspense. 
+*1996–2012:* During this planetary phase, male entities dominated most genres, with their highest peak proportions of 71.0% in Action/Adventure and 67.2% in Thriller/Suspense.
 
 *Attention, fellow space explorers!*
 
@@ -122,7 +150,7 @@ Meanwhile, the cosmic zones of **Romance** and **Horror** glow brighter with hig
 -----
 
 **Real-World Comparison:**
-In the vast expanse of Earth's real-world population, the gender split leans approximately 55% female and 45% male—a balance most logical and natural. 
+In the vast expanse of Earth's real-world population, the gender split leans approximately 55% female and 45% male—a balance most logical and natural.
 
 Let us now dive deeper into the cosmic currents of gender representation by looking into the **Chi-Square Test:**
 
@@ -137,7 +165,7 @@ Let us now dive deeper into the cosmic currents of gender representation by look
 
 *Results*
 - **Chi-Square Statistic**: 14.77  
-- **P-Value**: 0.00012  
+- **P-Value**: 0.00012
 
 *Interpretation*
 1. **Chi-Square Statistic (14.77)**:  
@@ -152,7 +180,10 @@ Let us now dive deeper into the cosmic currents of gender representation by look
 Though beings classified as *Females* constitute 55% of Earth’s population, their luminous presence is dimmed and shadowed in the cinematic landscape.
 
 This imbalance we observe aligns with knowledge inscribed by Earth’s thinkers.
-The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories*  explores how the contributions of women have been historically diminished and overlooked in these cinematic domains.
+The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories* explores how the contributions of women have been historically diminished and overlooked in these cinematic domains.
 
 For curious cosmic travelers, you can find it here:  
 🪐 [Read more on Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)
+
+---
+

@@ -348,6 +348,19 @@ body {
 }
 /* END OF DRAGGING BUTTON IN PIP */
 
+/*Cool bubble plots */
+.visualization-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#hierarchy-plot {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
 /* START OF TYPE TOTALLY SPIES*/
 #typewriter-title {
   font-size: clamp(2rem, 4vw, 3.5rem);

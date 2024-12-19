@@ -92,34 +92,27 @@ Korea burst onto the interstellar stage, propelled by creations like Oldboy and 
 
 ## **Introduction**
 
-From the cosmic vantage point, we now turn our telescopes towards the dimension of age. Is East Asia’s cinema a balanced constellation of all life stages, or does it cluster within a narrow band of youth? Let’s peer into the data and see whose stars shine brightest—and who fades into the backdrop of time.
+From the cosmic vantage point, we now turn our telescopes towards the dimension of age. 
 
 <div class="flourish-embed flourish-chart" data-src="visualisation/20797056"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20797056/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
-**Dominance of Youth Representation:**
+## **Dominance of Youth Representation:**
 
-Across all plots, youth takes the spotlight, with ages tightly clustered in the **20-40 range**.
-Meanwhile, the real-world populations hum with balance – age flows across all ranges, from the *energetic youth* to the *wise elders*.
-But cinema? Ah, it bends toward the younger kind. A reflection of what the industry desires… and perhaps, what it believes the world wishes to see.
+Across all plots, youth seizes center stage, with actor ages tightly clustered in the 20–40 range. Meanwhile, real-world populations sing a more harmonious tune—age flows seamlessly from energetic youth through to wise elders. Yet cinema bends toward younger faces, perhaps reflecting the industry’s vision of what audiences crave: an evergreen horizon of vigor and possibility.
 
-**Gender-Based Differences:**
+## **Gender-Based Differences:**
 
 *Females:*
-We can clearly observe that there's a strong peak in the **20-30 age** group, diminishing significantly past 40.
-This phenomenon whispers of a bias in Earth casting rituals, favoring youthful appearances, while elder females vanish from the on-screen landscape.
+A strong peak emerges in the 20–30 age group, tapering sharply beyond 40. This whispers of bias in Earth’s casting rituals, favoring youthful allure while sidelining older women, their stories drifting into the unseen depths of the cinematic cosmos.
 
 *Males:*
-Males ascend to their prime slightly later, peaking in the **30-40 year** zone.
-Unlike their female counterparts, males endure longer in Earth's cinema narrative.
-Let us descend deeper into this analysis by unraveling the mysteries hidden within these violin-shaped artifacts.
+Males ascend to their prime slightly later, peaking in the 30–40 year band. Unlike their female counterparts, men remain in the spotlight a bit longer, stretching their on-screen journeys into more mature chapters.
 
-<iframe src="/assets/plots/EA/male_violin_plot.html" width="100%" height="500px" style="border:none;"></iframe>
-This plot crafted for **males** reveals cinema's selective spotlight and Earth's natural balance.
-But, traveler, do not stop here! The patterns of **females** await exploration as well.
-<iframe src="/assets/plots/EA/female_violin_plot.html" width="100%" height="500px" style="border:none;"></iframe>
+Let’s delve deeper into these patterns with violin plots that reveal the subtle frequencies of this age-distribution symphony.
 
-To confirm our findings, we probed the human knowledge archives for deeper truths.
-The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories* discusses the marginalization of older women in East Asian film industries. It highlights how cultural norms and industry practices contribute to the preference for younger female actors.  
+
+
+To anchor our insights, we navigated human knowledge archives. The book Women in *East Asian Cinema: Gender Representations, Creative Labour and Global Histories* illuminates how cultural norms and industry habits push older women into cinematic shadows, consistently favoring younger female actors. 
 [Source: *Women in East Asian Cinema* - [Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)]
 
 -------------------------------
@@ -128,28 +121,44 @@ The book *Women in East Asian Cinema: Gender Representations, Creative Labour an
 
 <!-- this part is where we have the visualisation for east asia of the common plot of gender -->
 
-**Male Dominance Across Genres:**
+<div style="display: flex; align-items: up; justify-content: space-between;">
+  
+  <!-- Text Container -->
+  <div style="width: 40%; padding: 8px;">
+    <p>
+
+- **Male Dominance Across Genres:**
+
 In all observed Earthly time streams, the energy signatures of male entities surpass those of females, particularly in the high-thrill zones of Action/Adventure and Science Fiction.
 *1996–2012:* During this planetary phase, male entities dominated most genres, with their highest peak proportions of 71.0% in Action/Adventure and 67.2% in Thriller/Suspense.
 
-*Attention, fellow space explorers!*
-
-Get ready to focus your vision beams as we dive deeper into the **Gender Gap Radar Chart**.
-<iframe src="/assets/plots/EA/radar_plot.html" width="100%" height="500px" style="border:none;"></iframe>
 
 -----
 
-**Genre-Specific Representation:**
+- **Genre-Specific Representation:**
+
 In some territories like **Drama**, there is a slow yet steady rise in female energy waves over time.
 Meanwhile, the cosmic zones of **Romance** and **Horror** glow brighter with higher female presence.
 
-*Data absorbed. Analysis logged. The exploration continues with this bar chart race!*
+  </p>
+</div>
+   
+  <!-- Plot Container -->
+  <div style="width: 60%; padding: 10px;">
 
-<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/20770198"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20770198/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
+  <div style="font-size: 12px; width: 100%; margin: auto;">
+
+<div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/20770198"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20770198/thumbnail" width="150%" alt="bar-chart-race visualization" /></noscript></div>
+
+  </div>
+  </div>
+
+</div>
 
 -----
 
-**Real-World Comparison:**
+- **Real-World Comparison:**
+
 In the vast expanse of Earth's real-world population, the gender split leans approximately 55% female and 45% male—a balance most logical and natural.
 
 Let us now dive deeper into the cosmic currents of gender representation by looking into the **Chi-Square Test:**
@@ -163,16 +172,38 @@ Let us now dive deeper into the cosmic currents of gender representation by look
 
 <!-- put here maybe picture of chi squre test formula-->
 
-*Results*
-- **Chi-Square Statistic**: 14.77  
-- **P-Value**: 0.00012
+## **Statistical Validation: Chi-Square Tests**
 
-*Interpretation*
+<div style="display: flex; align-items: up; justify-content: space-between;">
+  <!-- Text Container -->
+  <div style="flex: 1; padding: 10px;">
+    <p>
+
+ *Interpretation*
 1. **Chi-Square Statistic (14.77)**:  
    This measures the discrepancy between observed (cinema proportions) and expected (real-world proportions) values. It indicates a greater deviation from the expected proportions.
 
 2. **P-Value (0.00012)**:  
    The p-value is much smaller than the standard significance threshold (e.g., 0.05). This means the result is statistically significant.
+
+   </p>
+  </div>
+
+  <!-- Plot Container -->
+  <div style="flex: 1; padding: 10px;">
+      <p>
+
+   | **Comparison**            | **Chi-Square Statistic** | **p-value** | **Conclusion**                                                 |
+   |----------------------------|--------------------------|-------------|-----------------------------------------------------------------|
+   | Observed vs. Expected (All)| ~14.77              | ~0.00012        | Reject H₀, significant difference between observed and expected |
+
+   
+
+  </p>
+  </div>
+
+  </div>
+
 
 *Conclusion:*
 
@@ -186,4 +217,3 @@ For curious cosmic travelers, you can find it here:
 🪐 [Read more on Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)
 
 ---
-

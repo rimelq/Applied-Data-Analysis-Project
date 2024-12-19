@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapHeight = mapContainer.offsetHeight;
     const viewportHeight = window.innerHeight;
     const savedScrollPosition = localStorage.getItem("scrollPosition");
+    loadRegionContent('US')
     if (savedScrollPosition) {
       window.scrollTo(0, parseInt(savedScrollPosition, 10)); // Scroll to saved position
       localStorage.removeItem("scrollPosition"); // Clear saved position
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      if (isMapOutOfView() && !pipModeEnabled && currentScroll > lastScrollY) {
+      if (isMapOutOfView() && !pipModeEnabled) {
         // Enter PiP mode
         placeholder.style.width = `${mapContainer.offsetWidth}px`;
         placeholder.style.height = `${mapContainer.offsetHeight}px`;
@@ -76,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
           pipContainer.style.height = "150px";
           console.log("PiP activated with initial dimensions.");
         }
-      } else if ((!isMapOutOfView() || currentScroll <= lastScrollY) && pipModeEnabled) {
+      } else if ((!isMapOutOfView()) && pipModeEnabled) {
         // Exit PiP mode
         pipModeEnabled = false;
         console.warn("Before PiP mode:", {

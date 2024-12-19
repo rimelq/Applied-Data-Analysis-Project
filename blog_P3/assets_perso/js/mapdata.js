@@ -5,6 +5,7 @@ var simplemaps_worldmap_mapdata={
     background_color: "#FFFFFF",
     background_transparent: "yes",
     popups: "detect",
+  
     
 		//State defaults
 		state_description: "State description",

@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   
   let offsetThreshold;
   let debounceTimer = null;
-  let lastScrollPosition = 0;
+  let lastScrollY = 0;
 
   // --- Function to Check if the Bottom of the Map is Out of View ---
   const isMapOutOfView = () => {
     const mapRect = mapContainer.getBoundingClientRect();
-    return mapRect.bottom <= 0 || mapRect.top >= window.innerHeight;
+    return mapRect.bottom <= 0 ;
   };
 
   // --- MODIFICATION: Ensure essential elements exist ---
@@ -37,10 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Page fully loaded. Initializing PiP scroll logic...");
     const mapHeight = mapContainer.offsetHeight;
     const viewportHeight = window.innerHeight;
-    calculateThreshold();
-  
-    // Calculate the threshold ONCE after the page loads
-    offsetThreshold = mapContainer.offsetTop + mapHeight - viewportHeight + 2700;
+    const savedScrollPosition = localStorage.getItem("scrollPosition");
+    if (savedScrollPosition) {
+      window.scrollTo(0, parseInt(savedScrollPosition, 10)); // Scroll to saved position
+      localStorage.removeItem("scrollPosition"); // Clear saved position
+    }
   });
 
 
@@ -53,12 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Debounce to prevent rapid state changes during scroll jumps
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
-      if (Math.abs(currentScroll - lastScrollPosition) < 50) {
+      if (Math.abs(currentScroll - lastScrollY) < 50) {
         // Ignore small scroll jumps (less than 50px)
         return;
       }
 
-      if (isMapOutOfView() && !pipModeEnabled) {
+      if (isMapOutOfView() && !pipModeEnabled && currentScroll > lastScrollY) {
         // Enter PiP mode
         placeholder.style.width = `${mapContainer.offsetWidth}px`;
         placeholder.style.height = `${mapContainer.offsetHeight}px`;
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
           pipContainer.style.height = "150px";
           console.log("PiP activated with initial dimensions.");
         }
-      } else if (!isMapOutOfView() && pipModeEnabled) {
+      } else if ((!isMapOutOfView() || currentScroll <= lastScrollY) && pipModeEnabled) {
         // Exit PiP mode
         pipModeEnabled = false;
         console.warn("Before PiP mode:", {
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Update the last stable scroll position
-      lastScrollPosition = currentScroll;
+      lastScrollY = currentScroll;
     }, 100); // Debounce interval: 100ms
   });
 
@@ -102,16 +103,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Attach an event listener to the window resize event
 let resizeTimeout; // To prevent excessive reloads during resizing
 window.addEventListener("resize", () => {
-  calculateThreshold()
   if (resizeTimeout) {
-    clearTimeout(resizeTimeout); // Clear any previous timeout to debounce
+    clearTimeout(resizeTimeout);
   }
 
-  // Reload the page after a short delay (to avoid excessive reloads)
   resizeTimeout = setTimeout(() => {
     console.log("Window resized. Reloading the page...");
+    const scrollPosition = window.scrollY; // Get current scroll position
+    localStorage.setItem("scrollPosition", scrollPosition); // Save to localStorage
+
     location.reload();
-  }, 100); // Adjust delay as needed
+  }, 100);
 });
 
   

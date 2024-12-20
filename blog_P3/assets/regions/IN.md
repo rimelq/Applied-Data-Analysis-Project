@@ -212,6 +212,8 @@ Bollywood’s storytelling gravitates toward the extremes, spotlighting either t
 
 ***Before making your way to the next part, click on the map to see the other regions' analysis***
 
+<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
+
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
 ---

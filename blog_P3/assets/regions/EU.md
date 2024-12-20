@@ -284,6 +284,8 @@ I interpret this as a cinematic inclination toward highlighting the contrast bet
 
 ---
 
+<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
+
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
 ---

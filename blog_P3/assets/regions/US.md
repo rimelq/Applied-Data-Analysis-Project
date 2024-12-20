@@ -422,6 +422,8 @@ Yet, change is always possible. By recognizing these biases, Hollywood has the c
 
 ---
 
+<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
+
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
 ---

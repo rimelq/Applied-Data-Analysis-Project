@@ -314,6 +314,7 @@ These patterns left me pondering: do these representations, or lack thereof, ser
 
 
 ---
+<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
 
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 

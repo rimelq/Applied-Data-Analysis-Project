@@ -1,16 +1,15 @@
-""" 
-Used functions for the european dataset 
-A different functions file is used due to the complexity of the European dataset
+##############################################
+#                                            #
+#        Europe Analysis Python Script       #
+#                                            #
+##############################################
 
-"""
 
 import pandas as pd
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 import numpy as np
 from scipy.stats import gaussian_kde
 import dash
-from dash import dcc, html, Input, Output
 import plotly.graph_objects as go
 from scipy.stats import chi2
 
@@ -24,29 +23,20 @@ import plotly.express as px
 pio.renderers.default = "notebook"
 
 
+# FUNCTIONS--------------------------------:
 
 
 ######################################################################
 
+
 def get_ethnicity_proportions(df, ethnicities):
     """
     Compute counts and percentages for specified ethnicities in the dataset.
-
-    Args:
-        df (pd.DataFrame): DataFrame with an 'actor_ethnicity_classification' column.
-        ethnicities (list of str): List of ethnicities to calculate.
-
-    Returns:
-        tuple: 
-            - counts_dict (dict): Counts for each ethnicity.
-            - proportions_dict (dict): Percentages for each ethnicity.
-
-    Notes:
-        'Unknown' is excluded from calculations.
     """
+    
     ethnicity_counts = df['actor_ethnicity_classification'].value_counts()
 
-    # calculate the total number of people with an ethnicity
+    # Calculate the total number of people with an ethnicity
     total = sum(ethnicity_counts.get(ethnicity, 0) for ethnicity in ethnicities if ethnicity != 'Unknown')
 
     # Initialize dictionaries 
@@ -69,21 +59,15 @@ def get_ethnicity_proportions(df, ethnicities):
 
     return counts_dict, proportions_dict
 
+
 ####################################################################
+
 
 def ethnicity_comparison_plot(region_data, real_world_proportions, ethnicities, genre):
     """"
     Create a horizontal bar chart comparing ethnicity proportions in cinema (Europe) vs real-world data.
-
-    Args:
-        region_data (pd.DataFrame): Dataset containing ethnicity and genre information for the region.
-        real_world_proportions (dict): Real-world ethnicity proportions as percentages.
-        ethnicities (list of str): List of ethnicities to include in the comparison.
-        genre (str): The genre to filter by (use "All Genres" for no filter).
-
-    Returns:
-        plotly.graph_objects.Figure: A bar chart showing the comparison.
     """
+    
     # Filter out 'Unknown' ethnicities from the region data
     df_filtered = region_data[region_data['actor_ethnicity_classification'] != 'Unknown']
 
@@ -103,7 +87,7 @@ def ethnicity_comparison_plot(region_data, real_world_proportions, ethnicities, 
     fig.add_trace(
         go.Bar(
             y=ethnicities,
-            x=[-genre_prop.get(eth, 0) * scale_factor for eth in ethnicities],  # Negative values for cinema industry
+            x=[-genre_prop.get(eth, 0) * scale_factor for eth in ethnicities], 
             name='Europe (Cinema Industry)',
             orientation='h',
             marker=dict(color='#7D3C98'),
@@ -144,20 +128,10 @@ def ethnicity_comparison_plot(region_data, real_world_proportions, ethnicities, 
 ####################################################################
 
 
-
 def chi_squared_ethnicity_test(region_data, ethnicities, real_world_proportions):
     """
     Perform a chi-squared test to compare observed ethnicity proportions in a dataset
     to real-world proportions.
-
-    Parameters:
-        region_data (DataFrame): The dataset containing ethnicity information.
-        ethnicities (list): List of ethnicities to include in the comparison.
-        real_world_proportions (dict): Real-world proportions of ethnicities (in percentages).
-
-    Returns:
-        dict: A dictionary containing chi-squared statistic, degrees of freedom, p-value,
-              and a conclusion on whether the proportions are significantly different.
     """
 
     counts, _ = get_ethnicity_proportions(region_data, ethnicities)
@@ -189,22 +163,13 @@ def chi_squared_ethnicity_test(region_data, ethnicities, real_world_proportions)
 
     return results
 
+    
 ####################################################################
+
 
 def age_distribution_plot(europe_avg_male, europe_avg_female, europe_df, time_periods, period="All Periods", genre="All Genres"):
     """
     Generate a Plotly figure comparing age distributions between real-world populations and actors.
-
-    Args:
-        europe_avg_male (pd.DataFrame): Real-world male age distribution data.
-        europe_avg_female (pd.DataFrame): Real-world female age distribution data.
-        europe_df (pd.DataFrame): Actor data including age, gender, release year, and genre.
-        time_periods (dict): Dictionary mapping period names to year ranges.
-        period (str): Selected time period for filtering data.
-        genre (str): Selected genre for filtering data.
-
-    Returns:
-        go.Figure: Plotly figure showing the age distribution comparison.
     """
     fig = go.Figure()
 
@@ -356,9 +321,15 @@ def age_distribution_plot(europe_avg_male, europe_avg_female, europe_df, time_pe
 
     return fig
 
+    
 #########################################################################
 
+
 def gender_proportion_plot(df, europe_avg_male, europe_avg_female, genres):
+    """
+    Generate a gender proportion plot with real-world and actor data over time
+    """
+    
     data = []
     periods_bins = ["1950-1965", "1966-1980", "1981-1995", "1996-2012"]
 
@@ -406,9 +377,15 @@ def gender_proportion_plot(df, europe_avg_male, europe_avg_female, genres):
 
     return pd.DataFrame(data)
 
+
 ###########################################################################
 
+
 def calculate_actor_ages(df, gender, genre=None):
+    """
+    Calculate average and standard deviation of actor ages for a specific gender and genre
+    """
+    
     # Filter by genre
     if genre and genre != "All Genres":
         df = df[df['main_genre'] == genre]
@@ -429,9 +406,15 @@ def calculate_actor_ages(df, gender, genre=None):
     std_ages = df_grouped['age_at_release'].std()
     return avg_ages, std_ages
 
+
 #########################################################
 
-def gender_OLS(df, output_html="ols_summary.html", output_md="ols_summary.md", plot_html="gender_ols_plot.html"):
+
+def gender_OLS(df, output_html="./europe_analysis/ols_summary.html", output_md="./europe_analysis/ols_summary.md", plot_html="./plots/gender_ols_plot.html"):
+    """ 
+    Perform OLS regression on gender proportions and create an interactive plot
+    """
+    
     # Filter to take only years above 1950
     df = df[df['release_y'] >= 1950]
 
@@ -498,9 +481,15 @@ def gender_OLS(df, output_html="ols_summary.html", output_md="ols_summary.md", p
     print(f"Intercept: {model.params['Intercept']}")
     print(f"Year Coefficient: {model.params['release_y']}")
 
+
 ###############################################################
 
-def radar_chart_plot(df, ethnicities, output_file="radar_chart.html"):
+
+def radar_chart_plot(df, ethnicities, output_file="./plots/radar_chart.html"):
+    """
+    Create a radar chart of gender proportions across ethnicities
+    """ 
+    
     # Filter to exclude 'Unknown' ethnicities
     df_filtered = df[df['actor_ethnicity_classification'] != 'Unknown']
 
@@ -555,10 +544,15 @@ def radar_chart_plot(df, ethnicities, output_file="radar_chart.html"):
     pio.write_html(fig, file=output_file, auto_open=False)
     print(f"Radar chart saved to {output_file}")    
 
+
 ###########################################################
 
-# Function to calculate gender proportions for each genre and time period
+
 def calculate_gender_proportions(df, time_periods, genres):
+    """
+    Function to calculate gender proportions for each genre and time period
+    """
+    
     gender_proportions = {}
 
     for period_name, (start_year, end_year) in time_periods.items():
@@ -589,10 +583,15 @@ def calculate_gender_proportions(df, time_periods, genres):
 
     return gender_proportions
 
+
 ###################################################################
 
-# Function to get real-world gender proportions
+
 def get_real_world_gender_proportions(europe_avg_male, europe_avg_female, period):
+    """
+    Function to get real-world gender proportions
+    """
+    
     if period == "All Periods":
         male_total = europe_avg_male.iloc[:, 1:].sum().sum()
         female_total = europe_avg_female.iloc[:, 1:].sum().sum()
@@ -605,12 +604,16 @@ def get_real_world_gender_proportions(europe_avg_male, europe_avg_female, period
         return 0.5, 0.5
     return male_total / total, female_total / total
 
+
 ###################################################################
 
-# Function to plot gender proportions with four subplots for each region
-def gender_prop_subplots(df, period, genres, time_periods, europe_avg_male, europe_avg_female):
-    fig = go.Figure()
 
+def gender_prop_subplots(df, period, genres, time_periods, europe_avg_male, europe_avg_female):
+    """ 
+    Function to plot gender proportions with four subplots for each region
+    """
+    
+    fig = go.Figure()
 
     gender_proportions = calculate_gender_proportions(df, time_periods, genres)
 

@@ -640,7 +640,7 @@ function loadRegionContent(region) {
 
     // Reload the map to apply changes
     
-    map.load();
+    //map.load();
 
 
     // Reload the map to apply the changes

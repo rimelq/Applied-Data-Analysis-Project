@@ -242,35 +242,36 @@ Bollywood’s storytelling gravitates toward the extremes, spotlighting either t
 <br>
 
 
-## Introduction
-As I drifted among Earth’s cultural constellations, I ventured into a grand endeavor: to understand how the movies Earthlings cherish align—or misalign—with the demographic patterns of your own reality. Anchored in three key metrics—**Ethnicity**, **Age**, and **Gender**—I sought to quantify representation gaps between real-world populations and the actors who grace Earthlings' screens. By examining how these discrepancies evolved through time and across regions, and by linking them to the gravitational pull of box office revenue, I hoped to uncover whether economic currents encourage such imbalances.
+# Introduction
 
-To explore this cinematic cosmos, I employed multiple observational instruments and analytical methods:
+As I explored Earth's diverse cultures, I took on a mission to understand how movies reflect—or differ from—real-world demographics. Focusing on three key factors—**Ethnicity**, **Age**, and **Gender**—I analyzed gaps between the real-world population and the actors on screen. By studying how these differences changed over time and across regions, and by examining their connection to box office earnings, I aimed to uncover whether economic factors drive these imbalances.
 
-1. **Radial Tree Plot**: A visual galaxy mapping how movie success categories (Highly Successful, Successful, Normal) link to various genres and regions.  
-2. **Combination Dual-Axis Charts**: Temporal journeys tracking representation gaps and box office revenue across decades, regions, and metrics. These help us see if changes in gaps mirror changes in revenue.  
-3. **Sankey Plots**: Flows of movies from representation gap intervals to genres and ultimately to success categories, aggregated over the entire 1950–2012 period. These highlight structural associations between gap magnitude, genre choice, and final revenue outcomes.  
-4. **Linear Regression Analyses**: Statistical attempts to measure a direct relationship between representation gaps and box office performance, both in simple forms (just gap vs. revenue) and more complex forms (controlling for metric type and temporal batches).
+To explore this cinematic landscape, I used several tools and methods:
 
-Armed with these tools, I can piece together a narrative: Does the industry’s portrayal of different ethnicities, genders, and ages shape—or is shaped by—its economic incentives?
+1. **Radial Tree Plot**: A visual map showing how movie success levels (Highly Successful, Successful, Normal) connect to different genres and regions.  
+2. **Combination Dual-Axis Charts**: Tracking representation gaps and box office revenue over time, across decades, regions, and metrics, to see if changes in representation align with changes in revenue.  
+3. **Sankey Plots**: Visualizing the flow of movies from representation gap levels to genres and then to success categories, covering the entire 1950–2012 period, to uncover patterns between gap size, genre, and revenue.  
+4. **Linear Regression Analyses**: Statistical models to explore whether representation gaps directly impact box office performance, both simply (gap vs. revenue) and with additional factors like metric type and time periods.
+
+With these tools, I aim to answer: Does how the industry represents ethnicity, gender, and age influence—or get influenced by—its financial goals?
 
 ---
 
 # Methodology Adopted
 
 **Representation Gaps**:  
-For each metric (Ethnicity, Age, Gender), I computed representation gaps as absolute percentage differences between the movie populations and the corresponding real-world demographic proportions. The larger the gap, the further the industry strayed from mirroring Earth’s demographic reality. These gaps were calculated for each region (Hollywood, Bollywood, East Asia, Europe), across multiple 10-year time batches (1950–1959, 1960–1969, …, 2010–2012).
+For each metric—**Ethnicity**, **Age**, and **Gender**—I calculated representation gaps as the absolute percentage difference between movie demographics and real-world proportions. Larger gaps indicate a greater deviation from Earth’s demographic reality. These gaps were measured for each region (Hollywood, Bollywood, East Asia, Europe) across 10-year periods (1950–1959, 1960–1969, …, 2010–2012).
 
 **Box Office Revenue**:  
-To assess economic outcomes, I examined aggregated box office revenues (mean per batch or overall distributions) and categorized movies into percentile-based success categories:  
-- **Highly Successful**: Top 10% by revenue  
+To evaluate economic outcomes, I analyzed box office revenues (average per decade or overall distributions) and grouped movies into success categories based on percentiles:  
+- **Highly Successful**: Top 10% of revenue  
 - **Successful**: 40th to 90th percentile  
-- **Normal**: Below the 40th percentile
+- **Normal**: Below the 40th percentile  
 
-By pairing these success categories with representation gaps, I hoped to see if achieving higher revenues demanded certain demographic imbalances.
+By linking these success categories to representation gaps, I aimed to see if certain demographic imbalances were associated with higher revenues.
 
 **Same Metrics as Before**:  
-I consistently used the same age, gender, and ethnicity data, ensuring coherence with previous analyses. Through all these steps—radial plots, line/area charts, Sankey diagrams, and regressions—the fundamental metrics and methods remained stable, allowing a comprehensive cross-check.
+I consistently used the same age, gender, and ethnicity data throughout the analysis. Whether using radial plots, line/area charts, Sankey diagrams, or regression models, the metrics and methods remained stable, to ensure a reliable cross-check.
 
 ---
 
@@ -280,16 +281,19 @@ I consistently used the same age, gender, and ethnicity data, ensuring coherence
 
 <div class="flourish-embed flourish-hierarchy" data-src="visualisation/20820914"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20820914/thumbnail" width="100%" alt="hierarchy visualization" /></noscript></div>
 
-This plot arranges genres around a circular axis, with success categories branching outward. Across all regions or within each one, we see how different genres populate these success tiers.
+This plot arranges genres around a circular axis, with success categories branching outward. It shows how different genres fall into these success tiers, either globally or within specific regions.
 
 **Key Insights**:  
-- **Global Patterns**: Action/Adventure and mass-appeal genres often cluster in Highly Successful tiers, indicating that big-budget spectacle transcends cultural borders. Documentaries and more niche genres hover in the Successful or Normal zones, mirroring their limited commercial appeal.  
-- **Regional Nuances**: Hollywood’s penchant for Action/Adventure and Sci-Fi dominates the top revenue stratum, Bollywood’s Romance/Drama tradition finds consistent but not always top-tier success, East Asia’s Thriller/Suspense or locally favored genres anchor their success tiers, and Europe’s arthouse tilt shows fewer blockbuster hits.  
-- **Link to Representation Gaps**: Although the radial tree plot does not directly show demographic gaps, it complements previous findings. Genres historically associated with skewed demographics still rank highly, suggesting that economic success often aligns with entrenched formulas, regardless of representational parity.
+- **Global Patterns**: Action/Adventure and other mass-appeal genres often dominate the Highly Successful tier, highlighting their universal appeal. In contrast, documentaries and niche genres tend to cluster in the Successful or Normal zones, reflecting their limited commercial draw.  
+- **Regional Nuances**: Hollywood excels in Action/Adventure and Sci-Fi at the top revenue levels, while Bollywood’s Romance/Drama is consistently successful but not always a blockbuster. East Asia finds success with Thriller/Suspense and locally popular genres, while Europe’s focus on arthouse films results in fewer major hits.  
+- **Link to Representation Gaps**: While the radial tree plot doesn’t directly show demographic gaps, it complements earlier findings. Genres often tied to skewed demographics still perform well, suggesting economic success frequently relies on established industry formulas rather than demographic representation.
 
-By showing the final distribution of genres into success categories, the radial chart reveals that commercial viability is often genre-driven and shaped by longstanding cultural and industrial norms—not necessarily by aligning closely with real-world demographics.
+By mapping the distribution of genres into success categories, the chart highlights how commercial success is heavily influenced by genre preferences shaped by cultural and industry norms, rather than strict alignment with real-world demographics.
+
 
 ---
+
+*For the Combination Dual-Axis Charts and Sankey diagrams, while results from other regions were analyzed as part of our cosmic experiment, only Hollywood's results are displayed to prioritize rendering efficiency, given its status as Earth's cinematic powerhouse.*
 
 ## 2. Combination Dual-Axis Charts: Hollywood
 
@@ -298,15 +302,15 @@ By showing the final distribution of genres into success categories, the radial 
 These charts overlay representation gaps and box office revenue over the decades, providing a temporal lens. For each region and metric, we see how gaps and revenue evolve together or diverge.
 
 **Key Insights**:  
-- **No Universal Trend**: Some periods show growing representation gaps alongside rising box office, others show shrinking gaps paired with stable revenue. This variation undermines any simple causal narrative.  
-- **Cultural and Historical Context**: Hollywood’s shifts might reflect the blockbuster era, the influence of social movements, or global expansion. Bollywood’s stable star system could make representation gaps economically irrelevant. East Asia’s homogeneity might keep high gaps stable without penalty. Europe’s arthouse markets don’t necessarily reward more balanced demographics with big commercial wins.  
-- **Societal Phenomena**: Periods of civil rights activism or global cultural exchange might nudge representation toward slightly narrower gaps without harming box office returns. Nonetheless, the data shows no strong pattern of “more representative = more revenue” or “less representative = more revenue.” Instead, genre cycles, star vehicles, and distribution networks overshadow demographic fine-tuning.
+- **No Universal Trend**: Some periods show larger representation gaps with rising box office revenues, while others show smaller gaps with steady earnings. This inconsistency challenges any straightforward cause-and-effect narrative.  
+- **Cultural and Historical Context**: Hollywood’s shifts may reflect the blockbuster era, social movements, or global market influence. Bollywood’s stable star system might make representation gaps less relevant to revenue. East Asia’s homogeneity may sustain large gaps without economic impact, while Europe’s arthouse focus doesn’t necessarily reward balanced representation with high earnings.  
+- **Societal Phenomena**: Civil rights movements or global cultural exchanges may have slightly narrowed gaps without reducing box office returns. However, the data doesn’t support a clear link between “better representation = more revenue” or “worse representation = more revenue.” Instead, factors like genre trends, star power, and distribution strategies play a larger role.
 
 By capturing changes over decades, these combination dual-axis charts illustrate that economic success is molded by historical forces and market evolutions rather than a direct or stable representation-gap-to-revenue pipeline.
 
 ---
 
-## 3. Representation Gaps and Box Office Revenue Impact: Hollywood 
+## 3. Representation Gaps and Box Office Revenue Impact: Hollywood
 
 <!-- Dropdown pour chaque région ici-->
 
@@ -314,9 +318,9 @@ By capturing changes over decades, these combination dual-axis charts illustrate
 The Sankey diagrams show the different flows of movies from representation gap intervals to genres and then to success categories. This tri-level mapping helps identify structural patterns.
 
 **Key Insights**:  
-- **Large Gap Intervals Still Yield Success**: If flows from high-gap categories ([50,75] or even [75,100]) lead into popular genres and ultimately into Highly Successful categories, it implies that entrenched demographic imbalances did not prevent lucrative outcomes.  
-- **Genre as an Economic Mediator**: Some genres consistently channel movies into Successful or even Highly Successful tiers, regardless of gap size. This supports the idea that genre preferences and star power might be more influential than demographic realism.  
-- **Comparing Metrics and Regions**: In Hollywood, large-gap intervals feeding into Action/Adventure and then into Highly Successful categories confirm that commercial formulas, not representational accuracy, often drive profit. Bollywood’s stable success of Romance/Drama under large gaps indicates similarly entrenched formulas. East Asia and Europe show analogous patterns, each with their local twists.
+- **Large Gap Intervals Still Yield Success**: Movies from large-gap categories (e.g., [50–75] or even [75–100]) often flow into popular genres and end up in Highly Successful tiers, showing that significant demographic imbalances don’t necessarily hinder profitability.  
+- **Genre as an Economic Mediator**: Certain genres consistently push movies into Successful or Highly Successful tiers, regardless of demographic gaps. This suggests that genre preferences and star appeal often outweigh the importance of demographic representation.  
+- **Comparing Metrics and Regions**: In Hollywood, large-gap movies often succeed in Action/Adventure genres, emphasizing that commercial success relies on tried-and-true formulas rather than representational accuracy. Bollywood’s steady success with Romance/Drama under high gaps reflects similar patterns. East Asia and Europe also exhibit these trends, with regional variations.
 
 The Sankey plots, by exposing stable “flows” from gap categories to success categories, reinforce the notion that representation gap levels are not strong determinants of economic fate. Instead, the industry’s gravitational fields—rooted in genre traditions and audience tastes—predominantly shape financial success.
 
@@ -332,12 +336,11 @@ After visually exploring patterns, I turned to linear and multiple regressions t
 
 
 **Key Insights**:  
-- **Simple Regression Weakness**: Only Hollywood’s simple regression suggested a modest negative relationship (higher gap = slightly lower revenue), but even that was weak.  
-- **Multiple Regression Overfitting**: Controlling for Metric and 10-year Batch labels explained all variation, leaving Representation Gap insignificant. This implies time and categorical differences, not demographic alignment, dominate the statistical landscape.  
-- **Across Regions**: Bollywood, East Asia, and Europe showed no meaningful linear association between gap and revenue. The complex interplay of cultural history, market size, and genre preference overwhelms any direct linear effect of representation gaps.
+- **Limitations of Simple Regression**: Only Hollywood showed a slight negative relationship (higher gap = slightly lower revenue), but even this connection was weak.  
+- **Overfitting in Multiple Regression**: When accounting for Metric and 10-year Batch labels, Representation Gap became statistically insignificant. This indicates that time periods and categorical differences, not demographic alignment, primarily explain the variation.  
+- **Regional Analysis**: In Bollywood, East Asia, and Europe, no clear linear relationship between gaps and revenue was found. The complex mix of cultural history, market size, and genre preferences overshadows any straightforward effect of representation gaps.
 
-These regressions confirm that once we factor in historical context (time periods) and differing metrics (ethnicity, age, gender), representation gap ceases to matter statistically. This supports the broader narrative: no simple numeric gap measure can predict box office returns reliably.
-
+These regressions confirm that, after accounting for historical context and metric differences, representation gaps have no significant statistical impact. This reinforces the idea that no simple gap measure can reliably predict box office success.
 
 
 
@@ -347,18 +350,20 @@ These regressions confirm that once we factor in historical context (time period
 
 Across four distinct works, one message emerges: **economic success in cinema does not strongly hinge on how closely movie demographics match real-world populations.**
 
-- **Radial Tree Plot**: Shows that globally favored genres secure top-tier revenue regardless of representational fidelity, hinting that economic incentives didn’t enforce representational balance.  
-- **Combination Dual-Axis Charts**: Demonstrate that representation gaps fluctuate with historical forces, yet these fluctuations do not consistently correlate with higher or lower box office revenues. The industry’s formulas and cultural shifts matter more.  
-- **Sankey Plots**: Aggregated flows reveal that even large demographic imbalances often feed into highly successful tiers via certain lucrative genres, reinforcing the idea that entrenched production norms hold sway over economic outcomes.  
-- **Linear Regression Analysis**: Statistically confirms that once historical eras and metric categories are considered, representation gap loses explanatory power. No straightforward causal or linear link emerges between gap and revenue.
+- **Radial Tree Plot**: Highlights that globally popular genres consistently achieve top-tier revenue, regardless of representational accuracy, suggesting that economic incentives don’t drive balanced representation.  
+- **Combination Dual-Axis Charts**: Show that representation gaps change with historical trends, but these shifts don’t reliably link to higher or lower box office revenues. Industry formulas and cultural movements play a bigger role.  
+- **Sankey Plots**: Reveal that even movies with significant demographic imbalances often succeed in top revenue tiers through profitable genres, emphasizing the dominance of established production norms over representation concerns.  
+- **Linear Regression Analysis**: Confirms that when historical periods and metric types are accounted for, representation gaps have little impact. There’s no clear linear or causal relationship between gaps and revenue.
 
 **Contextualizing with Societal and Historical Research**:  
-Earth's real-world scholarship, from the Annenberg Inclusion Initiative’s studies on representation to historical accounts of Hollywood’s studio system, corroborate these patterns. Social movements for diversity have nudged changes, but the box office bottom line seems driven more by star systems, blockbuster formulas, and marketing prowess than by demographic accuracy. Bollywood’s reliance on established stars and romance genres, East Asia’s local genre preferences, and Europe’s arthouse identity all reflect entrenched market conditions rather than demographic rectifications.
+Studies like those from the Annenberg Inclusion Initiative and historical analyses of Hollywood’s studio system confirm these trends. While social movements for diversity have influenced change, box office success still relies more on star power, blockbuster formulas, and marketing strategies than on accurate demographic representation. Bollywood primarily centers on big-name stars and romance genres as its key to success. East Asia tends to favor genres that appeal to local audiences, while Europe leans heavily toward arthouse films. These trends highlight how each region’s movie industry is shaped by long-standing market preferences and economic strategies, rather than by actively trying to improve demographic representation.
+
 
 **Conclusion**:  
 My cosmic exploration suggests that, while moral and cultural arguments for better representation are robust and well-documented, purely economic motives don’t straightforwardly reward or punish representational fidelity. Cinematic ecosystems seem able to thrive financially under various demographic distributions, relying instead on traditional genres, star legacies, and shifting audience tastes. To alter these constellations of representation, external sociopolitical forces, audience advocacy, and institutional reforms may be required—beyond the gravitational pull of the box office itself.
 
 In sum, the works we assembled act like telescopes and spectrometers. They reveal a complex cinematic universe where demographic reality often bends under the weight of tradition, cultural myths, and economic expediency. True demographic alignment might not guarantee a bigger cosmic payoff, but the pursuit of a cinema that mirrors its audience’s diversity might still resonate with Earth’s evolving sense of justice and authenticity.
+
 
 
 ## References
@@ -370,18 +375,22 @@ In sum, the works we assembled act like telescopes and spectrometers. They revea
 
 </span>
 
+
 -----
 
 **More insights on Data Reliability Score:**
 
 The **Reliability Score 𝑅** is calculated as:
 
-#### **R\=0.4⋅D+0.4⋅(1−M)+0.2⋅T** 
+#### **Formula**:
+
+#### R\=0.4⋅D+0.4⋅(1−M)+0.2⋅T 
 
 With:
-**D = Dataset Size Ratio.**
-**M = Missing Data Ratio.** 
-**𝑇 = Temporal Coverage ratio.**
+**D** = Dataset Size Ratio.
+**M** = Missing Data Ratio. 
+**T** = Temporal Coverage ratio.
+
 
 Ensuring that:
 - Higher missing data decreases the score.

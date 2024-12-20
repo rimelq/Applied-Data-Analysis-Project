@@ -426,8 +426,8 @@ body {
 /* START OF ALIEN */
 #alien {
   position: absolute;
-  top: 85%; /* Initially position the alien near the UFO landing spot */
-  right: 83%; /* Align it near the UFO */
+  top: 100%; /* Initially position the alien near the UFO landing spot */
+  right: 75%; /* Align it near the UFO */
   width: 100px; /* Adjust the alien size */
   z-index: 10; /* Ensure it appears above other elements */
   opacity: 0; /* Initially hidden */

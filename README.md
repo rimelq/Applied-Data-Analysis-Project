@@ -38,7 +38,7 @@ The Hollywood film industry is often considered representative of North America,
    - In the Bollywood analysis, we focused on how Indian Bollywood movies represent Indian ethnicities compared to the real world. Bollywood actors with non-Indian ethnicities (less than 1% of the data) were excluded to maintain this focus.
    - In the Europe Analysis, we took premade data from the web as the real-world dataset was not focused on ethnicities but nationnalities for the european countries.
   
-[Meme](meme.jpg "Our reaction after preprocessing the ethnicities")
+[Our reaction after preprocessing the ethnicities](meme.jpg)
 
 ### **Time Fragmentation**:  
    - Ethnicity data was divided into four time periods for consistency across all regions and industries:  

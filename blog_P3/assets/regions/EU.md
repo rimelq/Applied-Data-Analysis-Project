@@ -252,15 +252,6 @@ I interpret this as a cinematic inclination toward highlighting the contrast bet
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
 ---
 
 ## **References**

@@ -3,10 +3,20 @@ layout: home
 title:
 ---
 
+## **Greetings from Polystar!**
+
+Behold Earth’s cinematic landscape—an extraordinary planet of regions teeming with unique storytelling traditions. This map highlights my chosen destinations, each promising a glimpse into the diversity of human creativity. As I journey across this world, I seek to uncover whether Earth’s movies mirror reality or reinvent it. Time is limited, but my mission is clear.
+
+*Let the journey begin!*
+
+
+
 <div id="map-container">
   <div id="map"></div>
   <div id="placeholder"></div>
 </div>
+
+
 
 <div id="pip-map-container" style="display: none">
   <button id="drag-pip">Drag</button>

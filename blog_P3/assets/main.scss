@@ -73,7 +73,6 @@ body {
   color: #333; // Dark text for readability
 }*/
 
-
 .home {
   min-height: 100vh;
   background-color: rgb(242, 240, 235);
@@ -83,8 +82,8 @@ body {
   border: 1px solid white;
   border-radius: 10px;
   overflow: hidden; 
-  margin: 0 2%;
-  padding: 0 5%;
+  margin: 30px 2%;
+  padding: 50px 5%;
 }
 
 
@@ -486,4 +485,22 @@ body {
 #audio-section audio::-webkit-media-controls-current-time-display,
 #audio-section audio::-webkit-media-controls-timeline {
   color: #fff;
+}
+
+#custom-audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#custom-audio-controls img {
+  width: 40px; /* Sets a consistent width */
+  height: 40px; /* Sets a consistent height */
+  cursor: pointer; /* Makes the icons clickable */
+  transition: transform 0.2s ease-in-out; /* Adds a hover effect */
+}
+
+#custom-audio-controls img:hover {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }

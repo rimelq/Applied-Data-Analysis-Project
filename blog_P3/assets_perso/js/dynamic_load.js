@@ -79,6 +79,9 @@ function loadDefaultContent() {
                 createStatisticSelector('hollywood', contentContainer);
                 createGenreSelector('hollywood', contentContainer);
                 
+                // Add regression plot widget
+                createRegressionPlotWidget(contentContainer);
+
                 loadFlourishScript(() => {
                     console.log('Initializing visualizations');
                     initializeFlourishVisualizations(contentContainer);
@@ -575,7 +578,51 @@ function updateGenreVisualization(region, genre, visualizationIds) {
     }
 }
 
-// Modify the loadRegionContent function to include genre selectors
+
+function createRegressionPlotWidget(container) {
+    const visualizationPaths = {
+        'hollywood': '/assets/plots/box-office/regression_plot_Hollywood.html',
+        'bollywood': '/assets/plots/box-office/regression_plot_Bollywood.html',
+        'eastasia': '/assets/plots/box-office/regression_plot_EastAsia.html',
+        'europe': '/assets/plots/box-office/regression_plot_Europe.html'
+    };
+
+    const widgetHTML = `
+        <div class="regression-plot-widget" style="margin: 40px 0;">
+            <label for="region-select" style="font-weight: bold;">Select Region: </label>
+            <select id="region-select" class="form-select">
+                <option value="hollywood">Hollywood</option>
+                <option value="bollywood">Bollywood</option>
+                <option value="eastasia">East Asia</option>
+                <option value="europe">Europe</option>
+            </select>
+            <div id="regression-plot-container" style="margin-top: 20px;">
+                <iframe src="${visualizationPaths['hollywood']}" width="100%" height="400px" style="border:none;"></iframe>
+            </div>
+        </div>
+    `;
+
+    // Find the specific line to insert after
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const regressionTitle = headers.find(header => header.textContent.includes('4. Linear Regression Analyses'));
+
+    if (regressionTitle) {
+        regressionTitle.insertAdjacentHTML('afterend', widgetHTML);
+        console.log('Inserted regression plot widget');
+    } else {
+        console.error('Regression title not found');
+    }
+
+    // Add event listener to the dropdown
+    const selectElement = document.getElementById('region-select');
+    selectElement.addEventListener('change', function(e) {
+        const selectedRegion = e.target.value;
+        const container = document.getElementById('regression-plot-container');
+        container.innerHTML = `<iframe src="${visualizationPaths[selectedRegion]}" width="100%" height="400px" style="border:none;"></iframe>`;
+    });
+}
+
+// Modify the loadRegionContent function to include the regression plot widget
 function loadRegionContent(region) {
 
     const map = simplemaps_worldmap; // Reference to the map instance
@@ -661,6 +708,9 @@ function loadRegionContent(region) {
             if (region === 'US') {
                 createGenreSelector('hollywood', contentContainer);
             }
+            
+            // Add regression plot widget
+            createRegressionPlotWidget(contentContainer);
             
             loadFlourishScript(() => {
                 initializeFlourishVisualizations(contentContainer);

@@ -211,16 +211,38 @@ Bollywood’s storytelling gravitates toward the extremes, spotlighting either t
 
 ---
 
-***Before making your way to the next part, click on the map to see the other regions' analysis***
+<div style="font-size: 1.5em; margin-top: 30px;">
 
-<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
+**Before proceeding to the next section:**
 
-# Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
+- **Explore the map** to view the analyses for the 3 other Regions! 
+&nbsp;&nbsp;&nbsp;&nbsp; <!-- Adds horizontal space -->
+- Click **"Move Up"** to return to the top of the page.
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 ---
 
-# Introduction
+<h2 id="integrated-analysis"></h2>
 
+# **All-Regions Analysis of Representation Gaps and Box Office Revenue**
+
+---
+<br>
+<br>
+
+
+## Introduction
 As I drifted among Earth’s cultural constellations, I ventured into a grand endeavor: to understand how the movies Earthlings cherish align—or misalign—with the demographic patterns of your own reality. Anchored in three key metrics—**Ethnicity**, **Age**, and **Gender**—I sought to quantify representation gaps between real-world populations and the actors who grace Earthlings' screens. By examining how these discrepancies evolved through time and across regions, and by linking them to the gravitational pull of box office revenue, I hoped to uncover whether economic currents encourage such imbalances.
 
 To explore this cinematic cosmos, I employed multiple observational instruments and analytical methods:
@@ -308,7 +330,6 @@ After visually exploring patterns, I turned to linear and multiple regressions t
 
 <!-- Dropdown pour chaque région ici-->
 
-<iframe src="/assets/plots/box-office/regression_plot_Hollywood.html" width="100%" height="400px" style="border:none;"></iframe>
 
 **Key Insights**:  
 - **Simple Regression Weakness**: Only Hollywood’s simple regression suggested a modest negative relationship (higher gap = slightly lower revenue), but even that was weak.  

@@ -32,6 +32,7 @@
   </audio>
 </section>
 
+
 <section class="hero">
   <h1 id="typewriter-title">
     <span class="line1">Main Title Here</span>
@@ -65,26 +66,35 @@
     const playButton = document.getElementById('play-button');
     const pauseButton = document.getElementById('pause-button');
 
+    function playAudio() {
+      audioPlayer.play().then(() => {
+        playButton.style.display = 'none';
+        pauseButton.style.display = 'block';
+      }).catch(error => {
+        console.log("Autoplay failed: ", error);
+        playButton.style.display = 'block';
+        pauseButton.style.display = 'none';
+      });
+    }
+
     // Autoplay when the page loads
-    audioPlayer.play().then(() => {
-      playButton.style.display = 'none';
-      pauseButton.style.display = 'block';
-    }).catch(error => {
-      console.log("Autoplay failed: ", error);
-      playButton.style.display = 'block';
-      pauseButton.style.display = 'none';
-    });
+    playAudio();
 
     playButton.addEventListener('click', () => {
-      audioPlayer.play();
-      playButton.style.display = 'none';
-      pauseButton.style.display = 'block';
+      playAudio();
     });
 
     pauseButton.addEventListener('click', () => {
       audioPlayer.pause();
       playButton.style.display = 'block';
       pauseButton.style.display = 'none';
+    });
+
+    // Play audio when navigating back to home
+    document.querySelector('a[href="{{ "/" | relative_url }}"]').addEventListener('click', (event) => {
+      event.preventDefault();
+      playAudio();
+      window.location.href = event.target.href;
     });
   });
 </script>

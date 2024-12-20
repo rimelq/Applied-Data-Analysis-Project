@@ -384,6 +384,73 @@ body {
 }
 /* END OF TYPE TOTALLY SPIES */
 
+/* START OF UFO */
+#ufo {
+  position: absolute;
+  top: -200px; /* Start above the viewport */
+  right: -150px; /* Start off-screen on the right */
+  width: 250px; /* Adjust the size */
+  z-index: 10; /* Ensure it appears above other elements */
+  opacity: 0; /* Hidden initially */
+  animation: ufoDiagonalLanding 6s linear forwards; /* Smooth diagonal animation */
+}
+
+@keyframes ufoDiagonalLanding {
+  0% {
+    top: -200px; /* Start above the viewport */
+    right: -150px; /* Start off-screen on the right */
+    opacity: 0; /* Hidden at start */
+    transform: rotate(0deg); /* Upright at the start */
+  }
+  50% {
+    top: 50%; /* Midway through the diagonal */
+    right: 50%; /* Midway horizontally */
+    opacity: 1; /* Fully visible */
+    transform: rotate(360deg); /* Complete one full rotation */
+  }
+  90% {
+    top: 80%; /* Almost at the landing point */
+    right: 70%; /* Near the final position */
+    opacity: 1;
+    //transform: rotate(720deg); /* Complete a second, faster rotation */
+  }
+  100% {
+    top: 83%; /* Final landing point */
+    right: 80%; /* Exact bottom-left corner */
+    opacity: 1;
+    //transform: rotate(0deg); /* Land upright */
+  }
+}
+/* END OF UFO */
+
+/* START OF ALIEN */
+#alien {
+  position: absolute;
+  top: 85%; /* Initially position the alien near the UFO landing spot */
+  right: 83%; /* Align it near the UFO */
+  width: 100px; /* Adjust the alien size */
+  z-index: 10; /* Ensure it appears above other elements */
+  opacity: 0; /* Initially hidden */
+  animation: alienExit 3s ease-in-out forwards; /* Smooth alien exit animation */
+  animation-delay: 6s; /* Start after the UFO animation ends */
+}
+
+@keyframes alienExit {
+  0% {
+    top: 85%; /* Initial position, inside the UFO */
+    opacity: 0; /* Hidden */
+  }
+  50% {
+    top: 90%; /* Alien moves downward slightly */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    top: 93%; /* Final landing point, fully outside the UFO */
+    opacity: 1; /* Fully visible */
+  }
+}
+/* END OF ALIEN */
+
 .synopsis-hero {
   min-height: 100vh;
   display: flex;

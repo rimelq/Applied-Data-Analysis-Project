@@ -492,7 +492,34 @@ function updateStatisticVisualization(region, type, visualizationIds) {
 
 // Modify the loadRegionContent function to include statistic selectors
 function loadRegionContent(region) {
-    console.log(`Loading content for region: ${region}`);
+    console.warn("Mapdata object:", simplemaps_worldmap_mapdata);
+
+    console.warn(`Loading content for region: ${region}`);
+    const map = simplemaps_worldmap; // Reference to the map instance
+
+    // Reset opacity for all regions
+    console.warn("Resetting region opacity to 0.5...");
+    Object.keys(map.mapdata.regions).forEach(key => {
+        map.mapdata.regions[key]['color'] = "#5B3C89";
+        if (map.mapdata.regions[key]['name'] == region) {
+            map.mapdata.regions[key]['color'] = '#e66575';
+            console.warn(`Region ${region} opacity updated to:`, map.mapdata.regions[key]['color']);
+            }
+    });
+
+
+
+    // Reload the map to apply changes
+    console.warn("Reloading the map with updated region data...");
+    map.load();
+    console.warn("Map reload completed.");
+
+    console.warn("Final region data:", JSON.stringify(simplemaps_worldmap.mapdata.regions, null, 2));
+
+
+    // Reload the map to apply the changes
+    //map.load();
+  
     const contentContainer = document.getElementById('main-content');
     
     if (!contentContainer) {

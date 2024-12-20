@@ -1605,7 +1605,7 @@ var simplemaps_worldmap_mapdata={
   }, 
   regions: {
     "0": {
-      name: "North America",
+      name: "US",
       states: [
         "CA",
         "US"
@@ -1615,7 +1615,7 @@ var simplemaps_worldmap_mapdata={
       url: "javascript:loadRegionContent('US')"
     },
     "1": {
-      name: "Europe",
+      name: "EU",
       states:['SK', 'EE', 'BG', 'GB', 'GB', 'SK', 
         'LU', 'NL', 'UA', 'default', 'CH', 'IT',
         'GB', 'default', 'GB', 'IE',
@@ -1630,14 +1630,14 @@ var simplemaps_worldmap_mapdata={
         url: "javascript:loadRegionContent('EU')"
     },
     "2": {
-      name: "East Asia",
+      name: "EA",
       states: ['CN', 'JP', 'MN', 'HK', 'KR', 'TW'],
       zoomable: "no",
       color: "#5B3C89",
       url: "javascript:loadRegionContent('EA')"
     },
     "3": {
-      name: "India",
+      name: "IN",
       states: [
         "IN"
       ], 

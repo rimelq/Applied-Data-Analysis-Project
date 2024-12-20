@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapHeight = mapContainer.offsetHeight;
     const viewportHeight = window.innerHeight;
     const savedScrollPosition = localStorage.getItem("scrollPosition");
-    loadRegionContent('US')
+    loadDefaultContent()
     if (savedScrollPosition) {
       window.scrollTo(0, parseInt(savedScrollPosition, 10)); // Scroll to saved position
       localStorage.removeItem("scrollPosition"); // Clear saved position

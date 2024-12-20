@@ -26,7 +26,7 @@ Behold Earth’s cinematic landscape—an extraordinary planet of regions teemin
 
 <div id="pip-map-container" style="display: none">
   <button id="drag-pip">Drag</button>
-  <button id="close-pip">Close</button>
+  <button id="close-pip">Move Up</button>
   <div class="resize-handle br"></div> <!-- Bottom-right -->
 </div>
 

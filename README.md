@@ -174,9 +174,7 @@ The directory structure of our project looks like this (note that the datasets a
 │       └── oceania                    <- Processed data for Oceania region
 │
 ├── src                                <- Source code
-│   ├── preprocessing_global.ipynb     <- Notebook for data cleaning and preprocessing
-│   └── plot.ipynb                     <- Notebook for plotting and analysis
-│   └── plot_functions.py              <- Python script with plotting functions
+│   ├── preprocessing.py               <- Python script for the preprocessing
 │   └── hollywood_functions.py         <- Python script for hollywood analysis
 │   └── europe_functions.py            <- Python script for europe analysis
 │   └── eastasia_functions.py          <- Python script for east-asia analysis
@@ -190,5 +188,6 @@ The directory structure of our project looks like this (note that the datasets a
 ├── .gitignore                         <- List of files ignored by git
 ├── pip_requirements.txt               <- Python dependencies file
 ├── results.ipynb                      <- Notebook with all analysis and their code
+├── preprocessing_global_final.ipynb   <- Notebook for data cleaning and preprocessing
 └── README.md
 ```

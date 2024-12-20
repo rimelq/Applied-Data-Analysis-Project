@@ -8,14 +8,15 @@ Cinema has always served as a lens through which society is reflected—or disto
 ---
 
 ## **Research Questions**
+
 Representation accuracy and trends:
+
 1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
 2. What trends can be identified in cinematic representation over time?
 
-Variations and their impact:
-   
-4. How do these portrayals vary across regions, industries, and genres?  
-5. Are the largest demographic discrepancies linked to box office revenue?    
+Conclusive question: 
+
+3. Are the largest demographic discrepancies linked to box office revenue?    
 
 ---
 
@@ -48,10 +49,7 @@ The Hollywood film industry is often considered representative of North America,
      - **1996–2012**  
 
 ---
-**Visualisation**:
-   **DISLAIMER**
-   git doesn't show the interactive plots of plots.ipnyb because of their interactiveness but they should show in Visual Studio Code
-   Alternatively clicking on the following link should open a local server which would display it: https://mybinder.org/v2/gh/epfl-ada/ada-2024-project-advanceddestroyers0fall/HEAD?labpath=src%2Fplots.ipynb
+
 ### **Gender and Age Representation**
 1. **Real-World Data**:  
    Gender and age data was obtained from the [UN World Population Prospects dataset](https://population.un.org/wpp/), covering major regions associated with key film industries.
@@ -127,9 +125,10 @@ Cinema has always had the power to influence and reflect society. However, our s
 
 ---
 
-## **A word on the site**
+# **A word on the site**
 
-The site is interactive to follow Ada's journey. **Explore each region** by clicking on the map.
+The site is interactive to follow Ada's journey. The reader can **explore each region** by clicking on the map. The reader will have an indication when it's time to go to the next region.
+The best way to enjoy the site is to go through every region before reading the conclusive analysis but the reader can still read it after having read only one region analysis (though it is not recommended).
 
 ---
 
@@ -189,6 +188,9 @@ The directory structure of our project looks like this (note that the datasets a
 │   └── europe_urban_depection_functions.py         <- Python script for europe urban analysis
 │   └── bollywood_wealth_class_functions.py         <- Python script for bollywod wealth analysis
 │   └── eastasia_overwork_culture_functions.py      <- Python script for east-asia overwork analysis
+│   └── common_plots_functions.py      <- Python script for the basic plots that we later on made with flourish
+│   └── plots                          <- Directory that contains all the html plots
+|   └── png                            <- Directory that contains all the pictures of interactive plots used in the results.ipynb
 │
 │
 ├── .gitignore                         <- List of files ignored by git

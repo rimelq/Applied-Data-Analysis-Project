@@ -79,7 +79,7 @@ Enough orbiting this point, let’s glide on to the next observation.
 
 ---
 
-# **Age Analysis of the European Movie Industry**
+# **Gender Analysis of the European Movie Industry**
 
 ## **Introduction**
 

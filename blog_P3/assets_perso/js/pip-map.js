@@ -104,17 +104,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Attach an event listener to the window resize event
 let resizeTimeout; // To prevent excessive reloads during resizing
 window.addEventListener("resize", () => {
-  if (resizeTimeout) {
-    clearTimeout(resizeTimeout);
-  }
 
-  resizeTimeout = setTimeout(() => {
     console.log("Window resized. Reloading the page...");
     const scrollPosition = window.scrollY; // Get current scroll position
     localStorage.setItem("scrollPosition", scrollPosition); // Save to localStorage
 
     location.reload();
-  }, 100);
 });
 
   
@@ -239,7 +234,7 @@ window.addEventListener("resize", () => {
     closeButton.style.display = "none";
     dragButton.style.display = "none";
     resetPiPPosition(); // Reset position when closed
-    window.scrollTo({ top: mapOffsetTop - 50, behavior: "smooth" });
+    mapContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
   // --- Helper function to reset PiP position ---

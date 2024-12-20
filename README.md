@@ -3,22 +3,49 @@
 
 ## **Abstract**
 
-Cinema has always served as a lens through which society is reflected—or distorted. This project investigates whether the cinematic world aligns with real-world demographics in terms of gender, ethnicity, and age, or whether it reinforces outdated stereotypes. By comparing on-screen representation to societal expectations across genres and regions, we aim to highlight discrepancies and explore their potential implications. Our analysis will compare demographic representation not only by region but also across major film industries such as Hollywood, Bollywood, and others. Beyond identifying these disparities, we will examine trends over time and consider data-driven proposals to address them. 
+   Cinema serves as both a mirror and a canvas, reflecting societal norms while shaping perceptions of the world. This project delves into whether the cinematic portrayal of gender, ethnicity, and age aligns with real-world demographics or perpetuates outdated stereotypes. By comparing on-screen representation to societal realities across regions, genres, and time periods, we uncover disparities and their implications for cultural and economic trends. 
+Focusing on major film industries—Hollywood, Bollywood, East Asia, and Europe—we analyze how these gaps evolved over decades and assess their connection to box office performance. Beyond highlighting representation inaccuracies, we explore whether the industry's choices are driven by financial motives or entrenched traditions. Our findings aim to spark meaningful discussions on cinema’s role in reflecting—and potentially reshaping—society.
+
 
 ---
 
 ## **Research Questions**
 
-Representation accuracy and trends:
+Our research aims to uncover the dynamics between cinema, societal representation, and economic outcomes by addressing the following key questions:
 
-1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
-2. What trends can be identified in cinematic representation over time?
+1. **Representation Accuracy and Trends**:  
+   - How accurately does cinema reflect real-world gender, ethnicity, and age demographics?  
+   - What trends in representation can be observed across time periods, regions, and genres?
 
-Conclusive question: 
+2. **Economic Implications**:  
+   - Are the largest demographic discrepancies linked to box office revenue?  
+   - Does cinematic representation reflect financial motivations or cultural inertia?
 
-3. Are the largest demographic discrepancies linked to box office revenue?    
 
 ---
+
+## **A Note on the Data Story**
+
+To bring the data story to life, we introduced an alien persona (of course named Ada!), offering a unique, outsider perspective on human cinematic trends.
+
+The website’s design features a space-themed color palette, blending alien greens and galaxy purples to complement the narrative. Our storytelling approach aims to balance between humor and professionalism, keeping readers both engaged and informed.
+
+
+---
+
+
+# **About our website**
+
+Check out our interactive website: [https://blog-p3.vercel.app](https://blog-p3.vercel.app)
+
+The site allows readers to follow Ada's journey by **exploring each region** through an interactive map. As you navigate, you'll receive prompts to move to the next region. There are four regions to explore, each offering unique insights. 
+
+At the end, a **Unified All-Regions Analysis** combines data on Representation Gaps and Box Office Revenue, providing a comprehensive summary of our findings. This analysis is accessible after clicking on any region and remains the same regardless of the region selected.
+
+For the best experience, we recommend exploring each region's analysis before diving into the Unified Analysis. However, readers can still access the conclusion after reviewing just one region—though this approach may miss the depth and context provided by the full journey.
+
+---
+
 
 ## **Data Processing**
 
@@ -46,8 +73,8 @@ The Hollywood film industry is often considered representative of North America,
      - **1950–1965**  
      - **1966–1980**  
      - **1981–1995**  
-     - **1996–2012**  
-
+     - **1996–2012**
+  - When deemed relevant and for more detailed analyses, we sometimes further divided the data into 10-year intervals to capture finer changes and trends over time.
 ---
 
 ### **Gender and Age Representation**
@@ -92,26 +119,18 @@ From these theme-classified movies, further statistical analysis was conducted t
 - Up until Milestone P3:
    - Week 10-12: Completed remaining regional analyses
    - Week 12 : Started website development
-   - Week 13: Conducted the conclusive analysis
-   - Week 12-14: Transform results into an engaging and interactive data story 
+   - Week 12-14: Transformed results into an engaging and interactive data story 
+   - Week 13: Conducted the Box Office conclusive analysis
+
 
 ---
 
 ## **Contribution of team members**
-- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive analysis
-- **Alexandre Huou:** CMU datapreprocessing, lead website development and deployment
+- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive Box Office Analysis
+- **Alexandre:** CMU datapreprocessing, lead Website development and deployment
 - **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
-- **Donia:** Bollywood analysis, summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
+- **Donia:** Bollywood analysis, Movie Summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
 - **Lily:** Europe analysis, plotting the data, data story writing, formatting on the site
-
----
-
-## **A Word on the Data Story**
-
-To make the data story engaging, we introduced an alien persona (of course called Ada) with a small backstory, which offers an external perspective on human cinematic trends. 
-
-The site design incorporates a space-inspired color palette (e.g., alien greens, galaxy purples) to match the theme.
-The storytelling approach aims to balance humor and professionalism to maintain reader interest.
 
 ---
 
@@ -122,13 +141,6 @@ Our analysis highlights significant gaps in the way cinema portrays society. Acr
 What stands out in our findings is the absence of relationship between representation gaps and box-office performance. This contradicts the argument that these portrayals are driven by financial motives and points instead to a reluctance to break away from long-standing traditions.
 
 Cinema has always had the power to influence and reflect society. However, our study shows that it often falls short of its potential to represent the world accurately. 
-
----
-
-# **A word on the site**
-
-The site is interactive to follow Ada's journey. The reader can **explore each region** by clicking on the map. The reader will have an indication when it's time to go to the next region.
-The best way to enjoy the site is to go through every region before reading the conclusive analysis but the reader can still read it after having read only one region analysis (though it is not recommended).
 
 ---
 

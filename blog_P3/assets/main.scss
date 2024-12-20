@@ -438,18 +438,120 @@ body {
 @keyframes alienExit {
   0% {
     top: 85%; /* Initial position, inside the UFO */
-    opacity: 0; /* Hidden */
+    opacity: 1; /* Hidden */
+    transform: scale(0.3);
   }
   50% {
     top: 90%; /* Alien moves downward slightly */
     opacity: 1; /* Fully visible */
+    transform: scale(0.6);
   }
   100% {
-    top: 93%; /* Final landing point, fully outside the UFO */
+    top: 93%;
+    right: 80%; /* Final landing point, fully outside the UFO */
     opacity: 1; /* Fully visible */
+    transform: scale(0.75);
   }
 }
 /* END OF ALIEN */
+
+/* START OF POP UP BOX*/
+#popup-box {
+  position: absolute;
+  top: 82%;
+  right: 58%;
+  width: 20%;
+  height: 13%;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Courier New;
+  font-size: 14px;
+  z-index: 20;
+  opacity: 0;
+  animation: popupAppear 2s ease-in-out forwards;
+  animation-delay: 9s;
+}
+
+/* Popup Appear Animation */
+@keyframes popupAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move into place */
+  }
+}
+
+/* Add a hover effect to the alien */
+#alien:hover + #popup-box {
+  background-color: #f0f8ff; /* Change background on hover */
+  border-color: #007bff; /* Change border color on hover */
+  cursor: pointer;
+}
+/* END OF POP UP BOX*/
+
+/* START OF ALIEN TOP MAP */
+/* Bubble Container */
+.bubble-container {
+  position: relative;
+  display: inline-block;
+  float: right; /* Align to the right */
+  margin-right: 20px; /* Add some space from the edge */
+  margin-top: -40px; /* Adjust vertical alignment */
+  text-align: center; /* Center content */
+  width: 150px; /* Adjust width */
+}
+
+/* Alien Icon Styling */
+#alien-icon {
+  width: 100px; /* Adjust the alien icon size */
+  margin-bottom: 10px; /* Add space below the icon */
+}
+
+/* Speech Bubble Styling */
+.speech-bubble {
+  position: relative;
+  background: #f0f8ff; /* Light blue background for the bubble */
+  border: 2px solid #007bff; /* Border color matching the theme */
+  border-radius: 15px; /* Rounded edges for the bubble */
+  padding: 10px; /* Padding inside the bubble */
+  font-size: 14px; /* Font size for the text */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+
+  /* Positioning for the "tail" of the bubble */
+  margin: auto;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position the "tail" at the bottom */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent; /* Create the triangular tail */
+  border-top-color: #f0f8ff; /* Match the bubble's background color */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .bubble-container {
+    float: none;
+    text-align: center;
+    margin: 0 auto 20px; /* Center on smaller screens */
+  }
+}
+
+/* END OF ALIEN TOP MAP */
 
 .synopsis-hero {
   min-height: 100vh;

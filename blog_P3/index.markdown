@@ -9,6 +9,12 @@ Behold Earth’s cinematic landscape—an extraordinary planet of regions teemin
 
 *Let the journey begin!*
 
+<div class="bubble-container">
+  <img id="alien-icon" src="assets/images/ET_finger.png" alt="Alien Icon">
+  <div class="speech-bubble">
+    Clicking on a region teleports me there?
+  </div>
+</div>
 
 
 <div id="map-container">

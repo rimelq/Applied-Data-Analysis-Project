@@ -16,7 +16,7 @@ Representation accuracy and trends:
 
 Conclusive question: 
 
-4. Are the largest demographic discrepancies linked to box office revenue?    
+3. Are the largest demographic discrepancies linked to box office revenue?    
 
 ---
 

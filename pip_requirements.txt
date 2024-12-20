@@ -11,3 +11,6 @@ seaborn
 scipy
 nltk
 requests
+statsmodels
+dash
+scikit-learn

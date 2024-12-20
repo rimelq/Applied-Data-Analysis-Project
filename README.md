@@ -10,10 +10,12 @@ Cinema has always served as a lens through which society is reflected—or disto
 ## **Research Questions**
 
 Representation accuracy and trends:
+
 1. How accurately does cinema reflect real-world gender, ethnicity, and age demographics?
 2. What trends can be identified in cinematic representation over time?
 
 Conclusive question: 
+
 4. Are the largest demographic discrepancies linked to box office revenue?    
 
 ---

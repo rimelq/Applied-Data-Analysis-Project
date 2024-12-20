@@ -3,3 +3,11 @@ jupyterlab
 ipywidgets
 jupyterlab-widgets
 widgetsnbextension
+pandas
+plotly
+numpy
+matplotlib
+seaborn
+scipy
+nltk
+requests

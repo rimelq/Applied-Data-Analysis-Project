@@ -1,4 +1,4 @@
-def create_and_save_overwork_and_balance_dictionaries(wordnet, output_dir="dictionaries"):
+def create_and_save_overwork_and_balance_dictionaries(wordnet, output_dir="./EA_skipgram/dictionaries"):
     """
     Creates and saves expanded dictionaries for overwork-related and work-life balance-related keywords.
 
@@ -64,7 +64,11 @@ def create_and_save_overwork_and_balance_dictionaries(wordnet, output_dir="dicti
 
 import pandas as pd
 
-def extract_and_save_eastasian_movies(movie_metadata, output_file="eastasian_movies.csv"):
+
+###########################################################################
+
+
+def extract_and_save_eastasian_movies(movie_metadata, output_file="./EA_skipgram/eastasian_movies.csv"):
     """
     Extracts movies from East Asian countries and saves them to a CSV file.
 
@@ -92,8 +96,13 @@ def extract_and_save_eastasian_movies(movie_metadata, output_file="eastasian_mov
 
     print(f"East Asian movies saved to {output_file}")
     return eastasian_movies
+
+
+###########################################################################
+
+
 # Function to process East Asian themes and create visualizations with a consistent template
-def process_eastasian_themes(re, px, pd, output_file="eastasian_theme_analysis.html"):
+def process_eastasian_themes(re, px, pd, output_file="./plots/eastasian_theme_analysis.html"):
     """
     Analyze work-related themes in East Asian movies and create visualizations.
 
@@ -103,9 +112,6 @@ def process_eastasian_themes(re, px, pd, output_file="eastasian_theme_analysis.h
     Returns:
         None
     """
-    import pandas as pd
-    import plotly.express as px
-    import re
 
     # Load dictionaries
     with open("dictionaries\\overwork_dictionary.txt") as file:
@@ -114,7 +120,7 @@ def process_eastasian_themes(re, px, pd, output_file="eastasian_theme_analysis.h
         balance_dict = set(file.read().splitlines())
 
     # Load data
-    eastasian_with_summaries = pd.read_csv("eastasian_movies.csv")
+    eastasian_with_summaries = pd.read_csv("./EA_skipgram/eastasian_movies.csv")
 
     # Function to tokenize and count keywords in the summary
     def count_class_keywords(summary, keyword_dict):

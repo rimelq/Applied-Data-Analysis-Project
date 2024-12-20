@@ -1,14 +1,23 @@
+##############################################
+#                                            #
+#  Reliability Score Analysis Python Script  #
+#                                            #
+##############################################
+
+
 import pandas as pd
 import plotly.express as px
 import numpy as np
 
-def plot_dataset_distribution_across_regions(movie_metadata, output_html_file = "dataset_distribution_across_regions.html", output_csv_file = "dataset_distribution_across_regions.csv"):
-    
+
+# FUNCTIONS--------------------------------:
+
+
+def plot_dataset_distribution_across_regions(movie_metadata, 
+                                             output_html_file = "dataset_distribution_across_regions.html", 
+                                             output_csv_file = "dataset_distribution_across_regions.csv"):
     """
     Calculate and plot the dataset distribution across regions.
-
-    Parameters:
-        movie_metadata (DataFrame): Input movie metadata DataFrame with 'Movie countries' column.
     """
 
     # Define region-country mappings
@@ -83,21 +92,20 @@ def plot_dataset_distribution_across_regions(movie_metadata, output_html_file = 
     # Save the figure as an HTML file
     fig.write_html(output_html_file)
     print(f"Figure saved as {output_html_file}")
+    
     # Save the resulting DataFrame to a CSV for later use
     df_ratios.to_csv(output_csv_file, index=False)
 
-def calculate_missing_data_percentage(movie_metadata, output_html_file = "missing_data_across_regions.html", output_csv_file = "missing_data_across_regions.csv"):
-    
+
+######################################################################
+
+
+def calculate_missing_data_percentage(movie_metadata, output_html_file = "missing_data_across_regions.html", 
+                                      output_csv_file = "missing_data_across_regions.csv"):
     """
     Calculate the percentage of missing data (NaNs) for each region and plot the results.
-
-    Parameters:
-        movie_metadata (DataFrame): The movie metadata DataFrame.
-        output_file (str): Path to save the output CSV file with results.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing the region names and percentage of missing values.
     """
+    
     # Define region-country mappings
     hollywood_region = ['United States of America', 'Canada']
     indian_region = ['India']
@@ -119,7 +127,6 @@ def calculate_missing_data_percentage(movie_metadata, output_html_file = "missin
         "Europe": european_region
     }
     
-    # Dictionary to store missing data percentages
     missing_data_percentages = {}
     
     # Helper function to calculate missing percentage
@@ -128,8 +135,8 @@ def calculate_missing_data_percentage(movie_metadata, output_html_file = "missin
             lambda x: any(country in x for country in region_countries) if pd.notnull(x) else False
         )]
         
-        total_elements = sub_data.size  # Total elements in the subset
-        total_missing = sub_data.isna().sum().sum()  # Total NaN values
+        total_elements = sub_data.size  
+        total_missing = sub_data.isna().sum().sum()  
         return (total_missing / total_elements) * 100 if total_elements > 0 else 0
 
     # Calculate for each region
@@ -164,21 +171,20 @@ def calculate_missing_data_percentage(movie_metadata, output_html_file = "missin
     # Save the figure as an HTML file
     fig.write_html(output_html_file)
     print(f"Figure saved as {output_html_file}")
+        
     # Save the resulting DataFrame to a CSV for later use
     df_missing.to_csv(output_csv_file, index=False)
     
-def calculate_temporal_coverage(movie_metadata, output_html_file = "temporal_coverage_across_regions.html", output_csv_file = "temporal_coverage_across_regions.csv") :
+
+######################################################################
+
     
+def calculate_temporal_coverage(movie_metadata, output_html_file = "temporal_coverage_across_regions.html", 
+                                output_csv_file = "temporal_coverage_across_regions.csv") :
     """
     Calculate the temporal coverage percentage of movies for each region.
-
-    Parameters:
-        movie_metadata (DataFrame): The movie metadata DataFrame.
-        output_file (str): Path to save the output CSV file with results.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing the region names and temporal coverage percentages.
     """
+    
     # Define region-country mappings
     hollywood_region = ['United States of America', 'Canada']
     indian_region = ['India']
@@ -205,7 +211,6 @@ def calculate_temporal_coverage(movie_metadata, output_html_file = "temporal_cov
         lambda x: pd.to_datetime(str(x), errors='coerce').year if pd.notnull(x) else None
     )
 
-    # Drop rows with missing years
     movie_metadata = movie_metadata.dropna(subset=['release_year'])
     
     # Calculate total unique years in the full dataset
@@ -254,21 +259,16 @@ def calculate_temporal_coverage(movie_metadata, output_html_file = "temporal_cov
     # Save the figure as an HTML file
     fig.write_html(output_html_file)
     print(f"Figure saved as {output_html_file}")
+    
     # Save the resulting DataFrame to a CSV for later use
     df_temporal_coverage.to_csv(output_csv_file, index=False)
+
     
-def calculate_reliability_score(dataset_size_df, missing_data_df, temporal_coverage_df, output_html_file = "reliability_scores_across_regions.html", output_csv_file = "reliability_scores_across_regions.csv"):
-    
+def calculate_reliability_score(dataset_size_df, missing_data_df, temporal_coverage_df, 
+                                output_html_file = "reliability_scores_across_regions.html", 
+                                output_csv_file = "reliability_scores_across_regions.csv"):
     """
     Calculate the reliability scores for regions using Dataset Size, Missing Data, and Temporal Coverage.
-
-    Parameters:
-        dataset_size_df (DataFrame): DataFrame with 'Region' and 'Dataset Percentage'.
-        missing_data_df (DataFrame): DataFrame with 'Region' and 'Missing Data (%)'.
-        temporal_coverage_df (DataFrame): DataFrame with 'Region' and 'Coverage Ratio'.
-
-    Returns:
-        DataFrame: A DataFrame containing regions and their corresponding reliability scores.
     """
 
     # Merge all dataframes on the 'Region' column
@@ -281,10 +281,10 @@ def calculate_reliability_score(dataset_size_df, missing_data_df, temporal_cover
         'Temporal Coverage (%)': 'Temporal_Coverage'
     }, inplace=True)
 
-    # Normalize the Dataset Size and Temporal Coverage to [0, 1] (if needed)
-    merged_df['Dataset_Size'] = merged_df['Dataset_Size'] / 100  # Normalize data pourcentage percentage
-    merged_df['Missing_Data'] = merged_df['Missing_Data'] / 100  # Normalize missing data percentage
-    merged_df['Temporal_Coverage'] = merged_df['Temporal_Coverage'] / 100  # Normalize coverage percentage
+    # Normalize the Dataset Size and Temporal Coverage to [0, 1] 
+    merged_df['Dataset_Size'] = merged_df['Dataset_Size'] / 100  
+    merged_df['Missing_Data'] = merged_df['Missing_Data'] / 100  
+    merged_df['Temporal_Coverage'] = merged_df['Temporal_Coverage'] / 100  
 
     # Calculate the reliability score using the formula
     merged_df['Reliability_Score'] = (
@@ -327,3 +327,5 @@ def calculate_reliability_score(dataset_size_df, missing_data_df, temporal_cover
     # Save the resulting DataFrame to a CSV file for flourish visualisation
     merged_df[['Region', 'Reliability_Score']].to_csv(output_csv_file, index=False)
     print(f"Reliability scores saved to {output_csv_file}")
+
+    

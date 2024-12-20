@@ -1,3 +1,10 @@
+##############################################
+#                                            #
+#      Bollywood Analysis Python Script      #
+#                                            #
+##############################################
+
+
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
@@ -5,6 +12,10 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 
 DATA_FOLDER = './data/final/'
+
+
+# FUNCTIONS--------------------------------:
+
 
 def var_loader(DATA_FOLDER, mode='hollywood'):
     results = []
@@ -25,13 +36,12 @@ bothsexes_bollywood_realworld_averages, male_bollywood_realworld_proportions, \
 female_bollywood_realworld_proportions = var_loader(DATA_FOLDER, mode="bollywood")
 
 
+###############################################################
+
+
 def process_and_plot_ethnicity_revenue(data, output_file):
     """
     Process the data and plot the average box office revenue by majority ethnicity of actors.
-
-    Parameters:
-        data (DataFrame): Input DataFrame containing the movie and ethnicity data.
-        output_file (str): Path to save the output HTML file of the plot.
     """
 
     # Calculate the majority ethnicity for each movie
@@ -69,7 +79,7 @@ def process_and_plot_ethnicity_revenue(data, output_file):
     fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
     fig.update_layout(
         xaxis=dict(
-            range=[1.76e7, 1.78e7],  # Keep the scale as requested
+            range=[1.76e7, 1.78e7],  
             title="Average Box Office Revenue ($)"
         ),
         yaxis=dict(
@@ -79,28 +89,28 @@ def process_and_plot_ethnicity_revenue(data, output_file):
             font=dict(size=18, color='black')
         ),
         template="plotly_white",
-        plot_bgcolor="#F2F0F0",  # Background color
-        paper_bgcolor="#F2F0F0",  # Paper background color
-        font=dict(color="black"),  # Font color for labels
+        plot_bgcolor="#F2F0F0",  
+        paper_bgcolor="#F2F0F0",  
+        font=dict(color="black"),  
         margin=dict(t=100),  
     )
 
-    # Show the figure
     fig.show()
 
     # Save the figure as an HTML file
     fig.write_html(output_file)
     print(f"Figure saved as {output_file}")
 
+
+###############################################################
+
+
 def process_and_plot_gender_dominance(data, output_file):
     """
     Analyze gender proportions in movies, label them as male-dominated, female-dominated, or balanced,
     and plot the results with custom colors and layout.
-
-    Parameters:
-        data (DataFrame): Input DataFrame containing 'wiki_movie_id' and 'actor_gender'.
-        output_file (str): Path to save the output HTML file of the plot.
     """
+    
     # Calculate gender proportions for each movie
     def calculate_gender_proportions(df):
         df = df.dropna(subset=['actor_gender'])  # Drop rows with NaN actor_gender
@@ -131,7 +141,7 @@ def process_and_plot_gender_dominance(data, output_file):
         how='left'
     )
 
-    #Count gender dominance categories
+    # Count gender dominance categories
     dominance_counts = gender_proportions['Gender Dominance'].value_counts().reset_index()
     dominance_counts.columns = ['Gender Dominance', 'Number of Movies']
 
@@ -149,7 +159,6 @@ def process_and_plot_gender_dominance(data, output_file):
         title="<b>Number of Male-Dominated vs Female-Dominated Movies</b><br><span style='font-size:14px;'>Representation of Gender Dominance</span>",
     )
 
-    
     fig.update_traces(
         textposition='outside',
         marker_line_color='black',
@@ -178,7 +187,6 @@ def process_and_plot_gender_dominance(data, output_file):
         margin=dict(t=100, l=50, r=50, b=50), 
     )
 
-    # Show the plot
     fig.show()
 
     # Save the figure as an HTML file
@@ -186,14 +194,14 @@ def process_and_plot_gender_dominance(data, output_file):
     print(f"Figure saved as {output_file}")
 
 
+###############################################################
+
+
 def process_and_plot_average_revenue_by_gender(data, output_file):
     """
     Calculate and plot the average box office revenue for each gender dominance category.
-
-    Parameters:
-        data (DataFrame): Input DataFrame containing 'Gender Dominance' and 'box_office' columns.
-        output_file (str): Path to save the output HTML file of the plot.
     """
+    
     def calculate_gender_proportions(df):
             df = df.dropna(subset=['actor_gender'])  # Drop rows with NaN actor_gender
             gender_counts = df.groupby('wiki_movie_id')['actor_gender'].value_counts(normalize=True).unstack(fill_value=0)
@@ -235,21 +243,20 @@ def process_and_plot_average_revenue_by_gender(data, output_file):
             'Gender Dominance': 'Gender Dominance'
         },
         text='Average Box Office Revenue',
-        color_discrete_sequence=['#7c1d6f']  # Bar color
+        color_discrete_sequence=['#7c1d6f'] 
     )
 
-    # Adjust layout for styling and background
     fig.update_traces(
-        texttemplate='%{text:.2s}',  # Format numbers as shortened (e.g., 1.78M)
+        texttemplate='%{text:.2s}',  
         textposition='outside',
-        marker_line_color='black',  # Add black border around bars
+        marker_line_color='black',  
         marker_line_width=1.5
     )
 
     fig.update_layout(
         title=dict(
             font=dict(size=18, color='black'),
-            x=0.5,  # Center align title
+            x=0.5,  
             xanchor='center'
         ),
         xaxis=dict(
@@ -262,9 +269,9 @@ def process_and_plot_average_revenue_by_gender(data, output_file):
             titlefont=dict(size=12, color="black")
         ),
         template="plotly_white",
-        plot_bgcolor="#F2F0F0",  # Light gray plot background
-        paper_bgcolor="#F2F0F0",  # Light gray canvas background
-        font=dict(color="black"),  # Black text for labels
+        plot_bgcolor="#F2F0F0",  
+        paper_bgcolor="#F2F0F0",  
+        font=dict(color="black"),  
         margin=dict(t=100, l=50, r=50, b=50),  
         showlegend=False 
     )
@@ -275,16 +282,15 @@ def process_and_plot_average_revenue_by_gender(data, output_file):
     fig.write_html(output_file)
     print(f"Figure saved as {output_file}")
 
+
+###############################################################
+
+
 def process_and_plot_female_actor_trend(data, output_file):
     """
     Analyze and plot the trend of female actors in movies over the years.
-
-    Parameters:
-        data (DataFrame): Input DataFrame containing 'actor_gender' and 'release_y' columns.
-        output_file (str): Path to save the output HTML file of the plot.
     """
 
-    # Remove rows with NaN values in 'actor_gender' or 'release_y'
     valid_data = data.dropna(subset=['actor_gender', 'release_y'])
 
     # Count the number of female actors per year
@@ -302,11 +308,11 @@ def process_and_plot_female_actor_trend(data, output_file):
         labels={'release_y': 'Year', 'Female Actor Count': 'Count of Female Actors'},
         markers=True,
         line_shape='linear',
-        color_discrete_sequence=['#eeb479']  # Line color
+        color_discrete_sequence=['#eeb479']  
     )
 
     fig.update_traces(
-        line=dict(width=2),  # Set line width
+        line=dict(width=2), 
         marker=dict(size=5, color='#eeb479') 
     )
 
@@ -319,8 +325,8 @@ def process_and_plot_female_actor_trend(data, output_file):
         xaxis=dict(
             title="Year",
             tickmode='linear',
-            tick0=1900,  # Start tick interval from 1900
-            dtick=10,  # Interval for ticks (every 10 years)
+            tick0=1900,
+            dtick=10,  
             titlefont=dict(size=12, color='black')
         ),
         yaxis=dict(
@@ -328,10 +334,10 @@ def process_and_plot_female_actor_trend(data, output_file):
             titlefont=dict(size=12, color='black')
         ),
         template="plotly_white",
-        plot_bgcolor="#F2F0F0",  # Light gray background
-        paper_bgcolor="#F2F0F0",  # Light gray canvas
-        font=dict(color="black"),  # Black text
-        margin=dict(t=100, l=50, r=50, b=50)  # Adjust margins
+        plot_bgcolor="#F2F0F0",  
+        paper_bgcolor="#F2F0F0",  
+        font=dict(color="black"),  
+        margin=dict(t=100, l=50, r=50, b=50)  
     )
 
     fig.show()
@@ -341,16 +347,14 @@ def process_and_plot_female_actor_trend(data, output_file):
     print(f"Figure saved as {output_file}")
 
 
+###############################################################
+
+
 def process_and_plot_male_actor_trend(data, output_file):
     """
     Analyze and plot the trend of male actors in movies over the years.
-
-    Parameters:
-        data (DataFrame): Input DataFrame containing 'actor_gender' and 'release_y' columns.
-        output_file (str): Path to save the output HTML file of the plot.
     """
 
-    # Remove rows with NaN values in 'actor_gender' or 'release_y'
     valid_data = data.dropna(subset=['actor_gender', 'release_y'])
 
     # Count the number of male actors per year
@@ -367,7 +371,7 @@ def process_and_plot_male_actor_trend(data, output_file):
         labels={'release_y': 'Year', 'Male Actor Count': 'Count of Male Actors'},
         markers=True,
         line_shape='linear',
-        color_discrete_sequence=['#7c1d6f']  # Line color (dark purple)
+        color_discrete_sequence=['#7c1d6f']  
     )
 
     # Update marker styling: 
@@ -380,14 +384,14 @@ def process_and_plot_male_actor_trend(data, output_file):
     fig.update_layout(
         title=dict(
             font=dict(size=18, color='black'),
-            x=0.5,  # Center align title
+            x=0.5,  
             xanchor='center'
         ),
         xaxis=dict(
             title="Year",
             tickmode='linear',
-            tick0=1900,  # Start tick interval from 1900
-            dtick=10,  # Interval for ticks (every 10 years)
+            tick0=1900, 
+            dtick=10,  
             titlefont=dict(size=12, color='black')
         ),
         yaxis=dict(
@@ -395,10 +399,10 @@ def process_and_plot_male_actor_trend(data, output_file):
             titlefont=dict(size=12, color='black')
         ),
         template="plotly_white",
-        plot_bgcolor="#F2F0F0",  # Light gray background
-        paper_bgcolor="#F2F0F0",  # Light gray canvas
-        font=dict(color="black"),  # Black text
-        margin=dict(t=100, l=50, r=50, b=50)  # Adjust margins
+        plot_bgcolor="#F2F0F0", 
+        paper_bgcolor="#F2F0F0",
+        font=dict(color="black"),  
+        margin=dict(t=100, l=50, r=50, b=50) 
     )
 
     fig.show()
@@ -408,20 +412,18 @@ def process_and_plot_male_actor_trend(data, output_file):
     print(f"Figure saved as {output_file}")
 
 
+###############################################################
+
+
 def save_actor_counts_for_flourish(male_actor_counts, female_actor_counts, output_file):
     """
     Merge male and female actor counts, transpose the data for Flourish, and save it as a CSV file.
-
-    Parameters:
-        male_actor_counts (DataFrame): DataFrame containing 'release_y' and 'Male Actor Count'.
-        female_actor_counts (DataFrame): DataFrame containing 'release_y' and 'Female Actor Count'.
-        output_file (str): Path to save the transposed data as a CSV file.
     """
 
-    # Merge male and female actor counts on 'release_y'
+    # Merge male and female actor counts on 'release_y' column
     actor_counts = male_actor_counts.merge(female_actor_counts, on="release_y", how="inner")
 
-    #Transpose the DataFrame
+    # Transpose the DataFrame
     flipped_df = actor_counts.T
 
     # Reset the index to make the years as a column

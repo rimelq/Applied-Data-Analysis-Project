@@ -1,3 +1,10 @@
+##############################################
+#                                            #
+#      East Asia Analysis Python Script      #
+#                                            #
+##############################################
+
+
 import os
 import pandas as pd
 import requests
@@ -14,6 +21,10 @@ from scipy.stats import gaussian_kde
 import plotly.express as px
 
 DATA_FOLDER = './data/final/'
+
+
+# FUNCTIONS--------------------------------:
+
 
 def var_loader(DATA_FOLDER, mode='hollywood'):
     results = []
@@ -34,23 +45,14 @@ bothsexes_eastasia_realworld_averages, male_eastasia_realworld_proportions, \
 female_eastasia_realworld_proportions = var_loader(DATA_FOLDER, mode="eastasia")
 
 
+###############################################################
+
+
 def prepare_ethnicity_proportion_data(cinema_data, real_world_data, output_path, period='1996-2012'):
     """
-    Prepare a dataset comparing cinema representation and real-world proportions 
-    for specified ethnicities over a given period.
-    
-    Parameters:
-    - cinema_data (DataFrame): Dataset containing cinema movie counts.
-                               Columns: ['actor_ethnicity_classification']
-    - real_world_data (DataFrame): Dataset containing real-world proportions.
-                                   Columns: ['group', 'size', 'new_period']
-    - output_path (str): Path to save the resulting CSV file.
-    - period (str): Period to filter the real-world data. Default: '1996-2012'.
-    
-    Returns:
-    - period_df (DataFrame): Processed data comparing cinema and real-world proportions.
-    - Saves the processed data as a CSV file at the specified path.
+    Prepare a dataset comparing cinema representation and real-world proportions for specified ethnicities over a given period.
     """
+    
     # Cinema Data Processing
     cinema_df = cinema_data['actor_ethnicity_classification'].value_counts().reset_index()
     cinema_df.columns = ['Ethnicity', 'Movies_Produced']
@@ -82,7 +84,7 @@ def prepare_ethnicity_proportion_data(cinema_data, real_world_data, output_path,
         data_merged['Movies_Produced'] / data_merged['Movies_Produced'].sum()
     ) * 100
     
-    # Fill NaN values
+    # Fill potential NaN values
     data_merged.fillna(0, inplace=True)
     
     period_data = []
@@ -106,13 +108,14 @@ def prepare_ethnicity_proportion_data(cinema_data, real_world_data, output_path,
     return period_df
 
 
+###############################################################
 
 
 def plot_temporal_trends(cinema_pivot, output_path):
     """
     Plots temporal trends for East Asian Cinema Representation with annotations.
-
     """
+    
     custom_colors = {
         'Chinese': '#5c1165',
         'Japanese': '#39b185',
@@ -186,7 +189,6 @@ def plot_temporal_trends(cinema_pivot, output_path):
         )
     ]
 
-    
     fig.update_layout(
         title={
             'text': "<b>Temporal Trends in East Asian Cinema Representation</b><br><span style='font-size:14px;'>(Period: 1950–2012)</span>",
@@ -227,10 +229,14 @@ def plot_temporal_trends(cinema_pivot, output_path):
     print(f"Plot saved to {output_path}")
 
 
+###############################################################
+
+
 def create_gender_radar_chart(eastasia_data, radar_html_path):
     """
     Creates a radar chart showing the gender gap in cinema genres and saves output files.
     """
+    
     # Map gender values
     eastasia_data['actor_gender'] = eastasia_data['actor_gender'].map({'M': 'Male', 'F': 'Female'})
 
@@ -303,14 +309,16 @@ def create_gender_radar_chart(eastasia_data, radar_html_path):
     # Show the radar chart
     fig.show()
 
-def create_age_distribution_violin_plots(
-    female_realworld, male_realworld, eastasia_data,
-    male_output_path, female_output_path
-):
+
+###############################################################
+
+
+def create_age_distribution_violin_plots(female_realworld, male_realworld, eastasia_data,
+    male_output_path, female_output_path):
     """
-    Creates violin plots comparing the age distributions of male and female actors
-    in East Asian cinema to real-world population data.
+    Creates violin plots comparing the age distributions of male and female actors in East Asian cinema to real-world population data.
     """
+    
     # Melt the real-world data for females and males
     female_realworld_long = female_realworld.melt(
         id_vars=['Time Period'], var_name='Age', value_name='Proportion'
@@ -416,12 +424,14 @@ def create_age_distribution_violin_plots(
     print(f"Female violin plot saved at: {female_output_path}")
 
 
+###############################################################
+
 
 def prepare_flourish_bar_race(eastasia_data, output_path):
     """
     Prepares data for a Flourish bar race visualization.
-
     """
+    
     # Filter data for the years 1950-2012
     filtered_data = eastasia_data[(eastasia_data['release_y'] >= 1950) & (eastasia_data['release_y'] <= 2012)]
 

@@ -103,7 +103,7 @@ From these theme-classified movies, further statistical analysis was conducted t
 - **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studiees and conclusive analysis
 - **Alexandre Huou:** CMU datapreprocessing, lead website development and deployment
 - **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
-- **Donia:** Bollywood analysis, key-word matching with tokenization for deeper insights across all regions
+- **Donia:** Bollywood analysis, summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
 - **Lily:** Europe analysis, plotting the data, data story writing, formatting on the site
 
 ---

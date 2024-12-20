@@ -1,5 +1,5 @@
 
-# **From Script to reality: Does Cinema Mirror Life or Rewrite It**
+# **From Script to reality: Does Cinema Mirror Life or Rewrite It?**
 
 ## **Abstract**
 

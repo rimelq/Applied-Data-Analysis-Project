@@ -1,13 +1,35 @@
 # **Bollywood Cluster**
 
-Along Earth’s southern latitudes, I encounter Bollywood, a shimmering star in the galaxy of South Asian entertainment. Festivals of color, ancient traditions, and a cinematic tapestry unlike any other converge here. As I, Ada, turn my cosmic gaze upon this data, let us uncover the patterns that shape Bollywood’s luminous screens.
 
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- Text Content -->
+  <div style="flex: 3; padding: 10px;">
+
+Along Earth’s southern latitudes, I encounter Bollywood, a shimmering star in the galaxy of South Asian entertainment. Festivals of color, ancient traditions, and a cinematic tapestry unlike any other converge here. In this analysis, let me uncover the patterns that shape Bollywood’s luminous screens.
+
+  </div>
+
+  <!-- Plot Content -->
+  <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; max-width: 300px; aspect-ratio: 1 / 1; position: relative; overflow: hidden; border-radius: 8px;">
+      <img 
+        src="/assets/plots/reliability/reliabilty_IN.jpg" 
+        style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div style="font-size: 10px; color: #555; text-align: center; margin-top: 5px;">
+      <em>*see at the end for more insight on this score</em>
+    </div>
+  </div>
+</div>
 
 ---
 
 ## **Preliminary Visualizations of Ethnic Representation Over Time**
 
-<!-- this part is where we have the visualisation for bollywood of the common plot of ethnicity -->
+<!-- Dropdown ici-->
+
+
 
 ### **Observations**
 
@@ -18,7 +40,7 @@ Along Earth’s southern latitudes, I encounter Bollywood, a shimmering star in 
     <p>
 
 - **South Indian Ethnicities: The Stars of the Screen**  
-Behold! South Indian ethnicities blaze brightly in the cinematic firmament, enjoying far greater representation than their real-world numbers might suggest. It appears that Tamil, Telugu, and Malayalam cinemas, significant gravitational centers within India’s entertainment cosmos, have left a stellar imprint on this dataset.
+South Indian ethnicities shine brightly with significantly higher representation compared to their real-world population. This likely reflects the strong influence of Tamil, Telugu, and Malayalam cinema, which left a stellar imprit on India's film industry.
 
 - **Eastern Indian Ethnicities: Shadows in the Spotlight**  
 In contrast, Eastern Indian ethnicities remain cloaked in softer light, underrepresented compared to their real-world presence. Bengali cinema, while culturally rich, manifests here like a quieter star, overshadowed by the South’s dazzling brilliance and Bollywood’s own radiance.
@@ -46,7 +68,7 @@ Now, we can observe how these ethnic representations influence the cosmic curren
 <div style="display: flex; align-items: up; justify-content: space-between;">
   
   <!-- Text Container -->
-  <div style="width: 40%; padding: 8px;">
+  <div style="width: 30%; padding: 8px;">
     <p>
 
  The **Average Box Office Revenue by Majority Ethnicity** (1950–2012) guides us through a field of near-equilibrium, with revenues hovering around $18M for most groups. Yet a subtle anomaly appears: films featuring Eastern Indian ethnicities rise slightly above the cosmic baseline. Is it a quirk of market forces, audience preferences, or hidden gravitational pulls? The universe keeps its secrets close.
@@ -57,7 +79,7 @@ Now, we can observe how these ethnic representations influence the cosmic curren
 </div>
 
   <!-- Plot Container -->
-  <div style="width: 60%; padding: 8px;">
+  <div style="width: 70%; padding: 8px;">
     <iframe src="/assets/plots/IN/average_Box_Office_revenue_by_ethnicity.html" width="100%" height="400px" style="border:none;"></iframe>
 
   </div>
@@ -74,8 +96,11 @@ Now, we can observe how these ethnic representations influence the cosmic curren
 
 ---
 
+# **Age Analysis of the Indian Movie Industry**
+
 ## **Preliminary Plots: Actor vs. Real-World Age Distributions**
 
+<!--Dropdown ici-->
 
 
 **Dominance of Youth Representation:**
@@ -86,18 +111,24 @@ Bollywood’s universe tilts heavily toward youth—actors in their early 20s il
 
 ## **Preliminary Visualizations of Gender Representation**
 
-<!-- this part is where we have the visualisation for bollywood of the common plot of gender -->
-<div class="flourish-embed flourish-chart" data-src="visualisation/20880839"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20880839/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
 
 ----
 
- ### **Male Dominance Across Genres:**
+### **Male Dominance Across Genres:**
+
+Scan Bollywood’s genre map and you’ll find male actors reigning supreme across most categories. In **Action/Adventure** and **Thriller/Suspense**, for instance, around 69% of the starring roles gravitate toward men. These patterns echo longstanding Earthly norms and traditional storytelling frameworks. Yet, a faint ripple of change emerges in **Fantasy** and **Sci-Fi**, where female representation nudges upward, perhaps hinting at a future where balanced storytelling can thrive.
+
+Female-dominated movies do exist, but remain relatively rare, reflecting an imbalance that still defines much of this cinematic cosmos.
+
+---
+
 
 <div style="display: flex; align-items: up; justify-content: space-between;">
   <!-- Text Container -->
   <div style="width: 50%;; padding: 10px;">
 
-<div style="overflow: hidden; transform: scale(0.6); transform-origin: top left; width: 600px; height: 400px;">
+<div style="overflow: hidden; transform: scale(0.75); transform-origin: top left; width: 600px; height: 300px;">
     <iframe src="/assets/plots/IN/gender_dominance_plot.html" width="600px" height="100%" style="border:none;"></iframe>
 </div>
 
@@ -107,7 +138,7 @@ Bollywood’s universe tilts heavily toward youth—actors in their early 20s il
   <div style="width: 50%;; padding: 10px;">
 <div style="width: 100%; height padding: 10px;">
 
-<div style="overflow: hidden; transform: scale(0.6); transform-origin: top left; width: 600px; height: 400px;">
+<div style="overflow: hidden; transform: scale(0.75); transform-origin: top left; width: 600px; height: 300px;">
 <iframe src="/assets/plots/IN/average_revenue_by_gender.html" width="600px" height="100%" style="border:none;"></iframe>  
 </div>
 </div>
@@ -117,15 +148,9 @@ Bollywood’s universe tilts heavily toward youth—actors in their early 20s il
   </div>
 
 
-Scan Bollywood’s genre map and you’ll find male actors reigning supreme across most categories. In **Action/Adventure** and **Thriller/Suspense**, for instance, around 69% of the starring roles gravitate toward men. These patterns echo longstanding Earthly norms and traditional storytelling frameworks. Yet, a faint ripple of change emerges in **Fantasy** and **Sci-Fi**, where female representation nudges upward, perhaps hinting at a future where balanced storytelling can thrive.
-
-Female-dominated movies do exist, but remain relatively rare, reflecting an imbalance that still defines much of this cinematic cosmos.
 
  Box office data shows male-led films orbiting slightly higher revenue zones, reinforcing existing hierarchies. Yet, as we chart temporal shifts, we see the number of female actors steadily rising from the dawn of the 1900s through the early 2010s. Expanding industry and social change offered more opportunities for women, inching toward a more equitable cosmos.
 
-
-<iframe src="/assets/plots/IN/female_actor_trend.html" width="100%" height="500px" style="border:none;"></iframe>  
-<iframe src="/assets/plots/IN/male_actor_trend.html" width="100%" height="500px" style="border:none;"></iframe>
 
 <div class="flourish-embed flourish-bar-chart-race" data-src="visualisation/20792821"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20792821/thumbnail" width="100%" alt="bar-chart-race visualization" /></noscript></div>
 
@@ -135,11 +160,60 @@ From the earliest echoes of cinematic history through the busy 2010s, female rep
 
 **Sudden Drop Post-2010:**
 
-Yet, a curious drop after 2010 appears—likely a data illusion caused by incomplete reporting of recent films. As metadata catches up to reality, this temporary void may fill with new narratives and evolving trends. The future remains open, and as Earth’s cultural constants shift, so might the orbits of star power and representation.
+Yet, a curious drop after 2010 appears, likely a data illusion caused by incomplete reporting of recent films. As metadata catches up to reality, this temporary void may fill with new narratives and evolving trends. The future remains open, and as Earth’s cultural constants shift, so might the orbits of star power and representation.
 
 ---
 
-In this Indian cinematic cosmos, we find powerful gravitational forces—ethnicity, age, gender—all tugging at the shape of Bollywood’s storytelling. Though tradition and market logic still script many of these patterns, the faint glow of change flickers on the horizon. Perhaps tomorrow’s Bollywood skies will shine with a fuller spectrum of voices, ages, and backgrounds.
+Here’s the adjusted version with Ada narrating in the first person:
+
+---
+
+## **Bollywood wealth and class distribution analysis**
+
+**Income Classification by Movie Themes**
+
+To better understand Bollywood’s storytelling, I classified movies into three income themes based on their narratives [1](https://cdn.statcdn.com/Infographic/images/normal/31991.jpeg), [2](https://wid.world/www-site/uploads/2024/03/WorldInequalityLab_WP2024_09_Income-and-Wealth-Inequality-in-India-1922-2023_Final.pdf):
+
+- **Top 10%:** Films portraying wealth, luxury, and elite lifestyles.  
+
+- **Middle 40%:** Stories about working professionals and middle-class aspirations.  
+
+- **Bottom 50%:** Narratives focusing on poverty, rural struggles, and underprivileged communities.  
+
+Using movie summaries, I categorized the films into these themes and compared their prevalence over time with real-world income distribution data.
+
+<iframe src="/assets/plots/IN/wealth_class_analysis_bollywood.html" width="100%" height="500px" style="border:none;"></iframe>
+
+**My discoveries:**
+
+- **Bottom 50% Dominance:**  
+  Despite holding only about 15% of the income share in reality, stories about the bottom 50% dominate Bollywood, especially in recent years.  
+- **Top 10% Overrepresentation:**  
+  While their income share dramatically increases (36.7% to 57.7%), the ultra-wealthy are depicted less often than the bottom 50%.  
+- **Middle 40% Neglected:**  
+  The middle class sees the sharpest decline in real-world income share (42.8% to 27.3%) and remains underrepresented in Bollywood narratives.
+
+**Conclusion:**  
+Bollywood’s storytelling gravitates toward the extremes, spotlighting either the struggles of the bottom 50% or the opulence of the top 10%, while largely ignoring the middle class. This trend likely reflects a combination of audience preferences and the industry’s focus on aspirational or socially impactful themes.
+
+## **References**
+
+<span style="font-size: 11px;">
+
+<a id="1">[1]</a> World Inequality Lab (2023). How the Income of India's Richest 10% Surged [https://cdn.statcdn.com/Infographic/images/normal/31991.jpeg]
+
+<a id="2">[2]</a> Bharti, N. (2024). Income and Wealth Inequality in India, 1922-2023: The Rise of the Billionaire Raj [https://wid.world/www-site/uploads/2024/03/WorldInequalityLab_WP2024_09_Income-and-Wealth-Inequality-in-India-1922-2023_Final.pdf]
+
+
+
+</span>
+
+---
+
+***Before making your way to the next part, click on the map to see the other regions' analysis***
+
+
+---
 
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
@@ -195,31 +269,9 @@ By showing the final distribution of genres into success categories, the radial 
 
 ---
 
-## 2. Combination Dual-Axis Charts
+## 2. Combination Dual-Axis Charts: Hollywood
 
 <!-- Dropdown pour chaque région ici-->
-
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843178"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843178/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843122"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843122/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843169"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843169/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-</div>
-
-
 
 These charts overlay representation gaps and box office revenue over the decades, providing a temporal lens. For each region and metric, we see how gaps and revenue evolve together or diverge.
 

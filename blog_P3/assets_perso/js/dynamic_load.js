@@ -51,6 +51,11 @@ function loadDefaultContent() {
     console.log('Loading default Hollywood content');
     const contentContainer = document.getElementById('main-content');
     
+    if (!contentContainer) {
+        console.error('Content container not found');
+        return;
+    }
+
     contentContainer.innerHTML = '<p>Loading Hollywood content...</p>';
     
     fetch('/assets/regions/US.md')
@@ -65,16 +70,18 @@ function loadDefaultContent() {
             const htmlContent = marked.parse(markdown);
             contentContainer.innerHTML = htmlContent;
             
-            // Add period selector for Hollywood by default
-            createPeriodSelector('hollywood', contentContainer);
-            
-            // Add age period selector for Hollywood by default
-            createAgePeriodSelector('hollywood', contentContainer);
-            
-            // Initialize all Flourish visualizations in the content
-            loadFlourishScript(() => {
-                initializeFlourishVisualizations(contentContainer);
-            });
+            // Add selectors after the content is loaded
+            setTimeout(() => {
+                console.log('Adding selectors');
+                createPeriodSelector('hollywood', contentContainer);
+                createChartTypeSelector('hollywood', contentContainer);
+                createAgePeriodSelector('hollywood', contentContainer);
+                
+                loadFlourishScript(() => {
+                    console.log('Initializing visualizations');
+                    initializeFlourishVisualizations(contentContainer);
+                });
+            }, 0);
         })
         .catch(error => {
             console.error('Error loading default content:', error);
@@ -346,7 +353,75 @@ function updateAgeVisualization(region, period, visualizationIds) {
     }
 }
 
-// Modify the loadRegionContent function to include age visualizations
+function createChartTypeSelector(region, container) {
+    const visualizationIds = {
+        'ethnicity': '20843178',
+        'age': '20843122',
+        'gender': '20843169'
+    };
+
+    const selectorContainerHTML = `
+        <div class="chart-selector-container" style="text-align: center; margin-top: 20px;">
+            <label for="${region}-chart-type-select" style="font-weight: bold;">Select Statistic: </label>
+            <select id="${region}-chart-type-select" class="form-select">
+                <option value="ethnicity">Ethnicity</option>
+                <option value="age">Age</option>
+                <option value="gender">Gender</option>
+            </select>
+        </div>
+        <div id="${region}-chart-visualization-container" style="margin-top: 20px;">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${visualizationIds['ethnicity']}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${visualizationIds['ethnicity']}/thumbnail" width="100%" alt="chart visualization" />
+                </noscript>
+            </div>
+        </div>
+    `;
+
+    // Find the Combination Dual-Axis Charts title
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const chartTitle = headers.find(header => header.textContent.includes('Combination Dual-Axis Charts: Hollywood'));
+
+    if (chartTitle) {
+        chartTitle.insertAdjacentHTML('afterend', selectorContainerHTML);
+        console.log(`Inserted chart selector for ${region}`);
+    } else {
+        console.error(`Chart title not found for ${region}`);
+    }
+
+    const selectElement = document.getElementById(`${region}-chart-type-select`);
+    if (selectElement) {
+        selectElement.addEventListener('change', function(e) {
+            const selectedType = e.target.value;
+            updateChartVisualization(region, selectedType, visualizationIds);
+        });
+    } else {
+        console.error(`Select element not found for ${region}`);
+    }
+}
+
+function updateChartVisualization(region, type, visualizationIds) {
+    const newVisualizationId = visualizationIds[type];
+    const container = document.getElementById(`${region}-chart-visualization-container`);
+    
+    if (container) {
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${newVisualizationId}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" width="100%" alt="chart visualization" />
+                </noscript>
+            </div>
+        `;
+        container.innerHTML = newVisualizationHTML;
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+// Modify the loadRegionContent function to include chart type selectors
 function loadRegionContent(region) {
     console.log(`Loading content for region: ${region}`);
     const contentContainer = document.getElementById('main-content');
@@ -383,6 +458,17 @@ function loadRegionContent(region) {
                 createAgePeriodSelector('hollywood', contentContainer);
             } else if (region === 'EU') {
                 createAgePeriodSelector('europe', contentContainer);
+            }
+            
+            // Add chart type selectors based on region
+            if (region === 'EA') {
+                createChartTypeSelector('eastasia', contentContainer);
+            } else if (region === 'IN') {
+                createChartTypeSelector('bollywood', contentContainer);
+            } else if (region === 'US') {
+                createChartTypeSelector('hollywood', contentContainer);
+            } else if (region === 'EU') {
+                createChartTypeSelector('europe', contentContainer);
             }
             
             loadFlourishScript(() => {

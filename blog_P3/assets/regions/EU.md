@@ -1,8 +1,27 @@
 # **Europe Cluster**
 
-From my vantage point as an interstellar traveler, Europe appears as a vibrant mosaic of human nations, each contributing its own cultural accent and historical resonance. During my visit, I ventured beyond visual impressions to engage my other senses, sampling an array of Earthly flavors. Among these culinary curiosities, one particular fermented milk delicacy, “cheese,” as locals call it, left a strong yet intriguing imprint on my alien palate.
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- Text Content -->
+  <div style="flex: 3; padding: 10px;">
+
+Europe appears as a vibrant mosaic of human nations, each contributing its own cultural accent and historical resonance. During my visit, I ventured beyond visual impressions to engage my other senses, sampling an array of Earthly flavors. Among these culinary curiosities, one particular fermented milk delicacy, “cheese,” as locals call it, left a strong yet intriguing imprint on my alien palate.
 
 With these impressions in mind, let’s delve into what the data reveals about this richly textured region.
+
+  </div>
+
+  <!-- Plot Content -->
+  <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; max-width: 300px; aspect-ratio: 1 / 1; position: relative; overflow: hidden; border-radius: 8px;">
+      <img 
+        src="/assets/plots/reliability/reliability_EU.jpg" 
+        style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div style="font-size: 10px; color: #555; text-align: center; margin-top: 5px;">
+      <em>*see at the end for more insight on this score</em>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -18,11 +37,11 @@ My aim as a visitor here is to understand how Europe’s cinematic landscapes re
 
 ## **Preliminary Visualizations of Ethnic Representation Over Time**
 
-<div class="flourish-embed flourish-chart" data-src="visualisation/20791921"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20791921/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
 
 
 ---
+
 ## **Statistical Validation: Chi-Square Tests**
 
 1. **Chi-Square Test for Observed vs. Expected Frequencies (All genres combined):**  
@@ -32,27 +51,23 @@ My aim as a visitor here is to understand how Europe’s cinematic landscapes re
 Clearly, Europe’s ethnic actor distribution is skewed, not a neat cosmic alignment.
 
 
-
-
 ---
 
 ## **Interpretation of Ethnicity Trends**
 
 When comparing ethnicity proportions in European cinema to the real-world data, distinct patterns emerged. While a few groups hovered near their real population sizes, others diverged. 
 
-The three most striking trends were:
+The three most obvious differences were:
 
 - **Overrepresentation** of Jewish populations.
 - **Overrepresentation** of Black populations.
 - **Underrepresentation** of Caucasians.
 
-Let’s explore these findings more closely!
-
 - **Jewish People: Overrepresented**
-Jewish populations stand out with over a 10% difference compared to their real-world proportion. Historical context offers clues: during the 1920s and 1930s (by Earth’s calendar), Jewish communities thrived in the French film industry [[1]]. This early success likely planted deep roots, influencing future generations of filmmakers. It’s fascinating how historical migrations and cultural cross-pollinations echo in the data, surfacing again in Hollywood, where European Jewish filmmakers also left their mark.
+Jewish populations stand out with over a 10% difference compared to their real-world proportion. Historical context offers clues: during the 1920s and 1930s (by Earth’s calendar), Jewish communities thrived in the French film industry [1]. This early success likely planted deep roots, influencing future generations of filmmakers. It’s fascinating how historical migrations and cultural cross-pollinations echo in the data, surfacing again in Hollywood, where European Jewish filmmakers also left their mark.
 
 - **Black People: Overrepresented**
-Black populations were also somewhat overrepresented. I suspect this ties into Europe’s historical entanglements with Africa, including colonization. Interestingly, Black actors are most visible in documentaries, a genre often used to illuminate past injustices and colonial histories [[2]]. Cinema, in this sense, serves as a reflective lens, helping Earthlings remember what their textbooks might gloss over.
+Black populations were also somewhat overrepresented. I suspect this ties into Europe’s historical entanglements with Africa, including colonization. Interestingly, Black actors are most visible in documentaries, a genre often used to illuminate past injustices and colonial histories [2]. Cinema, in this sense, serves as a reflective lens, helping Earthlings remember what their textbooks might gloss over.
 
 - **Caucasians: Underrepresented**
 At first glance, it seems odd that the majority ethnic group is underrepresented. However, if smaller groups become proportionally more visible, the dominant group’s share naturally shrinks. In essence, it’s less a case of true underrepresentation and more a rebalancing of the cosmic scales.
@@ -64,14 +79,16 @@ Enough orbiting this point, let’s glide on to the next observation.
 
 ---
 
+# **Age Analysis of the European Movie Industry**
 
 ## **Introduction**
 
 Having uncovered ethnic imbalances, I now turn my telescopes toward age. By comparing male and female actor age distributions in European cinema to real-world demographics.
 
----
 
 ## **Preliminary Plots: Actor vs. Real-World Age Distributions**
+
+
 
 
 ----
@@ -82,7 +99,7 @@ The differences are startling: while Earth’s population displays a uniform spr
 
 When analyzing the age distribution in European cinema versus real-world data, a pattern emerges: Earth’s film industry appears fixated on age, especially for female actors. According to the data, women on screen peak at around **27 years**, while men ascend to their peak a decade later, at **37 years**.
 
-This gap echoes broader Earthly norms, where youth and beauty align with female marketability, while maturity and life experience elevate men’s status [[3]]. It’s as though aging for female actors is treated like a supernova’s collapse, while men’s aging is more like a star’s gentle ascent into a bright giant phase.
+This gap echoes broader Earthly norms, where youth and beauty align with female marketability, while maturity and life experience elevate men’s status [3]. It’s as though aging for female actors is treated like a supernova’s collapse, while men’s aging is more like a star’s gentle ascent into a bright giant phase.
 
 Comparing actors to the real-world population intensifies these observations. While Earth’s general female population spans a wide variance of ages, female actors cluster tightly in younger ranges, revealing narrow and selective industry standards. For men, the disparity is also present but slightly less severe, implying a marginally broader “acceptable” age window.
 
@@ -90,27 +107,34 @@ Comparing actors to the real-world population intensifies these observations. Wh
 
 ---
 
-<div style="display: flex; align-items: start; justify-content: space-between;">
-  <div style="flex: 0 0 30%;">
-    <!-- Text or code block here -->
-    
-## **Temporal changes**
-
-Historically, actors (both sexes) were older on average than their real-world counterparts. However, as Earthly populations aged and societal rhythms shifted, so did the data:
-
-- **Male actors** have gradually aligned more closely with real-world male distributions, reflecting some responsiveness to changing demographics.
-- **Female actors**, however, continue to lag behind, maintaining a younger skew than real-world populations would suggest.
-This resistance to reflect Earth’s aging reality suggests the industry’s casting practices are orbiting tradition, not adapting to new galactic coordinates.
-
+<div style="display: flex; align-items: flex-start; justify-content: space-between;">
+  <!-- Text Container -->
+  <div style="flex: 0 0 30%; padding: 10px; box-sizing: border-box;">
+    <h2>Temporal Changes</h2>
+    <p>
+      Historically, actors (both sexes) were older on average than their real-world counterparts. However, as Earthly populations aged and societal rhythms shifted, so did the data:
+    </p>
+    <ul>
+      <li><strong>Male actors:</strong> Gradually aligned more closely with real-world male distributions, reflecting some responsiveness to changing demographics.</li>
+      <li><strong>Female actors:</strong> Continue to lag behind, maintaining a younger skew than real-world populations would suggest.</li>
+    </ul>
+    <p>
+      This resistance to reflect Earth’s aging reality suggests the industry’s casting practices are orbiting tradition, not adapting to new galactic coordinates.
+    </p>
   </div>
   
-  <div style="flex: 0 0 70%;">
-    <!-- Plot image or embedded visualization -->
-    <div style="overflow: hidden; transform: scale(0.78); transform-origin: top center; width: 800px; height: 650px;">
-      <iframe src="/assets/plots/EU/average_age_analysis.html" width="100%" height="100%" style="border:none;"></iframe>
+  <!-- Plot Container -->
+  <div style="flex: 0 0 70%; padding: 10px; box-sizing: border-box; display: flex; justify-content: center; align-items: center;">
+    <div style="width: 100%; max-width: 900px; max-height: 700px; aspect-ratio: 16 / 18; position: relative; overflow: hidden; border-radius: 8px;">
+      <iframe 
+        src="/assets/plots/EU/average_age_analysis.html" 
+        style="width: 750px; height: 100%; border: none; transform: scale(0.8); transform-origin: top left;">
+      </iframe>
     </div>
   </div>
 </div>
+
+
 
 ---
 
@@ -128,7 +152,6 @@ Having investigated ethnicity and age, I now orbit gender. Earth’s male and fe
 
 ## **Preliminary Visualizations of Gender Representation**
 
-<div class="flourish-embed flourish-chart" data-src="visualisation/20880848"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20880848/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
 For a planet where women form more than half the population, cinema’s reluctance to grant them equal narrative space is perplexing.
 
@@ -144,31 +167,32 @@ For a planet where women form more than half the population, cinema’s reluctan
 
  Here, the gap widens significantly, as if humans believe that saving the world and piloting starships is an exclusively male pursuit.
 
+---
 
-<div style="display: flex; align-items: up; justify-content: space-between;">
+<div style="display: flex; align-items: flex-start; justify-content: space-between;">
   
   <!-- Text Container -->
-  <div style="width: 25%; height: 500px; padding: 10px;">
-
-### **Linear Regression**
-
-- *Coefficient*: 0.0008
-- *R-squared*: 0.358 
-- *P_value*: 0.000 
-
-
-</div>
+  <div style="width: 25%; padding: 10px; box-sizing: border-box;">
+    <h3>Linear Regression</h3>
+    <ul>
+      <li><strong>Coefficient:</strong> 0.0008</li>
+      <li><strong>R-squared:</strong> 0.358</li>
+      <li><strong>P-value:</strong> 0.000</li>
+    </ul>
+  </div>
    
   <!-- Plot Container -->
-  <div style="width: 75%; height: 500px; padding: 10px;">
-    <div style="overflow: hidden; transform: scale(0.8); transform-origin: top left; width: 800px; height: 600px;">
-      <iframe src="/assets/plots/EU/gender_ols_plot.html" width="100%" height="100%" style="border:none;"></iframe>
+  <div style="width: 75%; padding: 10px; box-sizing: border-box; display: flex; justify-content: center; align-items: center;">
+    <div style="width: 100%; max-width: 900px; height: 550px; overflow: hidden; position: relative;">
+      <iframe 
+        src="/assets/plots/EU/gender_ols_plot.html" 
+        style="width: 100%; height: 100%; border: none;">
+      </iframe>
     </div>
-
-  </div>
   </div>
 
 </div>
+
 
 
 ---
@@ -188,7 +212,6 @@ Examining gender representation by ethnicity uncovers another layer of bias:
 
 These patterns affirm that Earthly biases intersect in complex ways—gender and ethnicity weave together, producing intricate distributions that fail to reflect the planet’s true diversity.
 
-  </p>
 </div>
    
   <!-- Plot Container -->
@@ -199,16 +222,44 @@ These patterns affirm that Earthly biases intersect in complex ways—gender and
 </div>
 
   </div>
+
+</div>
+
+---
+
+## **Rural vs Urban Depiction in Europe**
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- Text Content -->
+  <div style="flex: 1; padding: 10px;">
+
+I note that Europe’s geography is largely rural. At a local scale, roughly 75.7% of the EU is rural, 20.7% towns/suburbs, and 3.5% cities. Aggregated into broader categories, we see predominantly urban areas at about 9.9%, predominantly rural at 39.8%, and intermediate regions at 50.4%. [4]
+
+For my analysis, these broader categories matter more, as they align with how films often present settings. Despite comprising only about 10% of the land area, urban zones are frequently overrepresented onscreen, sometimes matching or surpassing rural depictions. Intermediate areas, making up the majority of the EU, are noticeably underrepresented. Meanwhile, rural locales, though not as commonly featured as cities, are still shown strongly, particularly in recent decades (*As shown on the Movie Representation vs Real Land Area Distribution plot*).
+
+I interpret this as a cinematic inclination toward highlighting the contrast between bustling cities and the countryside, leaving the more nuanced intermediate spaces less explored. The post-1990 surge in all categories likely aligns with overall growth in European film production (*Representation by Decade plot*).
+
   </div>
 
+  <!-- Plot Content -->
+  <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; max-width: 600px; aspect-ratio: 1 / 2; position: relative; overflow: hidden; border-radius: 8px;">
+      <iframe src="/assets/plots/EU/setting_representation_by_year_comparison.html" width="450px" height="350px" style="border:none;"></iframe>
+      <iframe src="/assets/plots/EU/setting_representation_by_year_decade.html" width="450px" height="350px" style="border:none;"></iframe>
+    </div>
+    <div style="font-size: 10px; color: #555; text-align: center; margin-top: 5px;">
+    </div>
+  </div>
 </div>
 
 
 
 
----
 
-Europe is a magnificent, culturally rich region. I wish I could have lingered to dissect these patterns further. Alas, my interstellar itinerary calls me onward. Follow me on this cosmic analysis and simply click on the map. We’ll sail to another region, continuing our exploration of Earth’s cinematic constellations.
+
+
+
+
 
 ---
 
@@ -222,7 +273,14 @@ Europe is a magnificent, culturally rich region. I wish I could have lingered to
 
 <a id="3">[3]</a> Prommer, E. (2023). The Gender-Age-Gap on Screens : Cinema, TV and Streaming Services. In *Springer eBooks* (p. 145‑163). [https://doi.org/10.1007/978-3-031-18385-0_8](https://doi.org/10.1007/978-3-031-18385-0_8)
 
+<a id="4">[4]</a> European Commission. (n.d.). Urban-rural Europe - introduction. [https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Urban-rural_Europe_-_introduction](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Urban-rural_Europe_-_introduction)
+
 </span>
+
+---
+
+***Before making your way to the next part, click on the map to see the other regions' analysis***
+
 
 ---
 
@@ -280,31 +338,9 @@ By showing the final distribution of genres into success categories, the radial 
 
 ---
 
-## 2. Combination Dual-Axis Charts
+## 2. Combination Dual-Axis Charts: Hollywood
 
 <!-- Dropdown pour chaque région ici-->
-
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843178"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843178/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843122"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843122/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843169"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843169/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-</div>
-
-
 
 These charts overlay representation gaps and box office revenue over the decades, providing a temporal lens. For each region and metric, we see how gaps and revenue evolve together or diverge.
 

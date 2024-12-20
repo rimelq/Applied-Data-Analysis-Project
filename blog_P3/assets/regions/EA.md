@@ -1,16 +1,39 @@
 # **East Asian Cluster**
 
-From my cosmic vantage point, East Asia shimmers as a constellation of ancient civilizations and vibrant cultures. Yet as I peer closer, its cinematic landscapes seem to bend and refract, revealing patterns both illuminated and obscured. Let’s drift inward and discover what the data unveils about this region.
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- Text Content -->
+  <div style="flex: 3; padding: 10px;">
+    <p>
+       East Asia shimmers as a constellation of ancient civilizations and vibrant cultures. Yet as I peer closer, its cinematic landscapes seem to bend and refract, revealing patterns both illuminated and obscured. Let’s drift inward and discover what the data unveils about this region.
+    </p>
+  </div>
+
+  <!-- Plot Content -->
+  <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; max-width: 300px; aspect-ratio: 1 / 1; position: relative; overflow: hidden; border-radius: 8px;">
+      <img 
+        src="/assets/plots/reliability/reliabilty_EA.jpg" 
+        style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div style="font-size: 10px; color: #555; text-align: center; margin-top: 5px;">
+      <em>*see at the end for more insight on this score</em>
+    </div>
+  </div>
+</div>
+
+
 
 # **Ethnicity Comparative Analysis of the East Asian Movie Industry**
 
 ## **Introduction**
 
-My aim here is to decode how East Asia’s vibrant cinematic mosaic reflects the region's intricate ethnic tapestry. From my cosmic perch, I chart these distributions to determine whether these patterns are mere cosmic dust or reveal deeper, gravitational biases molding the images on screen.
+My aim here is to decode how East Asia’s vibrant cinematic mosaic reflects the region's intricate ethnic tapestry. I analyze these distributions to determine whether the patterns are random occurrences or reflect deeper biases shaping what appears on screen.
 
 ## **Preliminary Visualizations of Ethnic Representation Over Time**
 
-<!-- this part is where we have the visualisation for east asia of the common plot of ethnicity -->
+<!-- Dropdown ici -->
+
+
 
 **Disproportionate Representation:**
 
@@ -51,31 +74,30 @@ Temporal data reveals peculiar fluctuations across the decades—shifts seemingl
 
 <div style="display: flex; align-items: up; justify-content: space-between;">
   <!-- Text Container -->
-  <div style="width: 50%; padding: 10px;">
+  <div style="flex: 1; padding: 10px;">
     <p>
 
 1. **Golden Age of Japanese Cinema (1950–1965)**
-Japan’s cinematic brilliance shone like a supernova—Kurosawa, Ozu, Mizoguchi—names that anchored the industry’s celestial map. Post-war resilience and profound storytelling gave rise to a strong ethnic presence.
-- [Reference: Scenario writers and scenario readers in the Golden Age of Japanese cinema](https://www.researchgate.net/publication/307866839_Scenario_writers_and_scenario_readers_in_the_Golden_Age_of_Japanese_cinema)
+Japan’s cinematic brilliance shone like a supernova—Kurosawa, Ozu, Mizoguchi—names that anchored the industry’s celestial map. Post-war resilience and profound storytelling gave rise to a strong ethnic presence. [1]
 
 2. **Rise of Martial Arts Films (1966–1980)**
-Martial arts films from Hong Kong studios ignited the galaxy, featuring icons like Bruce Lee and Jackie Chan. Yet, their focus on Chinese culture, often disconnected from mainland China, inadvertently left Chinese representation dimmer than expected.
-- [Reference: Martial arts and the globalization of US and Asian film industries](https://www.researchgate.net/publication/233694107_Martial_arts_and_the_globalization_of_US_and_Asian_film_industries)
+Martial arts films from Hong Kong studios ignited the galaxy, featuring icons like Bruce Lee and Jackie Chan. Yet, their focus on Chinese culture, often disconnected from mainland China, inadvertently left Chinese representation dimmer than expected. [2]
+
 
 
    </p>
   </div>
 
  <!-- Plot Container -->
-  <div style="width: 50%; padding: 10px;">
+  <div style="flex: 1; padding: 10px;">
 
  3. **Studio Ghibli’s Success (1981–1995)**
-Ghibli’s enchanted worlds soared beyond live action, painting the cinematic skies with animated wonders. This era widened Japan’s influence, adding new spectrums of representation to the East Asian cinematic cosmos.
-- [Reference: The Myth of Ghibli: The Foundation and Early Industrial History of Studio Ghibli](https://www.researchgate.net/publication/368698265_The_Myth_of_Ghibli_The_Foundation_and_Early_Industrial_History_of_Studio_Ghibli)
+Ghibli’s enchanted worlds soared beyond live action, painting the cinematic skies with animated wonders. This era widened Japan’s influence, adding new spectrums of representation to the East Asian cinematic cosmos. [3]
+
 
 4. **Korean Wave (1996–2012)**
-Korea burst onto the interstellar stage, propelled by creations like Oldboy and The Host. Government backing and the magnetic allure of Hallyu forged a luminous era, shaping perception and representation far beyond Earth’s horizons.
-- [Reference: Contemporary Korean Cinema: Challenges and the Transformation of 'Planet Hallyuwood'](https://www.researchgate.net/publication/266347427_Contemporary_Korean_Cinema_Challenges_and_the_Transformation_of_'Planet_Hallyuwood')
+Korea burst onto the interstellar stage, propelled by creations like Oldboy and The Host. Government backing and the magnetic allure of Hallyu forged a luminous era, shaping perception and representation far beyond Earth’s horizons. [4]
+
 
 
  </div>
@@ -88,13 +110,16 @@ Korea burst onto the interstellar stage, propelled by creations like Oldboy and 
 
 -------------------------------
 
+# **Age Analysis of the East Asian Movie Industry**
 
-## **Introduction**
-
-From the cosmic vantage point, we now turn our telescopes towards the dimension of age. 
 
 ## **Preliminary Plots: Actor vs. Real-World Age Distributions**
 
+<!-- Dropdown ici -->
+
+
+
+---
 
 ## **Dominance of Youth Representation:**
 
@@ -112,15 +137,14 @@ Let’s delve deeper into these patterns with violin plots that reveal the subtl
 
 
 
-To anchor our insights, we navigated human knowledge archives. The book Women in *East Asian Cinema: Gender Representations, Creative Labour and Global Histories* illuminates how cultural norms and industry habits push older women into cinematic shadows, consistently favoring younger female actors. 
-[Source: *Women in East Asian Cinema* - [Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)]
+To anchor our insights, we navigated human knowledge archives. The book Women in *East Asian Cinema: Gender Representations, Creative Labour and Global Histories* illuminates how cultural norms and industry habits push older women into cinematic shadows, consistently favoring younger female actors. [5]
+
 
 -------------------------------
 
+# **Gender Comparative Analysis of the East Asian Movie Industry**
+
 ## **Preliminary Visualizations of Gender Representation**
-
-<div class="flourish-embed flourish-chart" data-src="visualisation/20880844"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20880844/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-
 
 <div style="display: flex; align-items: up; justify-content: space-between;">
   
@@ -184,8 +208,7 @@ Let us now dive deeper into the cosmic currents of gender representation by look
 1. **Chi-Square Statistic (14.77)**:  
    This measures the discrepancy between observed (cinema proportions) and expected (real-world proportions) values. It indicates a greater deviation from the expected proportions.
 
-2. **P-Value (0.00012)**:  
-   The p-value is much smaller than the standard significance threshold (e.g., 0.05). This means the result is statistically significant.
+
 
    </p>
   </div>
@@ -194,10 +217,8 @@ Let us now dive deeper into the cosmic currents of gender representation by look
   <div style="flex: 1; padding: 10px;">
       <p>
 
-   | **Comparison**            | **Chi-Square Statistic** | **p-value** | **Conclusion**                                                 |
-   |----------------------------|--------------------------|-------------|-----------------------------------------------------------------|
-   | Observed vs. Expected (All)| ~14.77              | ~0.00012        | Reject H₀, significant difference between observed and expected |
-
+2. **P-Value (0.00012)**:  
+   The p-value is much smaller than the standard significance threshold (e.g., 0.05). This means the result is statistically significant.
    
 
   </p>
@@ -212,13 +233,87 @@ Let us now dive deeper into the cosmic currents of gender representation by look
 Though beings classified as *Females* constitute 55% of Earth’s population, their luminous presence is dimmed and shadowed in the cinematic landscape.
 
 This imbalance we observe aligns with knowledge inscribed by Earth’s thinkers.
-The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories* explores how the contributions of women have been historically diminished and overlooked in these cinematic domains.
+The book *Women in East Asian Cinema: Gender Representations, Creative Labour and Global Histories* explores how the contributions of women have been historically diminished and overlooked in these cinematic domains.[[5]]
 
 For curious cosmic travelers, you can find it here:  
 🪐 [Read more on Oxford Academic](https://academic.oup.com/edinburgh-scholarship-online/book/58312)
 
 ---
 
+# **Overwork Culture Analysis in East Asia**
+
+The overwork culture in East Asia—referred to as **"karoshi"** in Japan, **"gwarosa"** in Korea, and **"996"** in China—has become a significant societal issue, often linked to mental health challenges, family breakdowns, and even crime. As I analyzed the data, I couldn’t help but notice how this culture of excessive work hours is reflected (or overlooked) in cinema.
+
+
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+  <!-- Text Content -->
+  <div style="flex: 1; padding: 10px;">
+
+**Real-Life Statistics on Overwork:** [6], [7]
+- **Japan:** In 2022, 10.1% of men and 4.2% of women worked over 60 hours a week.  
+- **South Korea:** The government recently reduced the maximum workweek from 68 to 52 hours to combat long-standing overwork issues.  
+- **China:** The “996” culture, working 9 am to 9 pm six days a week, equates to a grueling 72-hour workweek.
+
+**Work Hours vs. Movie Representation:**
+- **Japan:** Despite having the lowest normalized work hours (\~77%), Japanese movies address overwork themes most frequently (\~50%).  
+- **South Korea:** With moderate work hours (~90%), overwork appears in only ~12% of movies.  
+- **China:** Though work hours are the highest (~100%), overwork themes surface in just ~18% of Chinese cinema.
+
+  </div>
+
+  <!-- Plot Content -->
+  <div style="flex: 1; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 100%; max-width: 600px; aspect-ratio: 2/3; position: relative; overflow: hidden; border-radius: 8px;">
+      <iframe src="/assets/plots/EA/eastasian_theme_analysis_work_hours.html" width="450px" height="315px" style="border:none;"></iframe>
+      <iframe src="/assets/plots/EA/eastasian_theme_analysis_work_life_balance.html" width="450px" height="315px" style="border:none;"></iframe>
+    </div>
+    <div style="font-size: 10px; color: #555; text-align: center; margin-top: 5px;">
+    </div>
+  </div>
+</div>
+
+<iframe src="/assets/plots/EA/eastasian_theme_analysis_themes_over_time.html" width="100%" height="400px" style="border:none;"></iframe>
+
+**Cultural Implications:**  
+Japanese cinema appears to be a critical mirror, shedding light on workplace issues and sparking societal awareness. By contrast, China’s lower cinematic focus on overwork might reflect cultural hesitations or differing priorities when addressing workplace struggles on screen. South Korea falls somewhere in between, with workplace issues receiving limited attention in its films.
+
+
+These patterns left me pondering: do these representations, or lack thereof, serve as subtle critiques of their respective societies, or do they simply mirror cultural norms and expectations surrounding work?
+
+---
+
+## **References**  
+
+<span style="font-size: 11px;">  
+
+
+<a id="1">[1]</a> Kitsnik, L. (2016). Scenario writers and scenario readers in the Golden Age of Japanese cinema. Journal of Screenwriting, 7(3), 285–297. [https://doi.org/10.1386/josc.7.3.285_1]  (https://doi.org/10.1386/josc.7.3.285_1)
+
+<a id="2">[2]</a> Klein, C. (2004). Martial arts and the globalization of US and Asian film industries. Comparative American Studies an International Journal, 2(3), 360–384. [https://doi.org/10.1177/1477570004046776](https://doi.org/10.1177/1477570004046776)
+
+<a id="3">[3]</a> Denison, R. (2023). The Myth of Ghibli: The Foundation and early industrial history of Studio Ghibli. In Palgrave animation (pp. 31–52). [https://doi.org/10.1007/978-3-031-16844-4_2](https://doi.org/10.1007/978-3-031-16844-4_2)  
+
+<a id="4">[4]</a> Yecies, N. B., & Shim, N. A. (2011). CONTEMPORARY KOREAN CINEMA: CHALLENGES AND THE TRANSFORMATION OF ‘PLANET HALLYUWOOD.’ Acta Koreana, 14(1), 1–15. [https://doi.org/10.18399/acta.2011.14.1.001](https://doi.org/10.18399/acta.2011.14.1.001) 
+
+<a id="5">[5]</a> Women in East Asian cinema. (2023). In Edinburgh University Press eBooks. [https://doi.org/10.3366/edinburgh/9781399504928.001.0001](https://doi.org/10.3366/edinburgh/9781399504928.001.0001)
+
+<a id="6">[6]</a> Karoshi: The Problems with Japan's Work Culture [https://sites.uab.edu/humanrights/2024/11/22/karoshi-the-problems-with-japans-work-culture/]
+
+<a id="7">[7]</a> A 69-hour workweek? That’s no way to live, young South Koreans say [https://www.nbcnews.com/news/world/south-korea-69-hour-workweek-rcna75854]
+
+
+
+
+
+</span>
+
+---
+
+***Before making your way to the next part, click on the map to see the other regions' analysis***
+
+
+---
 
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
@@ -274,31 +369,9 @@ By showing the final distribution of genres into success categories, the radial 
 
 ---
 
-## 2. Combination Dual-Axis Charts
+## 2. Combination Dual-Axis Charts: Hollywood
 
 <!-- Dropdown pour chaque région ici-->
-
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843178"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843178/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843122"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843122/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843169"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843169/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-</div>
-
-
 
 These charts overlay representation gaps and box office revenue over the decades, providing a temporal lens. For each region and metric, we see how gaps and revenue evolve together or diverge.
 

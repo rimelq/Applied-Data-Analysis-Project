@@ -436,6 +436,7 @@ Yet, change is always possible. By recognizing these biases, Hollywood has the c
 
 ***Before making your way to the next part, click on the map to see the other regions' analysis***
 
+---
 
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
@@ -491,31 +492,9 @@ By showing the final distribution of genres into success categories, the radial 
 
 ---
 
-## 2. Combination Dual-Axis Charts
+## 2. Combination Dual-Axis Charts: Hollywood
 
 <!-- Dropdown pour chaque région ici-->
-
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843178"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843178/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843122"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843122/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-chart" data-src="visualisation/20843169"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20843169/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-  </div>
-
-</div>
-
-
 
 These charts overlay representation gaps and box office revenue over the decades, providing a temporal lens. For each region and metric, we see how gaps and revenue evolve together or diverge.
 

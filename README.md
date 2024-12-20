@@ -127,6 +127,12 @@ Cinema has always had the power to influence and reflect society. However, our s
 
 ---
 
+## **A word on the site**
+
+The site is interactive to follow Ada's journey. **Explore each region** by clicking on the map.
+
+---
+
 ## **Quickstart**
 
 ```bash
@@ -189,5 +195,6 @@ The directory structure of our project looks like this (note that the datasets a
 ├── pip_requirements.txt               <- Python dependencies file
 ├── results.ipynb                      <- Notebook with all analysis and their code
 ├── preprocessing_global_final.ipynb   <- Notebook for data cleaning and preprocessing
+├── meme.png                           <- An easter egg for you
 └── README.md
 ```

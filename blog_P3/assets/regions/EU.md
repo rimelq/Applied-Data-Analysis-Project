@@ -410,3 +410,21 @@ In sum, the works we assembled act like telescopes and spectrometers. They revea
 <a id="2">[2]</a> Gomery, D. (2005). The Hollywood Studio System: A History. British Film Institute Publishing. 
 
 </span>
+
+
+-----
+
+**More insights on Data Reliability Score:**
+
+The **Reliability Score 𝑅** is calculated as:
+
+#### **R\=0.4⋅D+0.4⋅(1−M)+0.2⋅T** 
+
+With:
+**D = Dataset Size Ratio.**
+**M = Missing Data Ratio.** 
+**𝑇 = Temporal Coverage ratio.**
+
+Ensuring that:
+- Higher missing data decreases the score.
+- A region with balanced dataset size and temporal coverage will achieve higher scores.

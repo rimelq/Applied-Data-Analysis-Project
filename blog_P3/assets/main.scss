@@ -83,7 +83,7 @@ body {
   border: 1px solid white;
   border-radius: 10px;
   overflow: hidden; 
-  margin: 0 5%;
+  margin: 0 2%;
   padding: 0 5%;
 }
 
@@ -92,45 +92,28 @@ body {
 .hero {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align elements towards the top */
   text-align: center;
-  //background-image: url("/assets/images/background.gif");//linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-  //background-size: auto 50%; /* Scale image to half container height */
-  //background-repeat: repeat-y; /* Repeat vertically */
-  //position: relative;
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+  padding-top: 120px; /* Add padding to move the content below the header */
   opacity: 1;  
   z-index: 1000;
-
-/*
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%; // Position starts after the first background 
-    left: 0;
-    width: 100%;
-    height: 50%; // Match half the container height
-    background-image: url("/assets/images/background.gif");
-    background-size: auto 50%;
-    background-repeat: no-repeat;
-    background-position: top;
-    transform: scaleY(-1); // Flip the image vertically
-    z-index: -1; // Behind the content
-  }*/
-
-  h1 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
-    color: rgba(242, 240, 235, 0.95);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    word-wrap: break-word;
-  }
 }
+
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: rgba(242, 240, 235, 0.95);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word;
+}
+
 
 @media screen and (max-width: 600px) {
   .hero h1 {
@@ -371,6 +354,7 @@ body {
   text-align: center;
   margin: 0 auto;
   max-width: 90%;
+  animation-duration: 0.9s;
 }
 
 #typewriter-title .line1 {
@@ -382,6 +366,8 @@ body {
   display: block; 
   white-space: normal;
   margin-top: 0.5rem; 
+  animation-duration: 0.9s;
+
 }
 
 
@@ -426,16 +412,77 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.background-image::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100vh;
-  background-image: url("ET_full-removebg-preview.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left center; /* Aligns the image to the left */
-  z-index: -1; /* Keeps it behind the content */
+.ethnicity-analysis-container {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.period-selector-wrapper {
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#ea-visualization-container {
+  margin-top: 20px;
+}
+
+.period-selector select {
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.period-selector label {
+  font-weight: bold;
+  color: #333;
+}
+
+#audio-section {
+  padding: 20px;
+  background-color: transparent; /* Fully transparent background */
+  border-radius: 8px;
+  margin: 100px auto; /* Adjusts position below the header */
+  max-width: 600px;
+  text-align: center;
+  z-index: 1001; /* Keeps it above other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally center the content */
+  justify-content: center; /* Vertically center the content */
+}
+
+#audio-section p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff; /* Ensures text is white */
+}
+
+#audio-section audio {
+  width: auto; /* Ensures the audio controls don't stretch unnecessarily */
+  display: block;
+  margin: 0 auto;
+}
+
+#audio-section audio::-webkit-media-controls-panel {
+  background-color: transparent; /* Makes the control panel fully transparent */
+}
+
+#audio-section audio::-webkit-media-controls-play-button,
+#audio-section audio::-webkit-media-controls-time-remaining-display {
+  color: #fff; /* Ensures play button and text are white */
+}
+
+#audio-section audio::-webkit-media-controls-current-time-display,
+#audio-section audio::-webkit-media-controls-timeline {
+  color: #fff;
 }

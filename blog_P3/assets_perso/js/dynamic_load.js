@@ -46,38 +46,7 @@ function initializeFlourishVisualizations(container) {
     });
 }
 
-// Function to load the hierarchy visualization
-function loadHierarchyPlot() {
-    console.log('Loading hierarchy plot');
-    const hierarchyContainer = document.getElementById('hierarchy-plot');
-    
-    if (!hierarchyContainer) {
-        console.error('Hierarchy container not found');
-        return;
-    }
-
-    const hierarchyHTML = `
-        <div class="flourish-embed flourish-hierarchy" 
-             data-src="visualisation/20799079"
-             style="width: 90%; height: 900px; margin: 0 auto;">
-            <noscript>
-                <img src="https://public.flourish.studio/visualisation/20799079/thumbnail" 
-                     width="100%" 
-                     alt="hierarchy visualization" />
-            </noscript>
-        </div>
-    `;
-
-
-    hierarchyContainer.innerHTML = hierarchyHTML;
-
-    // Initialize Flourish for the hierarchy plot
-    loadFlourishScript(() => {
-        initializeFlourishVisualizations(hierarchyContainer);
-    });
-}
-
-// New function to load default content (Hollywood)
+// Function to load default content (Hollywood)
 function loadDefaultContent() {
     console.log('Loading default Hollywood content');
     const contentContainer = document.getElementById('main-content');
@@ -96,6 +65,12 @@ function loadDefaultContent() {
             const htmlContent = marked.parse(markdown);
             contentContainer.innerHTML = htmlContent;
             
+            // Add period selector for Hollywood by default
+            createPeriodSelector('hollywood', contentContainer);
+            
+            // Add age period selector for Hollywood by default
+            createAgePeriodSelector('hollywood', contentContainer);
+            
             // Initialize all Flourish visualizations in the content
             loadFlourishScript(() => {
                 initializeFlourishVisualizations(contentContainer);
@@ -107,30 +82,322 @@ function loadDefaultContent() {
         });
 }
 
+// Add new function to create and handle the period selector for East Asia
+function createEAPeriodSelector(container) {
+    // Create a dedicated container for the selector and visualization
+    const selectorContainerHTML = `
+        <div class="ethnicity-analysis-container" style="margin: 40px 0;">
+            <div class="period-selector-wrapper" style="margin-bottom: 20px; text-align: left;">
+                <label for="ea-period-select" style="font-weight: bold;">Select Period: </label>
+                <select id="ea-period-select" class="form-select">
+                    <option value="All periods">All periods</option>
+                    <option value="1950-1965">1950-1965</option>
+                    <option value="1966-1980">1966-1980</option>
+                    <option value="1981-1995">1981-1995</option>
+                    <option value="1996-2012">1996-2012</option>
+                </select>
+            </div>
+            <div id="ea-visualization-container">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/20792125">
+                    <noscript>
+                        <img src="https://public.flourish.studio/visualisation/20792125/thumbnail" 
+                             width="100%" 
+                             alt="chart visualization" />
+                    </noscript>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Find the introduction section using Array.from and find
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const introSection = headers.find(header => header.textContent.includes('Introduction'));
+
+    if (introSection) {
+        // Insert after the paragraph following the introduction
+        let targetElement = introSection;
+        while (targetElement.nextElementSibling && targetElement.nextElementSibling.tagName === 'P') {
+            targetElement = targetElement.nextElementSibling;
+        }
+        targetElement.insertAdjacentHTML('afterend', selectorContainerHTML);
+    } else {
+        // Fallback: insert at a specific location
+        const visualizationPlaceholder = container.querySelector('.flourish-embed');
+        if (visualizationPlaceholder) {
+            visualizationPlaceholder.insertAdjacentHTML('beforebegin', selectorContainerHTML);
+        } else {
+            // If no suitable location is found, append to the container
+            container.insertAdjacentHTML('beforeend', selectorContainerHTML);
+        }
+    }
+
+    // Add event listener to the selector
+    document.getElementById('ea-period-select').addEventListener('change', function(e) {
+        const selectedPeriod = e.target.value;
+        updateEAVisualization(selectedPeriod);
+    });
+}
+
+function updateEAVisualization(period) {
+    const visualizationIds = {
+        'All periods': '20792125',
+        '1950-1965': '20791642',
+        '1966-1980': '20791740',
+        '1981-1995': '20791774',
+        '1996-2012': '20791794'
+    };
+
+    const newVisualizationId = visualizationIds[period];
+    const container = document.getElementById('ea-visualization-container');
+    
+    if (container) {
+        // Create new visualization HTML
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${newVisualizationId}">
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" 
+                         width="100%" 
+                         alt="chart visualization" />
+                </noscript>
+            </div>
+        `;
+        
+        // Replace the existing visualization
+        container.innerHTML = newVisualizationHTML;
+        
+        // Reinitialize the visualization
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+function createPeriodSelector(region, container) {
+    const visualizationIds = {
+        'bollywood': {
+            'All periods': '20792116',
+            '1950-1965': '20791501',
+            '1966-1980': '20791556',
+            '1981-1995': '20791616',
+            '1996-2012': '20791634'
+        },
+        'hollywood': {
+            'All periods': '20792106',
+            '1950-1965': '20792225',
+            '1966-1980': '20791365',
+            '1981-1995': '20791451',
+            '1996-2012': '20791472'
+        }
+    };
+
+    const selectorContainerHTML = `
+        <div class="ethnicity-analysis-container" style="margin: 40px 0;">
+            <div class="period-selector-wrapper" style="margin-bottom: 20px; text-align: left;">
+                <label for="${region}-period-select" style="font-weight: bold;">Select Period: </label>
+                <select id="${region}-period-select" class="form-select">
+                    <option value="All periods">All periods</option>
+                    <option value="1950-1965">1950-1965</option>
+                    <option value="1966-1980">1966-1980</option>
+                    <option value="1981-1995">1981-1995</option>
+                    <option value="1996-2012">1996-2012</option>
+                </select>
+            </div>
+            <div id="${region}-visualization-container">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/${visualizationIds[region]['All periods']}">
+                    <noscript>
+                        <img src="https://public.flourish.studio/visualisation/${visualizationIds[region]['All periods']}/thumbnail" 
+                             width="100%" 
+                             alt="chart visualization" />
+                    </noscript>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Find the Preliminary Visualizations title
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const prelimTitle = headers.find(header => header.textContent.includes('Preliminary Visualizations'));
+
+    if (prelimTitle) {
+        prelimTitle.insertAdjacentHTML('afterend', selectorContainerHTML);
+    }
+
+    // Add event listener to the selector
+    document.getElementById(`${region}-period-select`).addEventListener('change', function(e) {
+        const selectedPeriod = e.target.value;
+        updateVisualization(region, selectedPeriod, visualizationIds[region]);
+    });
+}
+
+function updateVisualization(region, period, visualizationIds) {
+    const newVisualizationId = visualizationIds[period];
+    const container = document.getElementById(`${region}-visualization-container`);
+    
+    if (container) {
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${newVisualizationId}">
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" 
+                         width="100%" 
+                         alt="chart visualization" />
+                </noscript>
+            </div>
+        `;
+        
+        container.innerHTML = newVisualizationHTML;
+        
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+function createAgePeriodSelector(region, container) {
+    const visualizationIds = {
+        'hollywood': {
+            'All periods': '20797028',
+            '1950-1965': '20797024',
+            '1966-1980': '20797034',
+            '1981-1995': '20797039',
+            '1996-2012': '20797045'
+        },
+        'bollywood': {
+            'All periods': '20797096',
+            '1950-1965': '20797100',
+            '1966-1980': '20797103',
+            '1981-1995': '20797111',
+            '1996-2012': '20797118'
+        },
+        'eastasia': {
+            'All periods': '20797056',
+            '1950-1965': '20797063',
+            '1966-1980': '20797061',
+            '1981-1995': '20797058',
+            '1996-2012': '20797059'
+        },
+        'europe': {
+            'All periods': '20780324',
+            '1950-1965': '20792399',
+            '1966-1980': '20792243',
+            '1981-1995': '20796749',
+            '1996-2012': '20796924'
+        }
+    };
+
+    const selectorContainerHTML = `
+        <div class="age-analysis-container" style="margin: 40px 0;">
+            <div class="period-selector-wrapper" style="margin-bottom: 20px; text-align: left;">
+                <label for="${region}-age-period-select" style="font-weight: bold;">Select Period: </label>
+                <select id="${region}-age-period-select" class="form-select">
+                    <option value="All periods">All periods</option>
+                    <option value="1950-1965">1950-1965</option>
+                    <option value="1966-1980">1966-1980</option>
+                    <option value="1981-1995">1981-1995</option>
+                    <option value="1996-2012">1996-2012</option>
+                </select>
+            </div>
+            <div id="${region}-age-visualization-container">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/${visualizationIds[region]['All periods']}">
+                    <noscript>
+                        <img src="https://public.flourish.studio/visualisation/${visualizationIds[region]['All periods']}/thumbnail" 
+                             width="100%" 
+                             alt="chart visualization" />
+                    </noscript>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Find the Age Distribution title
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const ageTitle = headers.find(header => header.textContent.includes('Preliminary Plots: Actor vs. Real-World Age Distributions'));
+
+    if (ageTitle) {
+        ageTitle.insertAdjacentHTML('afterend', selectorContainerHTML);
+    }
+
+    // Add event listener to the selector
+    document.getElementById(`${region}-age-period-select`).addEventListener('change', function(e) {
+        const selectedPeriod = e.target.value;
+        updateAgeVisualization(region, selectedPeriod, visualizationIds[region]);
+    });
+}
+
+function updateAgeVisualization(region, period, visualizationIds) {
+    const newVisualizationId = visualizationIds[period];
+    const container = document.getElementById(`${region}-age-visualization-container`);
+    
+    if (container) {
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${newVisualizationId}">
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" 
+                         width="100%" 
+                         alt="chart visualization" />
+                </noscript>
+            </div>
+        `;
+        
+        container.innerHTML = newVisualizationHTML;
+        
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+// Modify the loadRegionContent function to include age visualizations
 function loadRegionContent(region) {
     console.log(`Loading content for region: ${region}`);
     const contentContainer = document.getElementById('main-content');
-    contentContainer.innerHTML = `<p>Loading content for ${region}...</p>`;
+    
+    if (!contentContainer) {
+        console.error('Content container not found');
+        return;
+    }
 
-    fetch(`/assets/regions/${region}.md`)
+    contentContainer.innerHTML = `<p>Loading content for ${region}...</p>`;
+    const markdownPath = `/assets/regions/${region}.md`;
+
+    fetch(markdownPath)
         .then(response => {
             if (!response.ok) {
-                throw new Error(`Failed to load content for region: ${region}`);
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.text();
         })
         .then(markdown => {
+            console.log('Markdown content loaded successfully');
             const htmlContent = marked.parse(markdown);
             contentContainer.innerHTML = htmlContent;
             
-            // Initialize all Flourish visualizations in the new content
+            // Add period selectors based on region
+            if (region === 'EA') {
+                createEAPeriodSelector(contentContainer);
+                createAgePeriodSelector('eastasia', contentContainer);
+            } else if (region === 'IN') {
+                createPeriodSelector('bollywood', contentContainer);
+                createAgePeriodSelector('bollywood', contentContainer);
+            } else if (region === 'US') {
+                createPeriodSelector('hollywood', contentContainer);
+                createAgePeriodSelector('hollywood', contentContainer);
+            } else if (region === 'EU') {
+                createAgePeriodSelector('europe', contentContainer);
+            }
+            
             loadFlourishScript(() => {
                 initializeFlourishVisualizations(contentContainer);
             });
         })
         .catch(error => {
-            console.error(error);
-            contentContainer.innerHTML = `<p>Failed to load content for ${region}. Please try again later.</p>`;
+            console.error('Error loading region content:', error);
+            contentContainer.innerHTML = `
+                <div style="padding: 20px; text-align: center;">
+                    <h2>Error Loading Content</h2>
+                    <p>Failed to load content for ${region}. Please try again later.</p>
+                    <p>Error details: ${error.message}</p>
+                </div>
+            `;
         });
 }
 
@@ -141,8 +408,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load Flourish script first
     loadFlourishScript(() => {
         console.log('Flourish script ready - Loading content');
-        // Then load hierarchy plot
-        loadHierarchyPlot();
         // Then load default content
         setTimeout(() => {
             loadDefaultContent();

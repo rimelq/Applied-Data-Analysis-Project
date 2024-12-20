@@ -9,8 +9,8 @@ var simplemaps_worldmap_mapdata={
     
 		//State defaults
 		state_description: "State description",
-    state_color: "#70D0D2",
-    state_hover_color: "#3B729F",
+    state_color: "#009392",
+    state_hover_color: "#39b185",
     state_url: "https://simplemaps.com",
     border_size: 1.5,
     border_color: "#ffffff",
@@ -1626,14 +1626,14 @@ var simplemaps_worldmap_mapdata={
         'GE', 'CY', 'LT', 'GR', 'BE', 'HU', 'DE',
         'NO', 'FI', 'ME'],
         zoomable: "no",
-        color: "#7B5BAE",
+        color: "#5B3C89",
         url: "javascript:loadRegionContent('EU')"
     },
     "2": {
       name: "East Asia",
       states: ['CN', 'JP', 'MN', 'HK', 'KR', 'TW'],
       zoomable: "no",
-      color: "#B1A3E0",
+      color: "#5B3C89",
       url: "javascript:loadRegionContent('EA')"
     },
     "3": {
@@ -1642,7 +1642,7 @@ var simplemaps_worldmap_mapdata={
         "IN"
       ], 
       zoomable: "no",
-      color: "#9585C8",
+      color: "#5B3C89",
       url: "javascript:loadRegionContent('IN')"
     }
   }

@@ -77,6 +77,7 @@ function loadDefaultContent() {
                 createChartTypeSelector('hollywood', contentContainer);
                 createAgePeriodSelector('hollywood', contentContainer);
                 createStatisticSelector('hollywood', contentContainer);
+                createGenreSelector('hollywood', contentContainer);
                 
                 loadFlourishScript(() => {
                     console.log('Initializing visualizations');
@@ -490,7 +491,91 @@ function updateStatisticVisualization(region, type, visualizationIds) {
     }
 }
 
-// Modify the loadRegionContent function to include statistic selectors
+function createGenreSelector(region, container) {
+    const visualizationIds = {
+        'all': '20790816',
+        'action': '20789903',
+        'animation': '20791025',
+        'comedy': '20790991',
+        'documentary': '20790980',
+        'drama': '20790976',
+        'fantasy': '20790972',
+        'horror': '20790943',
+        'romance': '20790931',
+        'scifi': '20790837',
+        'thriller': '20790826'
+    };
+
+    const selectorContainerHTML = `
+        <div class="genre-selector-container" style="text-align: center; margin-top: 20px;">
+            <label for="${region}-genre-select" style="font-weight: bold;">Select Genre: </label>
+            <select id="${region}-genre-select" class="form-select">
+                <option value="all">All movie genres</option>
+                <option value="action">Action & Adventure</option>
+                <option value="animation">Animation & Family</option>
+                <option value="comedy">Comedy</option>
+                <option value="documentary">Documentary</option>
+                <option value="drama">Drama</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value="scifi">Science Fiction</option>
+                <option value="thriller">Thriller & Suspense</option>
+            </select>
+        </div>
+        <div id="${region}-genre-visualization-container" style="margin-top: 20px;">
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${visualizationIds['all']}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${visualizationIds['all']}/thumbnail" width="100%" alt="chart visualization" />
+                </noscript>
+            </div>
+        </div>
+    `;
+
+    // Find the Interpretation of Ethnicity Trends title
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const genreTitle = headers.find(header => header.textContent.includes('Interpretation of Ethnicity Trends'));
+
+    if (genreTitle) {
+        genreTitle.insertAdjacentHTML('afterend', selectorContainerHTML);
+        console.log(`Inserted genre selector for ${region}`);
+    } else {
+        console.error(`Genre title not found for ${region}`);
+    }
+
+    const selectElement = document.getElementById(`${region}-genre-select`);
+    if (selectElement) {
+        selectElement.addEventListener('change', function(e) {
+            const selectedGenre = e.target.value;
+            updateGenreVisualization(region, selectedGenre, visualizationIds);
+        });
+    } else {
+        console.error(`Select element not found for ${region}`);
+    }
+}
+
+function updateGenreVisualization(region, genre, visualizationIds) {
+    const newVisualizationId = visualizationIds[genre];
+    const container = document.getElementById(`${region}-genre-visualization-container`);
+    
+    if (container) {
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-chart" data-src="visualisation/${newVisualizationId}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" width="100%" alt="chart visualization" />
+                </noscript>
+            </div>
+        `;
+        container.innerHTML = newVisualizationHTML;
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+// Modify the loadRegionContent function to include genre selectors
 function loadRegionContent(region) {
 
     const map = simplemaps_worldmap; // Reference to the map instance
@@ -570,6 +655,11 @@ function loadRegionContent(region) {
                 createStatisticSelector('hollywood', contentContainer);
             } else if (region === 'EU') {
                 createStatisticSelector('europe', contentContainer);
+            }
+            
+            // Add genre selectors
+            if (region === 'US') {
+                createGenreSelector('hollywood', contentContainer);
             }
             
             loadFlourishScript(() => {

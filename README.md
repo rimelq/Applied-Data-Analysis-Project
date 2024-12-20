@@ -1,5 +1,5 @@
 
-# **The Reel World vs. The Real World: Is Cinema Holding a True Mirror to Society?**
+# **From Script to reality: Does Cinema Mirror Life or Rewrite It**
 
 ## **Abstract**
 
@@ -27,18 +27,20 @@ We chose 1950 as our starting point, the era of classics like *Pather Panchali* 
 ---
 
 ### **Ethnicity Representation Across Film Industries**
-The Hollywood film industry is often considered representative of North America, while Bollywood plays a similar role for South Asia. Our analysis extends to other regions such as East Asia, Europe and Oceania to provide a comprehensive understanding of how cinematic industries reflect (or diverge from) the demographics of their associated populations.
+The Hollywood film industry is often considered representative of North America, while Bollywood plays a similar role for South Asia. Our analysis extends to other regions such as East Asia and Europe to provide a comprehensive understanding of how cinematic industries reflect (or diverge from) the demographics of their associated populations.
 
 1. **Data Sources**:  
    - Ethnicity data for North America was sourced from the [EPR Core dataset](https://icr.ethz.ch/data/epr/core/), providing population breakdowns over time.  
    - Jewish-American population data was added from [Pew Research 2013](https://www.pewresearch.org/religion/2013/10/01/chapter-1-population-estimates/) and [Pew Research 2021](https://www.pewresearch.org/religion/2021/05/11/the-size-of-the-u-s-jewish-population/) due to their historical significance in Hollywood.
      
 2. **Adjustments for Analysis**:  
-   - Limited ethnic categorization in some regions (e.g., Canada, Oceania) led us to focus on the largest contributing country within each industry when necessary.  
-   - Missing data points were filled with zeroes, assuming negligible population proportions.  
-   - In this analysis, we focused on how Indian Bollywood movies represent Indian ethnicities compared to the real world.        Bollywood actors with non-Indian ethnicities (less than 1% of the data) were excluded to maintain this focus.
+   - Limited ethnic categorization in some regions led us to focus on the largest contributing country within each industry when necessary.  
+   - In the Bollywood analysis, we focused on how Indian Bollywood movies represent Indian ethnicities compared to the real world. Bollywood actors with non-Indian ethnicities (less than 1% of the data) were excluded to maintain this focus.
+   - In the Europe Analysis, we took premade data from the web as the real-world dataset was not focused on ethnicities but nationnalities for the european countries.
+  
+[Our reaction after preprocessing the ethnicities](meme.jpg)
 
-3. **Time Fragmentation**:  
+### **Time Fragmentation**:  
    - Ethnicity data was divided into four time periods for consistency across all regions and industries:  
      - **1950–1965**  
      - **1966–1980**  
@@ -65,68 +67,64 @@ The Hollywood film industry is often considered representative of North America,
 1. **Data Preprocessing**:  
    - Clean and preprocess demographic data from `character.metadata.tsv`, `movie.metadata.tsv`, and real-world datasets.  
    - Standardize formats to ensure consistency across regions and industries.
-   - With over 70% missing values in *actor_ethnicity* overall, we explored web scraping to supplement the data. We scraped from both **Wikidata** and **Ethnicelebs**, though Ethnicelebs provided limited information. Wikidata, however, yielded promising results. While we haven’t integrated these values yet, we may consider using the Wikidata results in P3 to improve data completeness. (The file containing the tests for the web scraping process can be found in test/scrap.ipynb.)
+   - With over 70% missing values in *actor_ethnicity* overall, we explored **web scraping** to supplement the data. We scraped from both **Wikidata** and **Ethnicelebs**, though Ethnicelebs provided limited information. Wikidata, however, yielded promising results. While we haven’t integrated these values yet, we may consider using the Wikidata results in P3 to improve data completeness. (The file containing the tests for the web scraping process can be found in test/scrap.ipynb.)
 
 2. **Comparative Analysis**:  
    - Compare on-screen demographics to real-world populations, highlighting differences across genres, industries, and regions. Due to Europe's cultural diversity, in order to exploit the dataset to the fullest we decided to split it into 3 subregions: eastern, western and northic due to culturo-ethnic fundamental differences.
    - Evaluate these disparities over the defined time periods.  
 
 3. **Correlation with Financial Success**:  
-   - Investigate whether industries with larger representation gaps see higher or lower box office revenue.  
-   - Use visualizations such as bubble plots with attributes like:  
-     - **X-axis**: Time periods.  
-     - **Y-axis**: Relative demographic discrepancies.  
-     - **Bubble size**: Box office revenue.  
-     - **Bubble color**: Genres or demographic attributes.  
+   To investigate the link between representation gaps and box office revenue, we utilized:
+   - **Radial Tree Plots:** Mapping success categories (Highly Successful, Successful, Normal) to genres and regions.
+   - **Dual-Axis Charts:** Tracking representation gaps and revenue trends over decades.
+   - **Sankey Diagrams:** Visualizing flows from representation gaps to genres and success outcomes.
+   - **Linear Regression Analyses:** Measuring direct and controlled relationships between gaps and revenue.
 
-4. **Trend Analysis**:  
-   - Identify shifts in representation trends over the decades for each industry.  
+4. **Thematic Vocabulary Analysis**:
+   - Used NLTK to tokenize movie summaries for each region.
+   - Generated vocabulary dictionaries from thematic seed words (e.g., "crime," leading to related words like "jail," "gang").
+   - Compared tokenized words in the summaries with the vocabulary. If the overlap exceeded a predefined threshold, the movie was identified as addressing that theme.
+From these theme-classified movies, further statistical analysis was conducted to derive insights. 
 
-5. **Insights and Recommendations**:  
-   - Propose strategies for better alignment between on-screen demographics and real-world populations.  
+ 
 
----
+## **Timeline**
 
-## **Proposed Timeline for P3**
-
-### **For P3 (Submission deadline: December 14, 2024):**
-
-- **Week 1 (November 15–21)**:  
-  - Conduct detailed analyses of demographic differences across genres, industries, regions, and time periods.  
-  - Correlate demographic gaps with financial success metrics.  
-
-- **Week 2 (November 22–28)**:  
-  - Develop advanced visualizations, such as bubble plots and comparative charts.  
-  - Highlight trends and outliers for each film industry.  
-
-- **Week 3 (November 29–December 7)**:  
-  - Synthesize findings and generate actionable insights.  
-  - Begin drafting the data story, integrating visual elements to support the narrative.  
-
-- **Week 4 (December 8–14)**:  
-  - Finalize all analyses and visualizations.  
-  - Publish the data story on a web platform (e.g., GitHub Pages).  
-  - Submit the final GitHub repository with all deliverables.  
+- Up Until Milestone P2: Completed all preprocessing and began regional analyses.
+- Up until Milestone P3:
+   - Week 10-12: Completed remaining regional analyses
+   - Week 12 : Started website development
+   - Week 13: Conducted the conclusive analysis
+   - Week 12-14: Transform results into an engaging and interactive data story 
 
 ---
 
-## **Organization within the Team**
-
-- **Data Preprocessing and Pipeline Development**: [Alexandre Huou]  
-- **Demographic Analysis and Correlation Studies**: [Rim El Qabli]  
-- **Visualization and Interactive Story Design:** [Donia Gasmi]   
-- **Statistical Analysis and Insights Generation**: [Lily Gilibert]
-- **Website Development and Storytelling Integration:** [Zeineb Mellouli] 
+## **Contribution of team members**
+- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive analysis
+- **Alexandre Huou:** CMU datapreprocessing, lead website development and deployment
+- **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
+- **Donia:** Bollywood analysis, summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
+- **Lily:** Europe analysis, plotting the data, data story writing, formatting on the site
 
 ---
 
-## **Questions for TAs**
+## **A Word on the Data Story**
 
-1. Is it feasible to infer whether financial profitability drives disparities in representation?  
-2. Are there specific statistical methods or visualizations you recommend for analyzing demographic discrepancies in relation to box office performance?  
-3. Is attempting to develop a machine learning model to provide actionable steps for improving representation a reasonable goal, or should we focus on descriptive insights instead?  
-4. What challenges might arise when comparing representation across smaller or underrepresented regional industries?  
-*Your input will guide us in prioritizing descriptive versus predictive analysis and ensure robust statistical validity.*
+To make the data story engaging, we introduced an alien persona (of course called Ada) with a small backstory, which offers an external perspective on human cinematic trends. 
+
+The site design incorporates a space-inspired color palette (e.g., alien greens, galaxy purples) to match the theme.
+The storytelling approach aims to balance humor and professionalism to maintain reader interest.
+
+---
+
+## **Conclusion**
+
+Our analysis highlights significant gaps in the way cinema portrays society. Across industries and regions, gender and age biases remain evident, often reinforcing societal norms. These disparities suggest that the film industry has been slow to evolve and maintains standards that do not reflect the diversity of the real world.
+
+What stands out in our findings is the absence of relationship between representation gaps and box-office performance. This contradicts the argument that these portrayals are driven by financial motives and points instead to a reluctance to break away from long-standing traditions.
+
+Cinema has always had the power to influence and reflect society. However, our study shows that it often falls short of its potential to represent the world accurately. 
+
 ---
 
 ## **Quickstart**
@@ -158,8 +156,10 @@ pip install -r pip_requirements.txt
 
 ## Project Structure
 
-The directory structure of our project looks like this:
+The directory structure of our project looks like this (note that the datasets are not included to to their sizes):
 ```
+├── blog_P3                            <- Directory for website development
+│
 ├── data                               <- Project data files
 │   ├── raw                            <- Raw datasets
 │   │   ├── CMU_movies                 <- Raw data for CMU movie datasets
@@ -177,10 +177,18 @@ The directory structure of our project looks like this:
 │   ├── preprocessing_global.ipynb     <- Notebook for data cleaning and preprocessing
 │   └── plot.ipynb                     <- Notebook for plotting and analysis
 │   └── plot_functions.py              <- Python script with plotting functions
+│   └── hollywood_functions.py         <- Python script for hollywood analysis
+│   └── europe_functions.py            <- Python script for europe analysis
+│   └── eastasia_functions.py          <- Python script for east-asia analysis
+│   └── bollywood_functions.py         <- Python script for bollywood analysis
+│   └── hollywood_crime_functions.py                <- Python script for hollywood crime analysis
+│   └── europe_urban_depection_functions.py         <- Python script for europe urban analysis
+│   └── bollywood_wealth_class_functions.py         <- Python script for bollywod wealth analysis
+│   └── eastasia_overwork_culture_functions.py      <- Python script for east-asia overwork analysis
 │
-├── tests                              <- Test scripts and notebooks
 │
 ├── .gitignore                         <- List of files ignored by git
 ├── pip_requirements.txt               <- Python dependencies file
+├── results.ipynb                      <- Notebook with all analysis and their code
 └── README.md
 ```

@@ -571,3 +571,36 @@ body {
 #custom-audio-controls img:hover {
   transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
+
+#team {
+  background-color: transparent !important; 
+  padding: 40px; 
+  text-align: center;
+  color: rgba(242, 240, 235, 0.95);
+  font-weight: bold;
+}
+
+#team h3 {
+  font-size: 24px;
+  font-weight: bold; 
+  margin-bottom: 30px; 
+}
+
+.team-member {
+  display: inline-block;
+  margin: 20px 30px; 
+  text-align: center; 
+}
+
+.team-member img {
+  width: 30px; 
+  height: 30px;
+  margin: 0 5px;
+}
+
+.team-member p {
+  color: rgba(242, 240, 235, 0.95);
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px; 
+}

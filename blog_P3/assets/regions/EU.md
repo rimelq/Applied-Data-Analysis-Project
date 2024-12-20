@@ -37,7 +37,7 @@ My aim as a visitor here is to understand how Europe’s cinematic landscapes re
 
 ## **Preliminary Visualizations of Ethnic Representation Over Time**
 
-
+<div class="flourish-embed flourish-chart" data-src="visualisation/20791921"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20791921/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
 
 
 ---
@@ -152,6 +152,8 @@ Having investigated ethnicity and age, I now orbit gender. Earth’s male and fe
 
 ## **Preliminary Visualizations of Gender Representation**
 
+<div class="flourish-embed flourish-chart" data-src="visualisation/20880848"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20880848/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+
 
 For a planet where women form more than half the population, cinema’s reluctance to grant them equal narrative space is perplexing.
 
@@ -252,15 +254,6 @@ I interpret this as a cinematic inclination toward highlighting the contrast bet
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
 ---
 
 ## **References**
@@ -283,6 +276,8 @@ I interpret this as a cinematic inclination toward highlighting the contrast bet
 
 
 ---
+
+<h2 id="integrated-analysis">Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue</h2>
 
 # Integrated Analysis of Cinematic Representation Gaps and Box Office Revenue
 
@@ -405,3 +400,31 @@ Earth's real-world scholarship, from the Annenberg Inclusion Initiative’s stud
 My cosmic exploration suggests that, while moral and cultural arguments for better representation are robust and well-documented, purely economic motives don’t straightforwardly reward or punish representational fidelity. Cinematic ecosystems seem able to thrive financially under various demographic distributions, relying instead on traditional genres, star legacies, and shifting audience tastes. To alter these constellations of representation, external sociopolitical forces, audience advocacy, and institutional reforms may be required—beyond the gravitational pull of the box office itself.
 
 In sum, the works we assembled act like telescopes and spectrometers. They reveal a complex cinematic universe where demographic reality often bends under the weight of tradition, cultural myths, and economic expediency. True demographic alignment might not guarantee a bigger cosmic payoff, but the pursuit of a cinema that mirrors its audience’s diversity might still resonate with Earth’s evolving sense of justice and authenticity.
+
+
+## References
+
+<span style="font-size: 11px;">
+<a id="1">[1]</a> Smith, S. L., Choueiti, M., Pieper, K., Case, A., & Clark, H. (2024). Inequality in 1,200 Popular Films: Examining Portrayals of Gender, Race/Ethnicity, LGBTQ+ & Disability from 2007 to 2018. Annenberg Inclusion Initiative. Retrieved from https://annenberg.usc.edu/research/aii
+
+<a id="2">[2]</a> Gomery, D. (2005). The Hollywood Studio System: A History. British Film Institute Publishing. 
+
+</span>
+
+
+-----
+
+**More insights on Data Reliability Score:**
+
+The **Reliability Score 𝑅** is calculated as:
+
+#### **R\=0.4⋅D+0.4⋅(1−M)+0.2⋅T** 
+
+With:
+**D = Dataset Size Ratio.**
+**M = Missing Data Ratio.** 
+**𝑇 = Temporal Coverage ratio.**
+
+Ensuring that:
+- Higher missing data decreases the score.
+- A region with balanced dataset size and temporal coverage will achieve higher scores.

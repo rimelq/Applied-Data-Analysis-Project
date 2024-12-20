@@ -21,8 +21,12 @@
 </header>
 
 <section id="audio-section">
-  <p>Play Ada's Anthem - Interstellar By Hans Zimmer </p>
-  <audio controls>
+  <p>Play Ada's Anthem - Interstellar By Hans Zimmer</p>
+  <div id="custom-audio-controls">
+    <img id="play-button" src="assets/images/play-icon.png" alt="Play">
+    <img id="pause-button" src="assets/images/pause-icon.png" alt="Pause">
+  </div>
+  <audio id="audio-player">
     <source src="assets/song/Interstellar.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -47,8 +51,37 @@
       Back home, Ada used her planet’s cutting-edge technology to open the capsule and power the machine inside. What she found left her speechless: tons of movies from a foreign civilization. Turning on her automatic language translator, she began watching the first film. Fascinated, Ada spent the entire night engrossed in the unfamiliar stories and didn’t get a wink of rest… But by morning, she knew exactly what her project would be! <br>
       <br>
       Rushing to class, Ada pitched her idea to her teacher: She would travel to earth and collect real-world data to compare to the movies she had seen. Her teacher, impressed with her proposal, approved it and gave her a budget to fund a week-long trip to the mysterious planet. Excited to discover a whole new world, Ada boarded her lightspeed vessel and set off on her adventure. <br>
-        With only enough funding for a week, Ada knew she had to plan her trip wisely. Using the movie dataset extracted from the capsule, she analyzed the film production patterns and identified five major movie industry clusters on Earth. Based on this, she divided her trip into five destinations. The United States of America, which produced the largest number of films, seemed to hold the best potential for discovery. Therefore, she allocated 3 days of her journey to explore this region. The remaining four destinations—North America, India, Europe, East-Asia —would each get one day. </i>
+        With only enough funding for a week, Ada knew she had to plan her trip wisely. Using the movie dataset extracted from the capsule, she analyzed the film production patterns and identified four major movie industry clusters on Earth. Based on this, she divided her trip into four destinations. The United States of America, which produced the largest number of films, seemed to hold the best potential for discovery. Therefore, she allocated 3 days of her journey to explore this region. The remaining three destinations—India, Europe, East-Asia —would each get one day. </i>
       </span>
   </p>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const audioPlayer = document.getElementById('audio-player');
+    const playButton = document.getElementById('play-button');
+    const pauseButton = document.getElementById('pause-button');
+
+    // Autoplay when the page loads
+    audioPlayer.play().then(() => {
+      playButton.style.display = 'none';
+      pauseButton.style.display = 'block';
+    }).catch(error => {
+      console.log("Autoplay failed: ", error);
+      playButton.style.display = 'block';
+      pauseButton.style.display = 'none';
+    });
+
+    playButton.addEventListener('click', () => {
+      audioPlayer.play();
+      playButton.style.display = 'none';
+      pauseButton.style.display = 'block';
+    });
+
+    pauseButton.addEventListener('click', () => {
+      audioPlayer.pause();
+      playButton.style.display = 'block';
+      pauseButton.style.display = 'none';
+    });
+  });
+</script>

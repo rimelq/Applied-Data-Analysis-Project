@@ -99,21 +99,11 @@ From these theme-classified movies, further statistical analysis was conducted t
 
 ---
 
-## **Organization within the Team**
-
-- **Data Preprocessing and Pipeline Development**: [Alexandre Huou]  
-- **Demographic Analysis and Correlation Studies**: [Rim El Qabli]  
-- **Visualization and Interactive Story Design:** [Donia Gasmi]   
-- **Statistical Analysis and Insights Generation**: [Lily Gilibert]
-- **Website Development and Storytelling Integration:** [Zeineb Mellouli] 
-
----
-
 ## **Contribution of team members**
 - **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studiees and conclusive analysis
 - **Alexandre Huou:** CMU datapreprocessing, lead website development and deployment
 - **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
-- **Donia:** Bollywood analysis, skip-grams for deeper insights across all regions
+- **Donia:** Bollywood analysis, key-word matching with tokenization for deeper insights across all regions
 - **Lily:** Europe analysis, plotting the data, data story writing, formatting on the site
 
 ---

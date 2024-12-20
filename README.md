@@ -100,7 +100,7 @@ From these theme-classified movies, further statistical analysis was conducted t
 ---
 
 ## **Contribution of team members**
-- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studiees and conclusive analysis
+- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive analysis
 - **Alexandre Huou:** CMU datapreprocessing, lead website development and deployment
 - **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
 - **Donia:** Bollywood analysis, summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis

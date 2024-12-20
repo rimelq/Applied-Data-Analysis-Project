@@ -189,6 +189,8 @@ The directory structure of our project looks like this (note that the datasets a
 │   └── bollywood_wealth_class_functions.py         <- Python script for bollywod wealth analysis
 │   └── eastasia_overwork_culture_functions.py      <- Python script for east-asia overwork analysis
 │   └── common_plots_functions.py      <- Python script for the basic plots that we later on made with flourish
+│   └── plots                          <- Directory that contains all the html plots
+|   └── png                            <- Directory that contains all the pictures of interactive plots used in the results.ipynb
 │
 │
 ├── .gitignore                         <- List of files ignored by git

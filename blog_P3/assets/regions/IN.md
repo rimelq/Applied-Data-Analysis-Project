@@ -165,10 +165,6 @@ Yet, a curious drop after 2010 appears, likely a data illusion caused by incompl
 
 ---
 
-Here’s the adjusted version with Ada narrating in the first person:
-
----
-
 ## **Bollywood wealth and class distribution analysis**
 
 **Income Classification by Movie Themes**

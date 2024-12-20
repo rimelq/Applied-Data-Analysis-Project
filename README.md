@@ -17,7 +17,7 @@ Our research aims to uncover the dynamics between cinema, societal representatio
    - How accurately does cinema reflect real-world gender, ethnicity, and age demographics?  
    - What trends in representation can be observed across time periods, regions, and genres?
 
-2. **Economic Implications**:  
+2. **Conclusive Economic Implications**:  
    - Are the largest demographic discrepancies linked to box office revenue?  
    - Does cinematic representation reflect financial motivations or cultural inertia?
 

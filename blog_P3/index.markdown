@@ -3,12 +3,6 @@ layout: home
 title:
 ---
 
-<!-- Container for hierarchy plot -->
-<div id="hierarchy-plot" class="visualization-container">
-
-  <!-- Hierarchy plot will be loaded here -->
-</div>
-
 <div id="map-container">
   <div id="map"></div>
   <div id="placeholder"></div>

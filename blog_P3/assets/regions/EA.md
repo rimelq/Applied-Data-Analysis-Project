@@ -384,32 +384,9 @@ By capturing changes over decades, these combination dual-axis charts illustrate
 
 ---
 
-## 3. Representation Gaps and Box Office Revenue Impact
+## 3. Representation Gaps and Box Office Revenue Impact: Hollywood 
 
 <!-- Dropdown pour chaque région ici-->
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821631"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821631/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821662"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821662/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821797"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821797/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-
-</div>
-
-
-
 
 The Sankey diagrams show the different flows of movies from representation gap intervals to genres and then to success categories. This tri-level mapping helps identify structural patterns.
 

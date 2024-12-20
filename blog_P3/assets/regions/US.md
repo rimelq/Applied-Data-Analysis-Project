@@ -107,22 +107,6 @@ Armed with these statistical findings, I examined historical context and Earthly
   </div>
 
 </div>
-
-<!--
-- All movie genres: <div class="flourish-embed flourish-chart" data-src="visualisation/20790816"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790816/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Action & Adventure: <div class="flourish-embed flourish-chart" data-src="visualisation/20789903"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20789903/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Animation & Family:<div class="flourish-embed flourish-chart" data-src="visualisation/20791025"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20791025/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Comedy: <div class="flourish-embed flourish-chart" data-src="visualisation/20790991"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790991/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Documentary: <div class="flourish-embed flourish-chart" data-src="visualisation/20790980"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790980/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Drama: <div class="flourish-embed flourish-chart" data-src="visualisation/20790976"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790976/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Fantasy: <div class="flourish-embed flourish-chart" data-src="visualisation/20790972"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790972/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Horror: <div class="flourish-embed flourish-chart" data-src="visualisation/20790943"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790943/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Romance: <div class="flourish-embed flourish-chart" data-src="visualisation/20790931"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790931/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Science Fiction: <div class="flourish-embed flourish-chart" data-src="visualisation/20790837"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790837/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-- Thriller & Suspense: <div class="flourish-embed flourish-chart" data-src="visualisation/20790826"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20790826/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
-
--->
-
 <div style="display: flex; align-items: center; justify-content: space-between;">
   
   <!-- Text Container -->
@@ -507,31 +491,9 @@ By capturing changes over decades, these combination dual-axis charts illustrate
 
 ---
 
-## 3. Representation Gaps and Box Office Revenue Impact
+## 3. Representation Gaps and Box Office Revenue Impact: Hollywood 
 
 <!-- Dropdown pour chaque région ici-->
-
-<div style="display: flex; justify-content: space-around; align-items: center; margin: 10px 0;">
-
-  <!-- Plot 1 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821631"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821631/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 2 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821662"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821662/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-  <!-- Plot 3 -->
-  <div style="flex: 1; margin: 0 6px; text-align: center;">
-    <div class="flourish-embed flourish-sankey" data-src="visualisation/20821797"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20821797/thumbnail" width="100%" alt="sankey visualization" /></noscript></div>
-  </div>
-
-
-</div>
-
-
 
 
 The Sankey diagrams show the different flows of movies from representation gap intervals to genres and then to success categories. This tri-level mapping helps identify structural patterns.

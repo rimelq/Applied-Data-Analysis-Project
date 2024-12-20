@@ -238,6 +238,7 @@ body {
   border-radius: 12px; // Rounded corners 
   cursor: grab; // Show the grab cursor 
   transition: none;
+  z-index: 50;
   //transition: all 0.8s ease-in-out; // Disable transitions for smooth dragging
 }
 /* END OF PIP*/

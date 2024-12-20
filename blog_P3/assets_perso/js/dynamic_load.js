@@ -76,6 +76,7 @@ function loadDefaultContent() {
                 createPeriodSelector('hollywood', contentContainer);
                 createChartTypeSelector('hollywood', contentContainer);
                 createAgePeriodSelector('hollywood', contentContainer);
+                createStatisticSelector('hollywood', contentContainer);
                 
                 loadFlourishScript(() => {
                     console.log('Initializing visualizations');
@@ -421,7 +422,75 @@ function updateChartVisualization(region, type, visualizationIds) {
     }
 }
 
-// Modify the loadRegionContent function to include chart type selectors
+function createStatisticSelector(region, container) {
+    const visualizationIds = {
+        'ethnicity': '20821631',
+        'age': '20821662',
+        'gender': '20821797'
+    };
+
+    const selectorContainerHTML = `
+        <div class="statistic-selector-container" style="text-align: center; margin-top: 20px;">
+            <label for="${region}-statistic-select" style="font-weight: bold;">Select Statistic: </label>
+            <select id="${region}-statistic-select" class="form-select">
+                <option value="ethnicity">Ethnicity</option>
+                <option value="age">Age</option>
+                <option value="gender">Gender</option>
+            </select>
+        </div>
+        <div id="${region}-statistic-visualization-container" style="margin-top: 20px;">
+            <div class="flourish-embed flourish-sankey" data-src="visualisation/${visualizationIds['ethnicity']}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${visualizationIds['ethnicity']}/thumbnail" width="100%" alt="sankey visualization" />
+                </noscript>
+            </div>
+        </div>
+    `;
+
+    // Find the Representation Gaps title
+    const headers = Array.from(container.getElementsByTagName('h2'));
+    const statisticTitle = headers.find(header => header.textContent.includes('Representation Gaps and Box Office Revenue Impact: Hollywood'));
+
+    if (statisticTitle) {
+        statisticTitle.insertAdjacentHTML('afterend', selectorContainerHTML);
+        console.log(`Inserted statistic selector for ${region}`);
+    } else {
+        console.error(`Statistic title not found for ${region}`);
+    }
+
+    const selectElement = document.getElementById(`${region}-statistic-select`);
+    if (selectElement) {
+        selectElement.addEventListener('change', function(e) {
+            const selectedType = e.target.value;
+            updateStatisticVisualization(region, selectedType, visualizationIds);
+        });
+    } else {
+        console.error(`Select element not found for ${region}`);
+    }
+}
+
+function updateStatisticVisualization(region, type, visualizationIds) {
+    const newVisualizationId = visualizationIds[type];
+    const container = document.getElementById(`${region}-statistic-visualization-container`);
+    
+    if (container) {
+        const newVisualizationHTML = `
+            <div class="flourish-embed flourish-sankey" data-src="visualisation/${newVisualizationId}">
+                <script src="https://public.flourish.studio/resources/embed.js"></script>
+                <noscript>
+                    <img src="https://public.flourish.studio/visualisation/${newVisualizationId}/thumbnail" width="100%" alt="sankey visualization" />
+                </noscript>
+            </div>
+        `;
+        container.innerHTML = newVisualizationHTML;
+        loadFlourishScript(() => {
+            initializeFlourishVisualizations(container);
+        });
+    }
+}
+
+// Modify the loadRegionContent function to include statistic selectors
 function loadRegionContent(region) {
     console.log(`Loading content for region: ${region}`);
     const contentContainer = document.getElementById('main-content');
@@ -469,6 +538,17 @@ function loadRegionContent(region) {
                 createChartTypeSelector('hollywood', contentContainer);
             } else if (region === 'EU') {
                 createChartTypeSelector('europe', contentContainer);
+            }
+            
+            // Add statistic selectors based on region
+            if (region === 'EA') {
+                createStatisticSelector('eastasia', contentContainer);
+            } else if (region === 'IN') {
+                createStatisticSelector('bollywood', contentContainer);
+            } else if (region === 'US') {
+                createStatisticSelector('hollywood', contentContainer);
+            } else if (region === 'EU') {
+                createStatisticSelector('europe', contentContainer);
             }
             
             loadFlourishScript(() => {

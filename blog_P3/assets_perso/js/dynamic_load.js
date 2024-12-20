@@ -583,7 +583,7 @@ function createRegressionPlotWidget(container) {
     const visualizationPaths = {
         'hollywood': '/assets/plots/box-office/regression_plot_Hollywood.html',
         'bollywood': '/assets/plots/box-office/regression_plot_Bollywood.html',
-        'eastasia': '/assets/plots/box-office/regression_plot_EastAsia.html',
+        'eastasia': '/assets/plots/box-office/regression_plot_Eastasia.html',
         'europe': '/assets/plots/box-office/regression_plot_Europe.html'
     };
 

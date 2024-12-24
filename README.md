@@ -126,11 +126,11 @@ From these theme-classified movies, further statistical analysis was conducted t
 ---
 
 ## **Contribution of team members**
-- **Rim:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive Box Office Analysis
-- **Alexandre:** CMU datapreprocessing, lead Website development and deployment
-- **Zayneb:** East-Asia analysis, plotting the data, website development and deployement
-- **Donia:** Bollywood analysis, Movie Summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
-- **Lily:** Europe analysis, plotting the data, data story writing, formatting on the site
+- **Rim El Qabli:** Real-world data preprocessing, Hollywood analysis, correlation studies and conclusive Box Office Analysis
+- **Alexandre Huou:** CMU datapreprocessing, lead Website development and deployment
+- **Zayneb Mellouli:** East-Asia analysis, plotting the data, website development and deployement
+- **Donia Gasmi:** Bollywood analysis, Movie Summary-theme identification through key-word matching for deeper insights across all regions, data reliability analysis
+- **Lily Gilibert:** Europe analysis, plotting the data, data story writing, formatting on the site
 
 ---
 

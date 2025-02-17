@@ -175,40 +175,42 @@ pip install -r pip_requirements.txt
 
 The directory structure of our project looks like this (note that the datasets are not included to to their sizes):
 ```
-├── blog_P3                            <- Directory for website development
-│
-├── data                               <- Project data files
-│   ├── raw                            <- Raw datasets
-│   │   ├── CMU_movies                 <- Raw data for CMU movie datasets
-│   │   └── real_world                 <- Raw real-world demographic data                   
-│   ├── cleaned_datasets               <- Cleaned datasets after preprocessing
-│   ├── clustered_clean                <- Region-based clustered datasets
-│   └── final                          <- Final processed datasets for analysis
-│       ├── bollywood                  <- Processed data for Bollywood region
-│       ├── east_asia                  <- Processed data for East Asia region
-│       ├── europe                     <- Processed data for Europe region
-│       ├── hollywood                  <- Processed data for Hollywood region
-│       └── oceania                    <- Processed data for Oceania region
-│
-├── src                                <- Source code
-│   ├── preprocessing.py               <- Python script for the preprocessing
-│   └── hollywood_functions.py         <- Python script for hollywood analysis
-│   └── europe_functions.py            <- Python script for europe analysis
-│   └── eastasia_functions.py          <- Python script for east-asia analysis
-│   └── bollywood_functions.py         <- Python script for bollywood analysis
-│   └── hollywood_crime_functions.py                <- Python script for hollywood crime analysis
-│   └── europe_urban_depection_functions.py         <- Python script for europe urban analysis
-│   └── bollywood_wealth_class_functions.py         <- Python script for bollywod wealth analysis
-│   └── eastasia_overwork_culture_functions.py      <- Python script for east-asia overwork analysis
-│   └── common_plots_functions.py      <- Python script for the basic plots that we later on made with flourish
-│   └── plots                          <- Directory that contains all the html plots
-|   └── png                            <- Directory that contains all the pictures of interactive plots used in the results.ipynb
-│
-│
-├── .gitignore                         <- List of files ignored by git
-├── pip_requirements.txt               <- Python dependencies file
-├── results.ipynb                      <- Notebook with all analysis and their code
-├── preprocessing_global_final.ipynb   <- Notebook for data cleaning and preprocessing
-├── meme.png                           <- An easter egg for you
-└── README.md
+## 📂 Project Structure  
+```plaintext
+📦 blog_P3                            # Directory for website development
+
+📦 data                               # Project data files
+ ┣ 📂 raw                            # Raw datasets
+ ┃ ┣ 📂 CMU_movies                 # Raw data for CMU movie datasets
+ ┃ ┗ 📂 real_world                 # Raw real-world demographic data                   
+ ┣ 📂 cleaned_datasets               # Cleaned datasets after preprocessing
+ ┣ 📂 clustered_clean                # Region-based clustered datasets
+ ┗ 📂 final                          # Final processed datasets for analysis
+   ┣ 📂 bollywood                   # Processed data for Bollywood region
+   ┣ 📂 east_asia                   # Processed data for East Asia region
+   ┣ 📂 europe                      # Processed data for Europe region
+   ┣ 📂 hollywood                   # Processed data for Hollywood region
+   ┗ 📂 oceania                     # Processed data for Oceania region
+
+📦 src                                # Source code for preprocessing and analysis
+ ┣ 📜 preprocessing.py               # Python script for general preprocessing
+ ┣ 📜 hollywood_functions.py         # Hollywood-specific analysis functions
+ ┣ 📜 europe_functions.py            # Europe-specific analysis functions
+ ┣ 📜 eastasia_functions.py          # East-Asia-specific analysis functions
+ ┣ 📜 bollywood_functions.py         # Bollywood-specific analysis functions
+ ┣ 📜 hollywood_crime_functions.py                # Hollywood crime analysis
+ ┣ 📜 europe_urban_depection_functions.py         # Europe urban depiction analysis
+ ┣ 📜 bollywood_wealth_class_functions.py         # Bollywood wealth class analysis
+ ┣ 📜 eastasia_overwork_culture_functions.py      # East-Asia overwork culture analysis
+ ┣ 📜 common_plots_functions.py      # Functions for basic plots (finalized with Flourish)
+ ┣ 📂 plots                          # HTML files of interactive plots
+ ┗ 📂 png                            # Static images of interactive plots used in results.ipynb
+
+📜 .gitignore                         # List of files ignored by Git
+📜 pip_requirements.txt               # Python dependencies file
+📜 results.ipynb                      # Notebook with all analysis and code
+📜 preprocessing_global_final.ipynb   # Notebook for data cleaning and preprocessing
+📜 meme.png                           # An easter egg for you 😉
+📜 README.md                          # This file
+
 ```

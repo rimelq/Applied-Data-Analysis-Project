@@ -1,6 +1,9 @@
 
 # **From Script to reality: Does Cinema Mirror Life or Rewrite It?**
 
+Check out our interactive website: [https://blog-p3.vercel.app](https://blog-p3.vercel.app)
+![website gif](website.gif)
+
 ## **Abstract**
 
    Cinema serves as both a mirror and a canvas, reflecting societal norms while shaping perceptions of the world. This project delves into whether the cinematic portrayal of gender, ethnicity, and age aligns with real-world demographics or perpetuates outdated stereotypes. By comparing on-screen representation to societal realities across regions, genres, and time periods, we uncover disparities and their implications for cultural and economic trends. 

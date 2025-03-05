@@ -2,6 +2,8 @@
 # **From Script to reality: Does Cinema Mirror Life or Rewrite It?**
 
 Check out our interactive website: [https://blog-p3.vercel.app](https://blog-p3.vercel.app)
+
+
 ![website gif](website.gif)
 
 ## **Abstract**

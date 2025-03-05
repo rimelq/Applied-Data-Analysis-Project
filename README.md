@@ -176,7 +176,7 @@ pip install -r pip_requirements.txt
 The directory structure of our project looks like this (note that the datasets are not included to to their sizes):
 ```
 ## 📂 Project Structure  
-```plaintext
+
 📦 blog_P3                            # Directory for website development
 
 📦 data                               # Project data files
